@@ -20,8 +20,10 @@ class Openemulator < Formula
     library_paths = []
     library_paths << HOMEBREW_PREFIX/"lib"
 
-    xcodebuild "-configuration", "Release", "SYMROOT=build", "PREFIX=#{prefix}", "ONLY_ACTIVE_ARCH=YES",
-      "HEADER_SEARCH_PATHS=#{header_paths.join(' ')}", "LIBRARY_SEARCH_PATHS=#{library_paths.join(' ')}"
+    xcodebuild "-configuration", "Release", "-alltargets",
+      "SYMROOT=build", "PREFIX=#{prefix}", "ONLY_ACTIVE_ARCH=YES",
+      "HEADER_SEARCH_PATHS=#{header_paths.join(' ')}",
+      "LIBRARY_SEARCH_PATHS=#{library_paths.join(' ')}"
     prefix.install "build/Release/OpenEmulator.app"
   end
 
