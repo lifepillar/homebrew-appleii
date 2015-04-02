@@ -19,11 +19,22 @@ class Openemulator < Formula
 
     library_paths = []
     library_paths << HOMEBREW_PREFIX/"lib"
+    library_paths << Formula["libpng"].lib if MacOS.version <= :lion
 
-    xcodebuild "-configuration", "Release", "-alltargets",
-      "SYMROOT=build", "PREFIX=#{prefix}", "ONLY_ACTIVE_ARCH=YES",
+    args = [
+      "-sdk",
+      "macosx#{MacOS.version}",
+      "-configuration", "Release",
+      "-alltargets",
+      "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}",
+      "SYMROOT=build",
+      "PREFIX=#{prefix}",
+      "ARCHS=x86_64",
       "HEADER_SEARCH_PATHS=#{header_paths.join(' ')}",
       "LIBRARY_SEARCH_PATHS=#{library_paths.join(' ')}"
+    ]
+
+    xcodebuild *args
     prefix.install "build/Release/OpenEmulator.app"
   end
 
