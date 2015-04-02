@@ -36,6 +36,11 @@ class Epple2 < Formula
     system "make", "install"
   end
 
+  def caveats; <<-EOS.undent
+    Configuration files are in #{etc}/epple2.
+    EOS
+  end
+
   test do
     system "false"
   end
