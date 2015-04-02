@@ -42,6 +42,15 @@ class Openemulator < Formula
     prefix.install "build/Release/OpenEmulator.app"
   end
 
+  def caveats; <<-EOS.undent
+    OpenEmulator does not contain any ROM file. See:
+
+        https://github.com/OpenEmulatorProject/libemulation/issues/15
+
+    ROM files must be copied inside #{prefix}/OpenEmulator.app/Contents/Resources/roms.
+    EOS
+  end
+
   test do
     system "false"
   end
