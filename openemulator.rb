@@ -9,16 +9,20 @@ class Openemulator < Formula
   depends_on "portaudio"
 
   def install
-    header_paths = []
-    header_paths << "/usr/include/libxml2"
-    header_paths << Formula["libpng"].include/"libpng16"
-    header_paths << Formula["libsamplerate"].include
-    header_paths << Formula["libsndfile"].include
-    header_paths << Formula["libzip"].include << Formula["libzip"].lib/"libzip/include"
-    header_paths << Formula["portaudio"].include
+    header_paths = [
+      "/usr/include/libxml2",
+      Formula["libpng"].include/"libpng16",
+      Formula["libsamplerate"].include,
+      Formula["libsndfile"].include,
+      Formula["libzip"].include,
+      Formula["libzip"].lib/"libzip/include",
+      Formula["portaudio"].include
+    ]
 
-    library_paths = []
-    library_paths << HOMEBREW_PREFIX/"lib"
+
+    library_paths = [
+      HOMEBREW_PREFIX/"lib"
+    ]
     library_paths << Formula["libpng"].lib if MacOS.version <= :lion
 
     args = [
