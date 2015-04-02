@@ -14,7 +14,13 @@ class Tohgr < Formula
     end
   end
 
+  def caveats; <<-EOS.undent
+    tohgr may segfault if it does not have permission
+    to write to the destination path.
+    EOS
+  end
+
   test do
-    system "false"
+    system "tohgr"
   end
 end
