@@ -8,7 +8,7 @@ class Jace < Formula
 
   def install
     libexec.install "jace.jar"
-    bin.write_jar_script libexec/"jace.jar", "jace"
+    bin.write_jar_script libexec/"jace.jar", "jace", "-Duser.dir=$HOME"
   end
 
   test do
