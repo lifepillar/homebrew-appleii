@@ -2,7 +2,7 @@ class Bmp2dhr < Formula
   homepage "http://www.appleoldies.ca/bmp2dhr/"
   url "http://www.appleoldies.ca/cc65/programs/dhgr/bmp2dhr.zip"
   version "1.1"
-  sha256 "a6838519e5601f5e7b1cee1305dbb105df4df4d035aaa2278355b4d7a97d9f8b"
+  sha256 "4ec7e17ab016d0611350cf88f0607354d2ac350be6788b5ba186e22118dcc6c3"
 
   def install
       cd "src" do
