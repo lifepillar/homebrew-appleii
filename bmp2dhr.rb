@@ -6,13 +6,13 @@ class Bmp2dhr < Formula
 
   def install
       cd "src" do
-        system ENV.cc, "-o", "bmp2dhr", "b2d.c"
+        system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "bmp2dhr", "b2d.c"
       end
       cd "a2fcbmp" do
-        system ENV.cc, "-o", "a2fcbmp", "a2fcbmp.c"
+        system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "a2fcbmp", "a2fcbmp.c"
       end
       cd "xpack" do
-        system ENV.cc, "-o", "xpack", "xpack.c"
+        system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "xpack", "xpack.c"
       end
       bin.install "src/bmp2dhr"
       bin.install_symlink bin/"bmp2dhr" => "b2d"
