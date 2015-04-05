@@ -27,7 +27,6 @@ class Linapple < Formula
     ]
     ENV.append "CXXFLAGS", "-I#{Formula["libzip"].lib}/libzip/include"
     cd "src" do
-      inreplace "Makefile", "INSTDIR = /usr/local/$(EXE)", "INSTDIR = #{prefix}"
       system "make"
     end
     chmod 0644, files
