@@ -37,6 +37,10 @@ class Epple2 < Formula
     system "autoreconf", "--install"
     system "./configure", *opts
     system "make", "install"
+    # Rename default configuration file and install epple2.conf manually,
+    # so that it won't be deleted if epple2 is removed.
+    File.rename prefix/"etc/epple2/epple2.conf", prefix/"etc/epple2/epple2.conf.default"
+    (etc/"epple2").install "conf/epple2.conf" unless File.exists?(etc/"epple2/epple2.conf")
   end
 
   def caveats; <<-EOS.undent
