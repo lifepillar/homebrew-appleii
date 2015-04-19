@@ -22,6 +22,7 @@ class Epple2 < Formula
 
   def install
     ENV.cxx11
+    ENV.append "CXXFLAGS", "-DETCDIR=\\\"#{etc}\\\""
 
     resource("epple2sys").stage do
       system "./configure", "--prefix=#{prefix}"
