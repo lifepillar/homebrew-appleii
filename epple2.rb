@@ -1,9 +1,6 @@
 class Epple2 < Formula
   homepage "http://mosher.mine.nu/epple2"
-  url "http://mosher.mine.nu/epple2/download/epple2-latest.tar.gz"
-  version "1.1"
-  sha256 "978c7c9f72ea1bdd6352aeae5058855924fdfa9418fcd2c608959d4884cbff30"
-  head "https://github.com/cmosher01/Epple-II.git"
+  url "https://github.com/cmosher01/Epple-II.git"
 
   depends_on :x11
   depends_on "sdl2"
