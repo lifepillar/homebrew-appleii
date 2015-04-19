@@ -40,6 +40,8 @@ class Epple2 < Formula
 
   def caveats; <<-EOS.undent
     Configuration files are in #{etc}/epple2.
+
+    Use Cmd-Alt-Esc to quit Epple ][ when in full-screen mode.
     EOS
   end
 
