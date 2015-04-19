@@ -2,6 +2,8 @@ class Epple2 < Formula
   homepage "http://mosher.mine.nu/epple2"
   url "https://github.com/cmosher01/Epple-II.git"
 
+  depends_on "automake" => :build
+  depends_on "autoconf" => :build
   depends_on :x11
   depends_on "sdl2"
   # For epple2sys:
@@ -29,6 +31,7 @@ class Epple2 < Formula
     opts << "--disable-silent-rules" if build.head?
     opts << "--prefix=#{prefix}"
 
+    system "autoreconf", "--install"
     system "./configure", *opts
     system "make", "install"
   end
