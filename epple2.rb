@@ -1,6 +1,8 @@
 class Epple2 < Formula
   homepage "http://mosher.mine.nu/epple2"
-  url "https://github.com/cmosher01/Epple-II.git"
+  url "https://github.com/cmosher01/Epple-II.git", :revision => "130d2b4ac4333062f30d0e6ae5b668228e3cc36f"
+  version "130d2b4a"
+  head "https://github.com/cmosher01/Epple-II.git"
 
   depends_on "automake" => :build
   depends_on "autoconf" => :build
