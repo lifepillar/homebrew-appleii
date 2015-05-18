@@ -9,7 +9,6 @@ class Epple2 < Formula
   depends_on :x11
   depends_on "sdl2"
   # For epple2sys:
-  depends_on "m4" => :build
   depends_on "xa" => :build
 
   needs :cxx11
