@@ -6,7 +6,6 @@ class Epple2 < Formula
 
   depends_on "automake" => :build
   depends_on "autoconf" => :build
-  depends_on :x11
   depends_on "sdl2"
   # For epple2sys:
   depends_on "xa" => :build
