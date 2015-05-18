@@ -29,7 +29,7 @@ class Epple2 < Formula
 
     opts = []
     opts << "--disable-dependency-tracking"
-    opts << "--disable-silent-rules" if build.head?
+    opts << "--disable-silent-rules"
     opts << "--prefix=#{prefix}"
 
     system "autoreconf", "--install"
