@@ -1,7 +1,6 @@
 class Epple2 < Formula
   homepage "http://mosher.mine.nu/epple2"
   url "https://github.com/cmosher01/Epple-II.git", :revision => "130d2b4ac4333062f30d0e6ae5b668228e3cc36f"
-  version "130d2b4a"
   head "https://github.com/cmosher01/Epple-II.git"
 
   depends_on "automake" => :build
@@ -38,7 +37,7 @@ class Epple2 < Formula
     # Rename default configuration file and install epple2.conf manually,
     # so that it won't be deleted if epple2 is removed.
     File.rename prefix/"etc/epple2/epple2.conf", prefix/"etc/epple2/epple2.conf.default"
-    (etc/"epple2").install "conf/epple2.conf" unless File.exists?(etc/"epple2/epple2.conf")
+    (etc/"epple2").install "conf/epple2.conf" unless File.exist?(etc/"epple2/epple2.conf")
   end
 
   def caveats; <<-EOS.undent
