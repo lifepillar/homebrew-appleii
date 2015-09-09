@@ -1,14 +1,16 @@
 class Merlin32 < Formula
   homepage "http://www.brutaldeluxe.fr/products/crossdevtools/merlin/"
   url "http://www.brutaldeluxe.fr/products/crossdevtools/merlin/Merlin32_v1.0.zip"
-  sha256 "490d465626fef0aea2f4ea63afe80097fdc2b074b876c04584405fe4715e4323"
+  sha256 "97bce524386a0d7a94cfe2292082090b7f96c371934ed8c819b0797fa16b5667"
 
   def install
-    cd "Source" do
+    merlin_dir = buildpath/"Merlin32_v1.0"
+    src_dir = merlin_dir/"Source"
+    cd src_dir do
       system "make", "-f", "linux_makefile"
     end
-    bin.install "Source/Merlin32"
-    prefix.install "Library"
+    bin.install src_dir/"Merlin32"
+    prefix.install merlin_dir/"Library"
   end
 
   def caveats; <<-EOS.undent
