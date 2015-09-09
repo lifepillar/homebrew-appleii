@@ -1,6 +1,6 @@
 class Openemulator < Formula
   homepage "https://github.com/OpenEmulatorProject/OpenEmulator-OSX"
-  url "https://github.com/OpenEmulatorProject/OpenEmulator-OSX.git"
+  head "https://github.com/OpenEmulatorProject/OpenEmulator-OSX.git"
 
   depends_on "libpng"
   depends_on "libsamplerate"
