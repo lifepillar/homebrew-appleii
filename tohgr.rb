@@ -1,4 +1,5 @@
 class Tohgr < Formula
+  desc "Convert images in PNG, JPG, or XPM format to Apple II images"
   homepage "http://wsxyz.net/tohgr.html"
   url "http://wsxyz.net/tohgr-source.zip"
   version "2014-12-26"

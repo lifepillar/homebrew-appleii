@@ -1,4 +1,5 @@
 class Merlin32 < Formula
+  desc "A multi-pass Cross Assembler for 6502/65c02/65c816 processors."
   homepage "http://www.brutaldeluxe.fr/products/crossdevtools/merlin/"
   url "http://www.brutaldeluxe.fr/products/crossdevtools/merlin/Merlin32_v1.0.zip"
   sha256 "97bce524386a0d7a94cfe2292082090b7f96c371934ed8c819b0797fa16b5667"

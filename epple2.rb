@@ -1,4 +1,5 @@
 class Epple2 < Formula
+  desc "An emulator of the original APPLE ][ and APPLE ][ PLUS computers"
   homepage "http://mosher.mine.nu/epple2"
   url "https://github.com/cmosher01/Epple-II.git", :revision => "130d2b4ac4333062f30d0e6ae5b668228e3cc36f"
   version "130d2b4ac"

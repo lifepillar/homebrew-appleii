@@ -1,4 +1,5 @@
 class Linapple < Formula
+  desc "An Apple 2, 2e cross-platform emulator"
   homepage "http://linapple.sourceforge.net"
   url "http://beotiger.com/download/linapple_src-2b"
   version "2b"

@@ -1,4 +1,5 @@
 class Openemulator < Formula
+  desc "An accurate, portable emulator of legacy computer systems"
   homepage "https://github.com/OpenEmulatorProject/OpenEmulator-OSX"
   head "https://github.com/OpenEmulatorProject/OpenEmulator-OSX.git"
 

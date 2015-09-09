@@ -1,4 +1,5 @@
 class Unlatch < Formula
+  desc "Convert A2FC (Dazzle Draw) files to AUX, BIN file pairs"
   homepage "http://www.appleoldies.ca/bmp2dhr/basic/"
   url "http://www.appleoldies.ca/cc65/programs/dhgr/unlatch.zip"
   version "2014-09-17"

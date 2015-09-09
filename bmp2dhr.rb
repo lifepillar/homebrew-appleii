@@ -1,4 +1,5 @@
 class Bmp2dhr < Formula
+  desc "A utility for converting modern graphics to Apple II graphics"
   homepage "http://www.appleoldies.ca/bmp2dhr/"
   url "http://www.appleoldies.ca/cc65/programs/dhgr/bmp2dhr.zip"
   version "1.1"
