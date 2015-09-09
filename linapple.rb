@@ -1,8 +1,9 @@
 class Linapple < Formula
   homepage "http://linapple.sourceforge.net"
-  url "https://downloads.sourceforge.net/project/linapple/linapple/linapple-2a/linapple-src_2a.tar.bz2"
-  version "2a"
-  sha256 "64961e7a63e2c22cef19414e165290791b600c307f0e7adebc057a2b0009c360"
+  url "http://beotiger.com/download/linapple_src-2b"
+  version "2b"
+  sha256 "96f837fe902a00a2b100766d234120f43f70a1e9c19198e442157516da4789fe"
+  head "https://github.com/timob/linapple.git"
 
   depends_on "libzip"
   depends_on "sdl"
