@@ -9,8 +9,7 @@ class AppleIiDiskTools < Formula
 
   def install
     system "./bootstrap --skip-po"
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
+    system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
     system "make", "install"
