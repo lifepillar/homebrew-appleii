@@ -17,4 +17,9 @@ not included here, please let me know!
 
 _Why isn't [cc65](https://cc65.github.io/cc65/) in this repository?_
 
-cc65 is already in Homebrew!
+cc65 is already in Homebrew! (`brew install cc65`)
+
+_Why isn't [Virtual \]\[](http://www.virtualii.com) in this repository?_
+
+Virtual ][ is already in Homebrew Cask!
+(`brew cask install virtual-ii`)
