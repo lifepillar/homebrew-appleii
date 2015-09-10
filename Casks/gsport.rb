@@ -8,7 +8,7 @@ cask :v1 => 'gsport' do
   license :gpl
 
   app "GSPort/GSPort.app"
-  
+
   caveats do
     "A ROM file should be put in #{staged_path}/GSport."
   end
