@@ -9,5 +9,9 @@ cask :v1 => 'sweet16' do
   license :gratis
 
   app "#{sweet16}/Sweet16.app"
+
+  caveats do
+    "ROM files should be put in #{staged_path}/#{sweet16}."
+  end
 end
 
