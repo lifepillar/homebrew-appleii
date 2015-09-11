@@ -1,7 +1,7 @@
 class Openemulator < Formula
   desc "An accurate, portable emulator of legacy computer systems"
   homepage "https://github.com/OpenEmulatorProject/OpenEmulator-OSX"
-  head "https://github.com/OpenEmulatorProject/OpenEmulator-OSX.git"
+  head "https://github.com/OpenEmulatorProject/OpenEmulator-OSX.git", :branch => "develop"
 
   depends_on "libpng"
   depends_on "libsamplerate"
