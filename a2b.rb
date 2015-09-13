@@ -1,5 +1,5 @@
 class A2b < Formula
-  desc "Convert Apple II images to BMP images."
+  desc "A utility for converting modern graphics to Apple IIGS SHR graphics"
   homepage "http://www.appleoldies.ca/a2b/"
   url "http://www.appleoldies.ca/a2b/Summer2015/a2bSnapShotSummer2015.zip"
   version "7.0"
