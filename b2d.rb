@@ -9,11 +9,15 @@ class B2d < Formula
       cd "src" do
         system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "b2d", "b2d.c"
       end
+      cd "magick" do
+        system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "m2s", "m2s.c"
+      end
       cd "xpack" do
         system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "xpack", "xpack.c"
       end
       bin.install "src/b2d"
       bin.install_symlink bin/"b2d" => "bmp2dhr"
+      bin.install "magick/m2s"
       bin.install "xpack/xpack"
   end
 
