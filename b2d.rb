@@ -1,4 +1,4 @@
-class Bmp2dhr < Formula
+class B2d < Formula
   desc "A utility for converting modern graphics to Apple II graphics"
   homepage "http://www.appleoldies.ca/bmp2dhr/"
   url "http://www.appleoldies.ca/cc65/programs/dhgr/bmp2dhr.zip"
@@ -7,18 +7,13 @@ class Bmp2dhr < Formula
 
   def install
       cd "src" do
-        system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "bmp2dhr", "b2d.c"
-      end
-      cd "a2fcbmp" do
-        system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "a2fcbmp", "a2fcbmp.c"
+        system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "b2d", "b2d.c"
       end
       cd "xpack" do
         system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "xpack", "xpack.c"
       end
-      bin.install "src/bmp2dhr"
-      bin.install_symlink bin/"bmp2dhr" => "b2d"
-      bin.install "a2fcbmp/a2fcbmp"
-      bin.install_symlink bin/"a2fcbmp" => "a2b"
+      bin.install "src/b2d"
+      bin.install_symlink bin/"b2d" => "bmp2dhr"
       bin.install "xpack/xpack"
   end
 
@@ -26,3 +21,4 @@ class Bmp2dhr < Formula
     system "false"
   end
 end
+
