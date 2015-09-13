@@ -1,13 +1,13 @@
 # Vintage Apple emulators and related software
 
-![Apple I](images/i.png "Apple I")
-![Apple \]\[](images/ii.png "Apple ][")
-![Apple \]\[+](images/ii+.png "Apple ][+")
-![Apple \]\[e](images/iie.png "Apple ][e")
-![Apple //e Platinum](images/iiee.png "Apple //e Platinum")
-![Apple //c](images/iic.png "Apple //c")
-![Apple ///+](images/iii+.png "Apple ///+")
-![Apple //GS](images/iigs.png "Apple //GS")
+[![Apple I](images/i.png "Apple I")](http://apple-history.com/ai)
+[![Apple \]\[](images/ii.png "Apple ][")](http://apple-history.com/aii)
+[![Apple \]\[+](images/ii+.png "Apple ][+")](http://apple-history.com/aiiplus)
+[![Apple \]\[e](images/iie.png "Apple ][e")](http://apple-history.com/aiie)
+[![Apple //e Platinum](images/iiee.png "Apple //e Platinum")](http://apple-history.com/aiiee)
+[![Apple //c](images/iic.png "Apple //c")](http://apple-history.com/aiic)
+[![Apple ///+](images/iii+.png "Apple ///+")](http://apple-history.com/aiii)
+[![Apple //GS](images/iigs.png "Apple //GS")](http://apple-history.com/aiigs)
 
 
 ## Requirements
@@ -68,4 +68,3 @@ The images in this repository have been generated with B. Buckels's `b2d` and
 [Wikipedia](https://en.wikipedia.org/wiki/File:Apple_I_Computer.jpg)) and the
 Apple ][e (courtesy of [W.
 Warby](https://www.flickr.com/photos/wwarby/16614254568/)).
-
