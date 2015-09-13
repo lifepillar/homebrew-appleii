@@ -1,4 +1,14 @@
-# Apple I/II/III/GS emulators and related software
+# Vintage Apple emulators and related software
+
+![Apple I](images/i.png "Apple I")
+![Apple \]\[](images/ii.png "Apple ][")
+![Apple \]\[+](images/ii+.png "Apple ][+")
+![Apple \]\[e](images/iie.png "Apple ][e")
+![Apple //e Platinum](images/iiee.png "Apple //e Platinum")
+![Apple //c](images/iic.png "Apple //c")
+![Apple ///+](images/iii+.png "Apple ///+")
+![Apple //GS](images/iigs.png "Apple //GS")
+
 
 ## Requirements
 
@@ -46,5 +56,16 @@ cc65 is already in Homebrew! (`brew install cc65`)
 
 _Why isn't [Virtual \]\[](http://www.virtualii.com) in this repository?_
 
-Virtual ][ is already in Homebrew Cask!
-(`brew cask install virtual-ii`)
+Virtual ][ is already in Homebrew Cask! (`brew cask install virtual-ii`)
+
+
+## Credits
+
+The images in this repository have been generated with B. Buckels's `b2d` and
+`a2b` programs. Original files are all from
+[apple-history](http://apple-history.com), with the exception of the Apple I
+(original from
+[Wikipedia](https://en.wikipedia.org/wiki/File:Apple_I_Computer.jpg)) and the
+Apple ][e (courtesy of [W.
+Warby](https://www.flickr.com/photos/wwarby/16614254568/)).
+
