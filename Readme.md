@@ -1,9 +1,9 @@
 # Vintage Apple emulators and related software
 
 [![Apple I](images/i.png "Apple I")](http://apple-history.com/ai)
-[![Apple \]\[](images/ii.png "Apple ][")](http://apple-history.com/aii)
-[![Apple \]\[+](images/ii+.png "Apple ][+")](http://apple-history.com/aiiplus)
-[![Apple \]\[e](images/iie.png "Apple ][e")](http://apple-history.com/aiie)
+[![Apple \]\[](images/ii.png "Apple II")](http://apple-history.com/aii)
+[![Apple \]\[+](images/ii+.png "Apple II+")](http://apple-history.com/aiiplus)
+[![Apple \]\[e](images/iie.png "Apple IIe")](http://apple-history.com/aiie)
 [![Apple //e Platinum](images/iiee.png "Apple //e Platinum")](http://apple-history.com/aiiee)
 [![Apple //c](images/iic.png "Apple //c")](http://apple-history.com/aiic)
 [![Apple ///+](images/iii+.png "Apple ///+")](http://apple-history.com/aiii)
