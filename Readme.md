@@ -17,7 +17,7 @@
 
 ## Installation
 
-    brew tap lifepillar/homebrew-appleii
+    brew tap lifepillar/appleii
 
 
 ## How to install formulas
