@@ -68,3 +68,13 @@ The images in this repository have been generated with B. Buckels's `b2d` and
 [Wikipedia](https://en.wikipedia.org/wiki/File:Apple_I_Computer.jpg)) and the
 Apple ][e (courtesy of [W.
 Warby](https://www.flickr.com/photos/wwarby/16614254568/)).
+
+
+## Off-topic: online emulators
+
+- [Virtual Apple \]\[](http://www.virtualapple.org)
+- [Apple \]\[js and Apple \]\[jse](https://www.scullinsteel.com/apple/about.html)
+- [Apple2JS](http://www.megidish.net/apple2js/)
+- [Apple \]\[+](http://porkrind.org/a2/)
+- [appletoo](https://github.com/nicholasbs/appletoo)
+
