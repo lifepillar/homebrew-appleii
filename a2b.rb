@@ -1,5 +1,5 @@
 class A2b < Formula
-  desc "A utility for converting modern graphics to Apple IIGS SHR graphics"
+  desc "Convert modern graphics to Apple IIGS SHR graphics"
   homepage "http://www.appleoldies.ca/a2b/"
   url "http://www.appleoldies.ca/a2b/Summer2015/a2bSnapShotSummer2015.zip"
   version "7.0"
@@ -9,11 +9,11 @@ class A2b < Formula
   patch :DATA
 
   def install
-      cd "a2fcbmp" do
-        system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "a2b", "a2fcbmp.c"
-      end
-      bin.install "a2fcbmp/a2b"
-      bin.install_symlink bin/"a2b" => "a2fcbmp"
+    cd "a2fcbmp" do
+      system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "a2b", "a2fcbmp.c"
+    end
+    bin.install "a2fcbmp/a2b"
+    bin.install_symlink bin/"a2b" => "a2fcbmp"
   end
 
   test do

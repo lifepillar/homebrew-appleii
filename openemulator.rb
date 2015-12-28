@@ -1,6 +1,10 @@
 class Openemulator < Formula
-  desc "An accurate, portable emulator of legacy computer systems"
+  desc "Accurate, portable emulator of legacy computer systems"
   homepage "https://github.com/OpenEmulatorProject/OpenEmulator-OSX"
+  url "https://github.com/OpenEmulatorProject/OpenEmulator-OSX.git",
+       :branch => "develop",
+       :revision => "4bef515645531d6574c6d10e305f9c0f17bbcba6"
+  version "4bef5156"
   head "https://github.com/OpenEmulatorProject/OpenEmulator-OSX.git", :branch => "develop"
 
   depends_on "libpng"
@@ -17,9 +21,8 @@ class Openemulator < Formula
       Formula["libsndfile"].include,
       Formula["libzip"].include,
       Formula["libzip"].lib/"libzip/include",
-      Formula["portaudio"].include
+      Formula["portaudio"].include,
     ]
-
 
     library_paths = [
       HOMEBREW_PREFIX/"lib"
@@ -35,8 +38,8 @@ class Openemulator < Formula
       "SYMROOT=build",
       "PREFIX=#{prefix}",
       "ARCHS=x86_64",
-      "HEADER_SEARCH_PATHS=#{header_paths.join(' ')}",
-      "LIBRARY_SEARCH_PATHS=#{library_paths.join(' ')}"
+      "HEADER_SEARCH_PATHS=#{header_paths.join(" ")}",
+      "LIBRARY_SEARCH_PATHS=#{library_paths.join(" ")}"
     ]
 
     xcodebuild *args

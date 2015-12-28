@@ -1,5 +1,5 @@
 class Jace < Formula
-  desc "A logical reproduction of an enhanced Apple //e computer"
+  desc "Logical reproduction of an enhanced Apple //e computer"
   homepage "https://sites.google.com/site/brendanrobert/projects/jace"
   url "https://downloads.sourceforge.net/project/java-ace/Builds/jace.jar"
   version "2013-04-07"

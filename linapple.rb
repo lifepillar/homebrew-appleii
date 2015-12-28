@@ -1,15 +1,14 @@
 class Linapple < Formula
-  desc "An Apple 2, 2e cross-platform emulator"
+  desc "Apple 2, 2e cross-platform emulator"
   homepage "http://linapple.sourceforge.net"
   url "http://beotiger.com/download/linapple_src-2b"
-  version "2b"
   sha256 "96f837fe902a00a2b100766d234120f43f70a1e9c19198e442157516da4789fe"
   head "https://github.com/timob/linapple.git"
 
   depends_on "libzip"
   depends_on "sdl"
 
-  def shim_script target
+  def shim_script(target)
     <<-EOS.undent
       #!/bin/bash
       cd "#{libexec}"; exec ./#{target} "$@"; cd -
@@ -25,7 +24,7 @@ class Linapple < Formula
       "linapple.conf",
       "linapple.installed.conf",
       "Master.dsk",
-      "splash.bmp"
+      "splash.bmp",
     ]
     ENV.append "CXXFLAGS", "-I#{Formula["libzip"].lib}/libzip/include"
     cd "src" do
