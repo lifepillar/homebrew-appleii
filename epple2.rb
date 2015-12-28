@@ -16,9 +16,8 @@ class Epple2 < Formula
   needs :cxx11
 
   resource "apple2sys" do
-    url "http://mosher.mine.nu/apple2/download/apple2sys-latest.tar.gz"
-    version "1.1"
-    sha256 "0fa87ae28035e3e1ec1d686e277e67e5b27b34cea5e2875a255f5a0e8f705197"
+    url "https://github.com/cmosher01/Apple-II-Source/archive/1.0.tar.gz"
+    sha256 "50c4b7a05550d0b3b4da76c133bf60e33df0319dfe03fa5ad4518203f72e5c89"
   end
 
   def install
@@ -26,6 +25,7 @@ class Epple2 < Formula
     ENV.append "CXXFLAGS", "-DETCDIR=\\\"#{etc}\\\""
 
     resource("apple2sys").stage do
+      system "./bootstrap", "--skip-po"
       system "./configure", "--prefix=#{prefix}"
       system "make", "install"
     end
