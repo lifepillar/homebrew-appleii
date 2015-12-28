@@ -14,7 +14,7 @@ class AppleIiDiskTools < Formula
   depends_on "gettext"
 
   def install
-    system "./bootstrap --skip-po"
+    system "./bootstrap", "--skip-po" if build.head?
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
@@ -22,7 +22,7 @@ class AppleIiDiskTools < Formula
   end
 
   test do
-    system "a2catalog -T"
-    system "a2nibblize -T"
+    system "a2catalog", "-T"
+    system "a2nibblize", "-T"
   end
 end
