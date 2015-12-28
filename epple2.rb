@@ -45,9 +45,14 @@ class Epple2 < Formula
   end
 
   def caveats; <<-EOS.undent
+    Please read Warning Concerning Copyright Restrictions here:
+
+        http://mosher.mine.nu/apple2/site/
+
     Configuration files are in #{etc}/epple2.
-    If, after upgrading, you get warnings about missing files,
-    try removing #{etc}/epple2 and reinstall epple2.
+
+    After upgrading you may need to update the import path in
+        #{etc}/epple2/epple2.conf
 
     Use Cmd-Alt-Esc to quit Epple ][ when in full-screen mode.
     EOS
