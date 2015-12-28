@@ -46,6 +46,8 @@ class Epple2 < Formula
 
   def caveats; <<-EOS.undent
     Configuration files are in #{etc}/epple2.
+    If, after upgrading, you get warnings about missing files,
+    try removing #{etc}/epple2 and reinstall epple2.
 
     Use Cmd-Alt-Esc to quit Epple ][ when in full-screen mode.
     EOS
