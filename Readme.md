@@ -12,7 +12,7 @@
 
 ## Requirements
 
-[Homebrew](http://brew.sh), [Homebrew Cask](http://caskroom.io).
+[Homebrew](http://brew.sh), [Homebrew Cask](http://caskroom.io) (optional, for casks only).
 
 
 ## Installation
