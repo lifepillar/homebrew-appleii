@@ -8,6 +8,7 @@
 [![Apple //c](images/iic.png "Apple //c")](http://apple-history.com/aiic)
 [![Apple ///+](images/iii+.png "Apple ///+")](http://apple-history.com/aiii)
 [![Apple //GS](images/iigs.png "Apple //GS")](http://apple-history.com/aiigs)
+![Jobs and Woz](images/jobs_woz.png "Jobz and Woz")
 
 
 ## Requirements
@@ -67,7 +68,9 @@ The images in this repository have been generated with B. Buckels's `b2d` and
 (original from
 [Wikipedia](https://en.wikipedia.org/wiki/File:Apple_I_Computer.jpg)) and the
 Apple ][e (courtesy of [W.
-Warby](https://www.flickr.com/photos/wwarby/16614254568/)).
+Warby](https://www.flickr.com/photos/wwarby/16614254568/)). The last picture
+(Jobs and Woz) is in so many places that I don't know whether it is copyrighted
+or may be considered in the public domain.
 
 
 ## Off-topic: online emulators
