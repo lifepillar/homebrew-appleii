@@ -4,11 +4,11 @@
 [![Apple \]\[](images/ii.png "Apple II")](http://apple-history.com/aii)
 [![Apple \]\[+](images/ii+.png "Apple II+")](http://apple-history.com/aiiplus)
 [![Apple \]\[e](images/iie.png "Apple IIe")](http://apple-history.com/aiie)
+![Jobs and Woz](images/jobs_woz.png "Jobz and Woz")
 [![Apple //e Platinum](images/iiee.png "Apple //e Platinum")](http://apple-history.com/aiiee)
 [![Apple //c](images/iic.png "Apple //c")](http://apple-history.com/aiic)
 [![Apple ///+](images/iii+.png "Apple ///+")](http://apple-history.com/aiii)
 [![Apple //GS](images/iigs.png "Apple //GS")](http://apple-history.com/aiigs)
-![Jobs and Woz](images/jobs_woz.png "Jobz and Woz")
 
 
 ## Requirements
