@@ -68,9 +68,9 @@ The images in this repository have been generated with B. Buckels's `b2d` and
 (original from
 [Wikipedia](https://en.wikipedia.org/wiki/File:Apple_I_Computer.jpg)) and the
 Apple ][e (courtesy of [W.
-Warby](https://www.flickr.com/photos/wwarby/16614254568/)). The last picture
-(Jobs and Woz) is in so many places that I don't know whether it is copyrighted
-or may be considered in the public domain.
+Warby](https://www.flickr.com/photos/wwarby/16614254568/)). The picture of Jobs
+and Woz is in so many places that I don't know whether it is copyrighted or may
+be considered in the public domain.
 
 
 ## Off-topic: online emulators
