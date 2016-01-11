@@ -6,7 +6,7 @@ class Jace < Formula
   sha256 "5ca3e38a9af710f259fd11a9b482a59b1591669915d2de8c93451d22f6dc3bff"
   head "https://github.com/badvision/jace.git"
 
-  depends_on :java => "1.6+"
+  depends_on :java => "1.8+"
   depends_on "maven" => :build
 
   # Rename .jace.conf => jace.conf
