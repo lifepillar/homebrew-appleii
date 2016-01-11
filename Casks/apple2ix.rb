@@ -1,4 +1,4 @@
-cask :v1 => 'apple2ix' do
+cask 'apple2ix' do
   version '0.9'
   sha256 '328637f021583bb303e8d77fec9b511c845ff2df0da14ae073bd0dbaa6c5aa84'
 

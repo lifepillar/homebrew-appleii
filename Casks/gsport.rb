@@ -1,4 +1,4 @@
-cask :v1 => 'gsport' do
+cask 'gsport' do
   version '0.31'
   sha256 '00d5df71ff0ee6932ece28b248e100fdb378d05d958374223c15962b2529b913'
 

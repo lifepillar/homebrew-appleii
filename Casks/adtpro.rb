@@ -1,4 +1,4 @@
-cask :v1 => 'adtpro' do
+cask 'adtpro' do
   version '2.0.1'
   sha256 '26384b16d3d5b0bae1afde511be8c6f087d5ecd203d2a4197ff2874de4de860f'
 

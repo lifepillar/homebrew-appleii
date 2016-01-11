@@ -1,4 +1,4 @@
-cask :v1 => 'sweet16' do
+cask 'sweet16' do
   version '3.0.3'
   sha256 'eed4544f0f461490e0849f33a2a582ad33ceeb0719a38f442cd871e47af3410b'
 
