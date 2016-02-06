@@ -5,7 +5,7 @@ class Diskbrowser < Formula
   version "1.0.1"
   sha256 "55b88a05ac470fbaea479b7489be73663a939cc2943d0cbafe98bb87ff5e7181"
 
-  depends_on :java => "1.8+"
+  depends_on :java => "1.6+"
 
   def install
     libexec.install "DiskBrowser.jar"
