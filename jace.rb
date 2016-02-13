@@ -29,4 +29,3 @@ class Jace < Formula
     false
   end
 end
-
