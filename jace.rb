@@ -9,8 +9,6 @@ class Jace < Formula
   depends_on :java => "1.8+"
   depends_on "maven" => :build
 
-  # Rename .jace.conf => jace.conf
-  patch :DATA
 
   def install
     system "mvn", "package"
@@ -20,7 +18,7 @@ class Jace < Formula
 
   def caveats; <<-EOS.undent
     Jace configuration is saved in
-        #{etc}/jace.conf
+        #{etc}/.jace.conf
     EOS
   end
 
@@ -29,16 +27,3 @@ class Jace < Formula
   end
 end
 
-__END__
-index e60459d..4a6e375 100644
---- a/src/main/java/jace/config/Configuration.java
-+++ b/src/main/java/jace/config/Configuration.java
-@@ -441,7 +441,7 @@ public class Configuration implements Reconfigurable {
-     }
-
-     public static File getSettingsFile() {
--        return new File(System.getProperty("user.dir"), ".jace.conf");
-+        return new File(System.getProperty("user.dir"), "jace.conf");
-     }
-
-     /**
