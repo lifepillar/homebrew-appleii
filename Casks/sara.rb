@@ -10,4 +10,3 @@ cask 'sara' do
 
   app 'SaraOSX/Sara.app'
 end
-

@@ -11,4 +11,3 @@ cask 'adtpro' do
 
   app "#{adtpro}/#{adtpro}.app"
 end
-

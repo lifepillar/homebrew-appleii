@@ -14,4 +14,3 @@ cask 'sweet16' do
     "ROM files should be put in #{staged_path}/#{sweet16}."
   end
 end
-
