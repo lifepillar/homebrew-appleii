@@ -3,7 +3,7 @@ class B2d < Formula
   homepage "http://www.appleoldies.ca/bmp2dhr/"
   url "http://www.appleoldies.ca/cc65/programs/dhgr/bmp2dhr.zip"
   version "1.1"
-  sha256 "5fa777cb9c35f67cee6449b90070d2ce66ccc17a49b9d97a7b303860ad3941ca"
+  sha256 "4cd25bccddae411a512ef172b447083ca9d4eb72ffb58a5bdadd1e4200a8b0ac"
 
   def install
     cd "src" do
