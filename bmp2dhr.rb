@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 class Bmp2dhr < Formula
   desc "Convert modern graphics to Apple II graphics"
   homepage "http://www.appleoldies.ca/bmp2dhr/"
