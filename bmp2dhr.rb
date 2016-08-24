@@ -28,6 +28,7 @@ class Bmp2dhr < Formula
     libexec.install "bmp"
     libexec.install "dither"
     libexec.install "msk"
+    libexec.install "SHR/scripts"
     libexec.install "template"
     bin.install "a2fcbmp/a2b"
     bin.install_symlink bin/"a2b" => "a2fcbmp"
@@ -35,14 +36,13 @@ class Bmp2dhr < Formula
     bin.install_symlink bin/"b2d" => "bmp2dhr"
     bin.install "magick/m2s"
     bin.install "xpack/xpack"
-    # Install scripts
-    Dir["SHR/scripts/*.sh"].each do |s|
-      bin.install s => "b2d-#{s.match('([^/]+)\.sh$')[1]}" # Prefix all script names with `b2d-`
-    end
   end
 
-  def caveats
-    "A template directory can be copied from #{libexec}/template"
+  def caveats; <<-EOS.undent
+    A template directory can be copied from #{libexec}/template
+
+    Post-processing scripts are available at #{libexec}/SHR/scripts
+    EOS
   end
 
   test do
