@@ -41,7 +41,7 @@ class Bmp2dhr < Formula
   def caveats; <<-EOS.undent
     A template directory can be copied from #{libexec}/template
 
-    Post-processing scripts are available at #{libexec}/SHR/scripts
+    Post-processing scripts are available at #{libexec}/scripts
     EOS
   end
 
