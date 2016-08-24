@@ -2,8 +2,8 @@ class A2b < Formula
   desc "Convert modern graphics to Apple IIGS SHR graphics"
   homepage "http://www.appleoldies.ca/a2b/"
   url "http://www.appleoldies.ca/a2b/Summer2015/a2bSnapShotSummer2015.zip"
-  version "7.0"
-  sha256 "ab784d0d8a44a73bbd4719cc02c17ee3bf9fec5c0dc5d6b6729c719163b9f852"
+  version "8.0"
+  sha256 "4cd25bccddae411a512ef172b447083ca9d4eb72ffb58a5bdadd1e4200a8b0ac"
 
   # Fix random() function conflicting with the same function in stdlib.h
   patch :DATA
