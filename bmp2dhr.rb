@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Bmp2dhr < Formula
   desc "Convert modern graphics to Apple II graphics"
   homepage "http://www.appleoldies.ca/bmp2dhr/"
@@ -35,14 +36,9 @@ class Bmp2dhr < Formula
     bin.install "magick/m2s"
     bin.install "xpack/xpack"
     # Install scripts
-    bin.install "SHR/scripts/aspect43.sh"    => "b2d-aspect43"
-    bin.install "SHR/scripts/cvt.sh"         => "b2d-cvt"
-    bin.install "SHR/scripts/cvt2bmp.sh"     => "b2d-cvt2bmp"
-    bin.install "SHR/scripts/kill.sh"        => "b2d-kill"
-    bin.install "SHR/scripts/killpalette.sh" => "b2d-killpalette"
-    bin.install "SHR/scripts/magall.sh"      => "b2d-magall"
-    bin.install "SHR/scripts/pad43.sh"       => "b2d-pad43"
-    bin.install "SHR/scripts/slicer.sh"      => "b2d-slicer"
+    Dir["SHR/scripts/*.sh"].each do |s|
+      bin.install s => "b2d-#{s.match('([^/]+)\.sh$')[1]}" # Prefix all script names with `b2d-`
+    end
   end
 
   def caveats
