@@ -13,16 +13,16 @@ class Bmp2dhr < Formula
 
   def install
     cd "a2fcbmp" do
-      system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "a2b", "a2fcbmp.c"
+      system ENV.cc, "-DMINGW", "-o", "a2b", "a2fcbmp.c"
     end
     cd "src" do
-      system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "b2d", "b2d.c"
+      system ENV.cc, "-DMINGW", "-o", "b2d", "b2d.c"
     end
     cd "magick" do
-      system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "m2s", "m2s.c"
+      system ENV.cc, "-DMINGW", "-o", "m2s", "m2s.c"
     end
     cd "xpack" do
-      system ENV.cc, "-DMINGW", "-arch", "i386", "-o", "xpack", "xpack.c"
+      system ENV.cc, "-DMINGW", "-o", "xpack", "xpack.c"
     end
     libexec.install "bmp"
     libexec.install "dither"
