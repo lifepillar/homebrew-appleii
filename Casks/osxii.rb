@@ -9,11 +9,11 @@ cask 'osxii' do
 
   app 'OSXII 0.9 Folder'
 
-  caveats do <<-EOS.undent
+  caveats do
+    <<-EOS.undent
     Read Roms.rtfd in "OSXII 0.9 Folder/Roms" directory.
     Place Apple.ROM and Disk.ROM in "Roms" directory.
     Place disk image files in "Disks" directory.
-  EOS
+    EOS
   end
 end
-
