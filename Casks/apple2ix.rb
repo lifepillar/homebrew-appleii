@@ -4,6 +4,7 @@ cask 'apple2ix' do
 
   url 'http://deadc0de.org/Apple2Mac/Apple2Mac-0.9.dmg'
   name 'Apple //ix'
+  name 'Vintage 1987 Platinum 128Kb Apple //e emulator'
   homepage 'http://deadc0de.org/apple2ix/'
   license :gpl
 

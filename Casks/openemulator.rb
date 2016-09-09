@@ -4,6 +4,7 @@ cask 'openemulator' do
 
   url 'https://openemulator.googlecode.com/files/OpenEmulator-1.0.3.dmg'
   name 'OpenEmulator'
+  name 'Accurate, portable emulator of legacy computer systems'
   homepage 'https://code.google.com/p/openemulator/'
   license :gpl
 

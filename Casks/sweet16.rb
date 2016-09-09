@@ -5,6 +5,7 @@ cask 'sweet16' do
   sweet16 = 'Sweet16_3.0.3'
   url "http://www.sheppyware.net/downloads/downloads-mac/files/#{sweet16}.zip"
   name 'Sweet16'
+  name 'The most capable Apple IIGS emulator for OS X'
   homepage 'http://www.sheppyware.net/software-mac/sweet16/'
   license :gratis
 

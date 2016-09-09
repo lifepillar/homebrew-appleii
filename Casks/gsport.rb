@@ -4,6 +4,7 @@ cask 'gsport' do
 
   url 'http://downloads.sourceforge.net/sourceforge/gsport/gsport_0.31.dmg'
   name 'GSPort'
+  name 'Portable Apple IIGS emulator'
   homepage 'http://gsport.sourceforge.net'
   license :gpl
 

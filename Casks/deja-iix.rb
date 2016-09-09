@@ -4,6 +4,7 @@ cask 'deja-iix' do
 
   url 'http://www.unmarked.com/labs/deja2/files/d2_latest.zip'
   name 'Deja IIx'
+  name 'AppleWorks emulator'
   # Deja IIx has no official home page
   homepage 'http://apple2history.org/history/ah19/'
   license :unknown
