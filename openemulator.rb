@@ -17,6 +17,7 @@ class Openemulator < Formula
     header_paths = [
       "/usr/include/libxml2",
       Formula["libpng"].include/"libpng16",
+      Formula["portaudio"].include,
       Formula["libsamplerate"].include,
       Formula["libsndfile"].include,
       Formula["libzip"].include,
