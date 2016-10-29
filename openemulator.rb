@@ -21,11 +21,11 @@ class Openemulator < Formula
       Formula["libsndfile"].include,
       Formula["libzip"].include,
       Formula["libzip"].lib/"libzip/include",
-      Formula["portaudio"].include,
+
     ]
 
     library_paths = [
-      HOMEBREW_PREFIX/"lib"
+      HOMEBREW_PREFIX/"lib",
     ]
     library_paths << Formula["libpng"].lib if MacOS.version <= :lion
 
