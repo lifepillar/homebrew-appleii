@@ -30,8 +30,6 @@ class Openemulator < Formula
     library_paths << Formula["libpng"].lib if MacOS.version <= :lion
 
     args = [
-      "-sdk",
-      "macosx#{MacOS.version}",
       "-configuration", "Release",
       "-alltargets",
       "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}",
