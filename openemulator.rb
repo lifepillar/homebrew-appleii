@@ -7,6 +7,7 @@ class Openemulator < Formula
   version "4bef5156"
   head "https://github.com/OpenEmulatorProject/OpenEmulator-OSX.git", :branch => "develop"
 
+  depends_on "flac"
   depends_on "libpng"
   depends_on "libsamplerate"
   depends_on "libsndfile"
@@ -16,6 +17,7 @@ class Openemulator < Formula
   def install
     header_paths = [
       "/usr/include/libxml2",
+      Formula["flac"].include,
       Formula["libpng"].include/"libpng16",
       Formula["portaudio"].include,
       Formula["libsamplerate"].include,
@@ -27,6 +29,7 @@ class Openemulator < Formula
 
     library_paths = [
       HOMEBREW_PREFIX/"lib",
+      Formula["flac"].lib,
     ]
     library_paths << Formula["libpng"].lib if MacOS.version <= :lion
 
