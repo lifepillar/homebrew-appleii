@@ -3,7 +3,7 @@ class Jace < Formula
   homepage "https://sites.google.com/site/brendanrobert/projects/jace"
   url "https://github.com/badvision/jace/releases/download/2.0-stable/Jace.jar"
   version "2.0"
-  sha256 "169df9846dfd496b985c0635717cbb1b93d2e4421d3662640ce32b2737ff6395"
+  sha256 "30f4b5ffa59f56903d90ebb202894ab32f15adc5f3f55ad30ad751635e645c59"
   head "https://github.com/badvision/jace.git"
 
   depends_on :java => "1.8+"
