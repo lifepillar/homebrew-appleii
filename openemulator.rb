@@ -49,6 +49,9 @@ class Openemulator < Formula
   end
 
   def caveats; <<-EOS.undent
+    Openemulator.app has been installed in #{opt_prefix}.
+    You may create an alias in your Applications folder if you want.
+
     OpenEmulator does not contain any ROM file. See:
 
         https://github.com/OpenEmulatorProject/libemulation/issues/15
