@@ -36,7 +36,6 @@ already built GUI applications) use:
 Example:
 
     brew install openemulator --HEAD
-    brew linkapps openemulator
     brew cask install gsport
 
 Refer to the documentation of Homebrew and Homebrew Cask for
