@@ -18,6 +18,11 @@ class Applewin < Formula
     EOS
   end
 
+  def caveats; <<-EOS.undent
+    The executable is called `applewin`.
+    EOS
+  end
+
   test do
     system "false"
   end
