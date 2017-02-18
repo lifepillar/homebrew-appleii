@@ -53,10 +53,10 @@ class Openemulator < Formula
     You may create an alias in your Applications folder if you want.
 
     OpenEmulator does not contain any ROM file. See:
+      https://github.com/OpenEmulatorProject/libemulation/issues/15
 
-        https://github.com/OpenEmulatorProject/libemulation/issues/15
-
-    ROM files must be copied inside #{prefix}/OpenEmulator.app/Contents/Resources/roms.
+    ROM files must be copied into:
+      #{opt_prefix}/OpenEmulator.app/Contents/Resources/roms
     EOS
   end
 
