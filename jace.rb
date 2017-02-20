@@ -1,9 +1,8 @@
 class Jace < Formula
   desc "Logical reproduction of an enhanced Apple //e computer"
   homepage "https://sites.google.com/site/brendanrobert/projects/jace"
-  url "https://github.com/badvision/jace/releases/download/2.0-stable/Jace.jar"
-  version "2.0"
-  sha256 "30f4b5ffa59f56903d90ebb202894ab32f15adc5f3f55ad30ad751635e645c59"
+  url "https://github.com/badvision/jace/releases/download/2.0-Stable/Jace.jar"
+  sha256 "e133bccd95cc5a7b21bd741fa36c99b8dbced249b165edbe9f15bb600b18565d"
   head "https://github.com/badvision/jace.git"
 
   depends_on :java => "1.8+"
