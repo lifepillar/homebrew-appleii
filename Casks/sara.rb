@@ -6,6 +6,7 @@ cask 'sara' do
   name 'Sara'
   name 'Sara Apple /// Emulator'
   homepage 'http://www.blackcatsystems.com/software/sara.html'
+
   license :unknown
 
   app 'SaraOSX/Sara.app'

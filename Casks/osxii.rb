@@ -6,6 +6,7 @@ cask 'osxii' do
   name 'OSXII'
   name 'Apple ][ emulator for OS X'
   homepage 'http://www.zophar.net/macintosh/apple2/osxii.html'
+
   license :gratis
 
   app 'OSXII 0.9 Folder'

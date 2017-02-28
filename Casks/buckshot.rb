@@ -5,6 +5,7 @@ cask 'buckshot' do
   url 'https://apple2.gs/downloads/buckshot/0.03/buckshot.dmg'
   name 'buckshot'
   homepage 'https://apple2.gs/buckshot/'
+
   license :gratis
 
   app 'buckshot.app'

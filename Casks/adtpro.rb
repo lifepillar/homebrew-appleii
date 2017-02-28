@@ -7,6 +7,7 @@ cask 'adtpro' do
   name 'ADTPro'
   name 'Apple Disk Transfer ProDOS'
   homepage 'http://adtpro.sourceforge.net'
+
   license :gratis
 
   app "#{adtpro}/#{adtpro}.app"
