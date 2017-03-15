@@ -33,9 +33,19 @@ already built GUI applications) use:
 
     brew cask install <cask name>
 
-Example:
+Examples:
+
+1. Install the bleeding edge version of OpenEmulator:
 
     brew install openemulator --HEAD
+
+2. Install [Zellyn](https://github.com/zellyn/OpenEmulator-OSX)'s fork of
+   OpenEmulator (with support for the IIe):
+
+    brew install openemulator-zellyn
+
+3. Install GSPort:
+
     brew cask install gsport
 
 Refer to the documentation of Homebrew and Homebrew Cask for
