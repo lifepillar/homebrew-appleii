@@ -4,6 +4,7 @@ class Calvados < Formula
   url "https://github.com/softwarejanitor/calvados.git",
     :revision => "c5dda859f2f5d8fe62369cf050390de05275ce1f"
   version "c5dda859"
+  head "https://github.com/softwarejanitor/calvados.git"
 
   depends_on "gtk"
 
