@@ -12,13 +12,19 @@ class Calvados < Formula
 
   def install
     system "make", "calvados"
-    bin.install "calvados"
+    libexec.install "calvados"
     libexec.install Dir["images"]
+    (bin/"calvados").write <<-eos.undent
+        #!/bin/bash
+        cd #{libexec} && exec "./calvados" "$@"
+    eos
   end
 
   def caveats; <<-EOS.undent
     Calvados is still a work in progress and no
     functionality has been implemented yet.
+
+    The executable is called `calvados`.
     EOS
   end
 
