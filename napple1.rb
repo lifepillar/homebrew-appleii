@@ -2,8 +2,8 @@ class Napple1 < Formula
   desc "Apple I emulator on a text terminal or console using ncurses"
   homepage "https://github.com/nobuh/napple1"
   url "https://github.com/nobuh/napple1.git",
-      :revision => "8c791a116cc65df1c3005a59b632ab21dbde6e2b"
-  version "2.2.1"
+      :revision => "f7e5d6733251bd64f7ad1a353f640f61bb487c75"
+  version "2.3.0"
   head "https://github.com/nobuh/napple1.git"
 
   def install
@@ -15,14 +15,8 @@ class Napple1 < Formula
     libexec.install "napple1"
     (bin/"napple1").write <<-eos.undent
         #!/bin/bash
-        cd #{libexec} && exec "./napple1" "$@"
+        ROMDIR='#{libexec}/rom' exec "#{libexec}/napple1" "$@"
     eos
-  end
-
-  def caveats; <<-EOS.undent
-    When napple1 is running, the working directory is set to
-    #{libexec}
-    EOS
   end
 
   test do
