@@ -37,17 +37,17 @@ Examples:
 
 1. Install the bleeding edge version of OpenEmulator from source:
 
-    brew install openemulator --HEAD
+        brew install openemulator --HEAD
 
 2. Install [4am's snapshot](https://archive.org/details/OpenEmulatorSnapshots)
    (including [Zellyn](https://github.com/zellyn/OpenEmulator-OSX)'s patches
    that add support for the Apple //e):
 
-    brew cask install openemulator
+        brew cask install openemulator
 
 3. Install GSPort:
 
-    brew cask install gsport
+        brew cask install gsport
 
 Refer to the documentation of Homebrew and Homebrew Cask for
 further details about these and other commands.
