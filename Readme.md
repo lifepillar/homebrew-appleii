@@ -35,14 +35,15 @@ already built GUI applications) use:
 
 Examples:
 
-1. Install the bleeding edge version of OpenEmulator:
+1. Install the bleeding edge version of OpenEmulator from source:
 
     brew install openemulator --HEAD
 
-2. Install [Zellyn](https://github.com/zellyn/OpenEmulator-OSX)'s fork of
-   OpenEmulator (with support for the IIe):
+2. Install [4am's snapshot](https://archive.org/details/OpenEmulatorSnapshots)
+   (including [Zellyn](https://github.com/zellyn/OpenEmulator-OSX)'s patches
+   that add support for the Apple //e):
 
-    brew install openemulator-zellyn
+    brew cask install openemulator
 
 3. Install GSPort:
 
