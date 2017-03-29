@@ -1,12 +1,11 @@
 cask 'openemulator' do
-  version '1.0.3'
-  sha256 '20d624e90a25de490459eb4d2125f32af6ea8b2ccec87d8061ccd86c8d669dd1'
+  version '1.0.3.1-20170318'
+  sha256 'e9e8b107b271868cedeb140e32adc3a05f166fb0ea357714c53ab83aa824d160'
 
-  # storage.googleapis.com was verified as official when first introduced to the cask
-  url 'https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/openemulator/OpenEmulator-1.0.3.dmg'
+  url 'https://archive.org/download/OpenEmulatorSnapshots/OpenEmulator-20170318.zip'
   name 'OpenEmulator'
   name 'Accurate, portable emulator of legacy computer systems'
-  homepage 'https://code.google.com/p/openemulator/'
+  homepage 'https://archive.org/details/OpenEmulatorSnapshots'
 
   license :gpl
 
