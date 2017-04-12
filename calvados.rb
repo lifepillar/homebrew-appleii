@@ -2,19 +2,17 @@ class Calvados < Formula
   desc "Gtk app designed as a workalike of CiderPress"
   homepage "https://github.com/softwarejanitor/calvados"
   url "https://github.com/softwarejanitor/calvados.git",
-    :revision => "c5dda859f2f5d8fe62369cf050390de05275ce1f"
-  version "c5dda859"
+    :revision => "fbf7281338c51d12c4f20cc55a08a002ec08a3d2"
+  version "fbf72813"
   head "https://github.com/softwarejanitor/calvados.git"
 
-  depends_on "gtk"
-
-  # Remove GTK flag causing build to fail
-  patch :DATA
+  depends_on "gtk+"
 
   def install
+    inreplace "Makefile", %r{/usr/include}, "#{HOMEBREW_PREFIX}/include"
     system "make", "calvados"
     libexec.install "calvados"
-    libexec.install Dir["images"]
+    libexec.install "images"
     (bin/"calvados").write <<-eos.undent
         #!/bin/bash
         cd #{libexec} && exec "./calvados" "$@"
@@ -33,18 +31,3 @@ class Calvados < Formula
     system "false"
   end
 end
-
-__END__
-diff --git a/Makefile b/Makefile
-index 582085f..849eb42 100644
---- a/Makefile
-+++ b/Makefile
-@@ -3,7 +3,7 @@
- #
- NAME=calvados
- CFLAGS=-g -Wall -o $(NAME)
--GTKFLAGS=-export-dynamic `pkg-config --cflags --libs gtk+-2.0`
-+GTKFLAGS=`pkg-config --cflags --libs gtk+-2.0`
- SRCS=calvados.c select_volume.c closing_dialog.c close_dialog.c show_about.c \
-        disk_sector_viewer_popup.c create_disk_image.c new_archive.c \
-        open_file.c okfunc_create_disk_image.c okfunc_select_volume.c \
