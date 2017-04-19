@@ -2,8 +2,8 @@ class Calvados < Formula
   desc "Gtk app designed as a workalike of CiderPress"
   homepage "https://github.com/softwarejanitor/calvados"
   url "https://github.com/softwarejanitor/calvados.git",
-    :revision => "fbf7281338c51d12c4f20cc55a08a002ec08a3d2"
-  version "fbf72813"
+    :revision => "9df8ea81d84b4095f74c8eb998b3403fccebb026"
+  version "9df8ea81"
   head "https://github.com/softwarejanitor/calvados.git"
 
   depends_on "gtk+"
