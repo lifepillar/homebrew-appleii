@@ -2,8 +2,8 @@ class Octalyzer < Formula
   desc "Apple //e Emulator for Millennials!"
   homepage "http://octalyzer.com/"
   url "http://yewsi.com/octalyzer/octalyzer-mac.zip"
-  version "2017-03-27"
-  sha256 "61eaae09738af5df08be897a877cb723edafc05473ab9e5fd7952f09447929a3"
+  version "2017-05-15"
+  sha256 "9c81f9f21f1f59d719be0e312b475b8bda3d4ff0764eba6cc84bb5274e01867a"
 
   def install
     bin.install "octalyzer"
