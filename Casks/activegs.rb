@@ -7,7 +7,5 @@ cask 'activegs' do
   name 'Apple IIGS emulator'
   homepage 'http://activegs.freetoolsassociation.com'
 
-  license :gratis
-
   app 'ActiveGS.app'
 end

@@ -9,7 +9,5 @@ cask 'deja-iix' do
   # Deja IIx has no official home page
   homepage 'http://apple2history.org/history/ah19/'
 
-  license :unknown
-
   app 'Deja IIx.app'
 end

@@ -6,7 +6,5 @@ cask 'buckshot' do
   name 'buckshot'
   homepage 'https://apple2.gs/buckshot/'
 
-  license :gratis
-
   app 'buckshot.app'
 end

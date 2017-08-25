@@ -7,7 +7,5 @@ cask 'openemulator' do
   name 'Accurate, portable emulator of legacy computer systems'
   homepage 'https://archive.org/details/OpenEmulatorSnapshots'
 
-  license :gpl
-
   app 'OpenEmulator.app'
 end

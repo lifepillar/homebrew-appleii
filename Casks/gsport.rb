@@ -7,8 +7,6 @@ cask 'gsport' do
   name 'Portable Apple IIGS emulator'
   homepage 'http://gsport.sourceforge.net'
 
-  license :gpl
-
   app 'GSPort/GSPort.app'
 
   caveats do

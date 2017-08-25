@@ -7,8 +7,6 @@ cask 'catakig' do
   name 'Apple II emulator'
   homepage 'http://www.zophar.net/macintosh/apple2/catakig.html'
 
-  license :gratis
-
   app 'Catakig'
 
   caveats do

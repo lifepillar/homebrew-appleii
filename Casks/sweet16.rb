@@ -8,7 +8,5 @@ cask 'sweet16' do
   name 'The most capable Apple IIGS emulator for OS X'
   homepage 'http://www.sheppyware.net/software-mac/sweet16/'
 
-  license :gratis
-
   app "#{sweet16}/Sweet16.app"
 end
