@@ -1,8 +1,8 @@
 class Nulib2 < Formula
   desc "Disk and file archive program for NuFX archives"
   homepage "http://nulib.com"
-  url "https://github.com/fadden/nulib2/archive/v3.0.0.tar.gz"
-  sha256 "0a0b33cf459d3b2a053f5ef6bbe9b0407cac3ab5e3f617fda06da3b6df949f85"
+  url "https://github.com/fadden/nulib2/archive/v3.1.0.tar.gz"
+  sha256 "383127d6966edae09da550f4d7197e68eed101d239f2a23cee42dc086506af12"
   head "https://github.com/fadden/nulib2.git"
 
   def install
