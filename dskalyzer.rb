@@ -1,8 +1,8 @@
 class Dskalyzer < Formula
   desc "Apple II disk image management tool"
   homepage "http://octalyzer.com/dskalyzer/"
-  url "https://github.com/paleotronic/dskalyzer/archive/v0.1.2.tar.gz"
-  sha256 "221ebcec5464455fb6e061bb92f0151033d7c63d314082566ac870088404a697"
+  url "https://github.com/paleotronic/dskalyzer/archive/v0.1.3.tar.gz"
+  sha256 "6e150746eb62bfa80b8edc513cd786f6a7917b837fe1ecf199eac132ff6b9d03"
   head "https://github.com/paleotronic/dskalyzer.git"
 
   depends_on "go" => :build
@@ -13,10 +13,10 @@ class Dskalyzer < Formula
 
     (buildpath/"src/github.com/paleotronic/dskalyzer").install buildpath.children
     cd "src/github.com/paleotronic/dskalyzer" do
-      chmod 0755, "make.sh"
       system "./make.sh"
     end
-    bin.install "src/github.com/paleotronic/dskalyzer/bin/dskalyzer-darwin-amd64" => "dskalyzer"
+    system "unzip", "src/github.com/paleotronic/dskalyzer/publish/dskalyzer-darwin-amd64.zip"
+    bin.install "dskalyzer" => "dskalyzer"
   end
 
   test do
