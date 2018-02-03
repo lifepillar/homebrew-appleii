@@ -10,7 +10,7 @@ cask 'catakig' do
   app 'Catakig'
 
   caveats do
-    <<-EOS.undent
+    <<~EOS
     ROMs files must be put in /Applications/Catakig/ROMs.
     EOS
   end

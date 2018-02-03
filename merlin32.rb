@@ -15,7 +15,7 @@ class Merlin32 < Formula
     prefix.install "Library"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Macro definition files are in #{prefix}/Library.
     EOS
   end

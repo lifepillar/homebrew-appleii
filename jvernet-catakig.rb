@@ -21,7 +21,7 @@ class JvernetCatakig < Formula
     prefix.install "build/Release/Catakig.app"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Catakig.app has been installed in #{opt_prefix}.
     You may create an alias in your Applications folder if you want.
     EOS

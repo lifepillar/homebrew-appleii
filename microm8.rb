@@ -9,7 +9,7 @@ class Microm8 < Formula
     bin.install "microm8"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     To get started:
         microm8 -help
     EOS

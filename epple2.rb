@@ -44,7 +44,7 @@ class Epple2 < Formula
     (etc/"epple2").install "conf/epple2.conf" unless File.exist?(etc/"epple2/epple2.conf")
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Please read Warning Concerning Copyright Restrictions here:
 
         http://mosher.mine.nu/apple2/site/

@@ -37,7 +37,7 @@ class Bmp2dhr < Formula
     bin.install "xpack/xpack"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     A template directory can be copied from #{libexec}/template
 
     Post-processing scripts are available at #{libexec}/scripts

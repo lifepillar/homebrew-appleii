@@ -9,7 +9,7 @@ class Linapple < Formula
   depends_on "sdl"
 
   def shim_script(target)
-    <<-EOS.undent
+    <<~EOS
       #!/bin/bash
       cd "#{libexec}"; exec ./#{target} "$@"; cd -
     EOS

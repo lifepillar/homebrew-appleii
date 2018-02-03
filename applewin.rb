@@ -12,13 +12,13 @@ class Applewin < Formula
     libexec.install Dir["*"]
 
     bin.mkpath
-    (bin/"applewin").write <<-EOS.undent
+    (bin/"applewin").write <<~EOS
       #!/bin/bash
       wine #{libexec}/Applewin.exe "$@"
     EOS
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     The executable is called `applewin`.
     EOS
   end

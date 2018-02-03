@@ -13,13 +13,13 @@ class Calvados < Formula
     system "make", "calvados"
     libexec.install "calvados"
     libexec.install "images"
-    (bin/"calvados").write <<-eos.undent
+    (bin/"calvados").write <<~EOS
         #!/bin/bash
         cd #{libexec} && exec "./calvados" "$@"
-    eos
+    EOS
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Calvados is still a work in progress and no
     functionality has been implemented yet.
 

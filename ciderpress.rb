@@ -13,13 +13,13 @@ class Ciderpress < Formula
     libexec.install Dir["*"]
 
     bin.mkpath
-    (bin/"ciderpress").write <<-EOS.undent
+    (bin/"ciderpress").write <<~EOS
       #!/bin/bash
       wine ${HOME}'/.wine/drive_c/Program Files (x86)/faddenSoft/CiderPress/CiderPress.exe' "$@"
     EOS
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     To complete the installation execute:
 
       cd #{libexec}

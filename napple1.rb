@@ -13,10 +13,10 @@ class Napple1 < Formula
     libexec.install "core"
     libexec.install "rom"
     libexec.install "napple1"
-    (bin/"napple1").write <<-eos.undent
+    (bin/"napple1").write <<~EOS
         #!/bin/bash
         ROMDIR='#{libexec}/rom' exec "#{libexec}/napple1" "$@"
-    eos
+    EOS
   end
 
   test do

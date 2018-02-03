@@ -48,7 +48,7 @@ class OpenemulatorZellyn < Formula
     prefix.install "build/Release/OpenEmulator.app"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Openemulator.app has been installed in #{opt_prefix}.
     You may create an alias in your Applications folder if you want.
     EOS

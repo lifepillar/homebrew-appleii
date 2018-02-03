@@ -12,13 +12,13 @@ class Faux1 < Formula
     libexec.install "apps"
     libexec.install "rom"
     libexec.install "faux1"
-    (bin/"faux1").write <<-eos.undent
+    (bin/"faux1").write <<~EOS
         #!/bin/bash
         cd #{libexec} && exec "./faux1" "$@"
-    eos
+    EOS
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     When faux1 is running, the working directory is set to
     #{libexec}
     EOS

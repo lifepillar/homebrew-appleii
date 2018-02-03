@@ -18,7 +18,7 @@ class Jace < Formula
     bin.write_jar_script libexec/"Jace.jar", "jace", "-Duser.dir=#{etc}"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Jace configuration is saved in
         #{etc}/.jace.conf
     EOS
