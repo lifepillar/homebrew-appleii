@@ -1,9 +1,8 @@
 class Plasma < Formula
   desc "Proto Language AsSeMbler for Apple"
   homepage "https://github.com/dschmenk/PLASMA"
-  url "https://github.com/dschmenk/PLASMA.git",
-      :revision => "7f9975c4429e07e5687b947854ded7922f0561d5"
-  version "7f9975c4"
+  url "https://github.com/dschmenk/PLASMA/archive/v1.0.0.tar.gz"
+  sha256 "cd5c9bbc6653092305ccb560a9c08a77f2ca2a3c027229fc9f93f3e0774fd849"
   head "https://github.com/dschmenk/PLASMA.git"
 
   option "with-test", "Verify the build with `make test`"
@@ -22,6 +21,11 @@ class Plasma < Formula
     libexec.install Dir["*"]
     bin.write_exec_script libexec/"src/plasm"
     bin.write_exec_script libexec/"src/plvm"
+  end
+
+  def caveats; <<~EOS
+    If you see errors during the first `make`, you may safely ignore them.
+    EOS
   end
 
   test do
