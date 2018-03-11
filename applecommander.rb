@@ -1,28 +1,28 @@
 class Applecommander < Formula
   desc "Move data between Apple ][ disk images and native filesystem"
-  homepage "http://applecommander.sourceforge.net"
+  homepage "http://applecommander.github.io"
   # The version from sites.google.com is more recent than the ones from SourceForge
-  url "https://sites.google.com/site/drjohnbmatthews/applecommander/AppleCommander-1.3.5.14-ac.jar"
-  sha256 "84077fd4990398a6212a3ac2450c15979c071497c34a680666c9e24db5b4330b"
+  url "https://github.com/AppleCommander/AppleCommander/releases/download/v1-4-0/AppleCommander-ac-1.4.0.jar"
+  sha256 "4994afa46b67b30dd74c1964caca94c8df1a6e8e9bad3e141ecb3a4519256eb2"
 
   option "with-gui", "Additionally install the GUI."
 
-  depends_on :java => "1.6+" # Not tested with previous versions
+  depends_on :java => "1.8+" # Not tested with previous versions
 
   if build.with? "gui"
     resource "AppleCommander-GUI" do
-      url "https://sites.google.com/site/drjohnbmatthews/applecommander/AppleCommander-1.3.5.14.jar"
-      sha256 "103531d7d06a9d607aebb0a2abc0e0e72ee26313e9ec0110f6d0ad210f8fba46"
+      url "https://github.com/AppleCommander/AppleCommander/releases/download/v1-4-0/AppleCommander-macosx-1.4.0.jar"
+      sha256 "e35ce5676f8329da3f61e4a6be3dc9f5c0776524033889473db0c4c663e503be"
     end
   end
 
   def install
-    libexec.install "AppleCommander-1.3.5.14-ac.jar"
-    bin.write_jar_script libexec/"AppleCommander-1.3.5.14-ac.jar", "applecommander"
+    libexec.install "AppleCommander-ac-1.4.0.jar"
+    bin.write_jar_script libexec/"AppleCommander-ac-1.4.0.jar", "applecommander"
     if build.with? "gui"
       resource("AppleCommander-GUI").stage do
-        libexec.install "AppleCommander-1.3.5.14.jar"
-        bin.write_jar_script libexec/"AppleCommander-1.3.5.14.jar", "applecommander-gui"
+        libexec.install "AppleCommander-macosx-1.4.0.jar"
+        bin.write_jar_script libexec/"AppleCommander-macosx-1.4.0.jar", "applecommander-gui", "-XstartOnFirstThread"
       end
     end
   end
