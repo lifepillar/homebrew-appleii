@@ -1,8 +1,8 @@
 class Plasma < Formula
   desc "Proto Language AsSeMbler for Apple"
   homepage "https://github.com/dschmenk/PLASMA"
-  url "https://github.com/dschmenk/PLASMA/archive/v1.0.0.tar.gz"
-  sha256 "cd5c9bbc6653092305ccb560a9c08a77f2ca2a3c027229fc9f93f3e0774fd849"
+  url "https://github.com/dschmenk/PLASMA/archive/v1.1.0.tar.gz"
+  sha256 "a7294c409453406acbb947f6f74c0c947bda1df11db1fcc90cc1f33f0028d37b"
   head "https://github.com/dschmenk/PLASMA.git"
 
   option "with-test", "Verify the build with `make test`"
@@ -11,7 +11,8 @@ class Plasma < Formula
 
   def install
     cd "src" do
-      begin # For some reason, the first make fails, but second builds correctly
+      begin
+        # For some reason, the first make fails, but second builds correctly
         system "make"
       rescue
       end
