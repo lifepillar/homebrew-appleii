@@ -1,9 +1,9 @@
 class Microm8 < Formula
   desc "The next generation of emulators"
-  homepage "http://www.microm8.com"
-  url "http://microm8.com/download/microm8-mac.zip"
-  version "0.0.1alpha-201802230153" # build 201802230153
-  sha256 "4a1128038a49691b89e9e3717e7f7d79cad5243fa827946b2ee8bbd4578cca1c"
+  homepage "https://paleotronic.com/microm8/"
+  url "https://paleotronic.com/download/microm8-mac.zip"
+  version "0.0.1alpha-201806041256" # build 201806041256 
+  sha256 "f52948fba858b9e033152559fa90c370b28aac19b31d22b05e4b470ab110e231"
 
   def install
     bin.install "microm8"
