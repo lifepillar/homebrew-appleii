@@ -1,12 +1,14 @@
 cask 'adtpro' do
-  version '2.0.1'
-  sha256 '26384b16d3d5b0bae1afde511be8c6f087d5ecd203d2a4197ff2874de4de860f'
+  version '2.0.2'
+  sha256 '29e711906520172684e363ec4e7b55d09d915c0cf22444df4403595d28f47ccf'
 
-  adtpro = 'ADTPro-2.0.1'
-  url "http://downloads.sourceforge.net/sourceforge/adtpro/#{adtpro}.dmg"
+  adtpro = "ADTPro-#{version}"
+  url "https://github.com/ADTPro/adtpro/releases/download/v_#{version.tr('.','_')}/#{adtpro}.dmg"
+  appcast "https://github.com/ADTPro/adtpro/releases.atom"
   name 'ADTPro'
   name 'Apple Disk Transfer ProDOS'
-  homepage 'http://adtpro.sourceforge.net'
+  homepage 'http://adtpro.com'
 
-  app "#{adtpro}/#{adtpro}.app"
+  # Copy the whole folder
+  app "#{adtpro}"
 end
