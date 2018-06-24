@@ -2,7 +2,7 @@ cask 'gsplus' do
   version '0.13'
   sha256 '7a170868901eca3e1a88c15277709340f68e9de6ccc6b010aa9dc849f5e71903'
 
-  url 'http://apple2.gs/downloads/plusbuilds/0.13/GSplus-Install.dmg'
+  url "http://apple2.gs/downloads/plusbuilds/#{version}/GSplus-Install.dmg"
   name 'GSplus'
   name 'Apple IIGS emulator based on KEGS and GSPort'
   homepage 'https://apple2.gs/plus/'
