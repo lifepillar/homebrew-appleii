@@ -3,9 +3,8 @@ class Wozardry < Formula
   homepage "https://github.com/a2-4am/wozardry"
   url "https://github.com/a2-4am/wozardry.git",
     :branch => "master",
-    :revision => "6c3642ed862b6a81d19302f5af2fc2fa8c9582be"
-  version "6c3642ed"
-  sha256 "8a1088be1628f593c9d00b0e91d47a3820016d4d2b80a4b047cfedf61b34c9c4"
+    :revision => "c39f15a34e314e02b665cbe397b8ba1000bbc447"
+  version "c39f15a3"
   head "https://github.com/a2-4am/wozardry.git", :branch => "master"
 
   depends_on "python"
@@ -28,8 +27,8 @@ class Wozardry < Formula
     end
 
     libexec.install Dir["*"]
-    (libexec/"wozardry").chmod 0755
-    (bin/"wozardry").write_env_script("#{libexec}/wozardry", :PYTHONPATH => ENV["PYTHONPATH"])
+    (libexec/"wozardry.py").chmod 0755
+    (bin/"wozardry").write_env_script("#{libexec}/wozardry.py", :PYTHONPATH => ENV["PYTHONPATH"])
   end
 
   test do
