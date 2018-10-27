@@ -1,27 +1,25 @@
 class Jace < Formula
   desc "Logical reproduction of an enhanced Apple //e computer"
   homepage "https://sites.google.com/site/brendanrobert/projects/jace"
-  url "https://github.com/badvision/jace/releases/download/2.0-Stable/Jace.jar"
-  sha256 "e133bccd95cc5a7b21bd741fa36c99b8dbced249b165edbe9f15bb600b18565d"
+  url "https://github.com/badvision/jace/archive/2.0-Stable.tar.gz"
+  version "2.0-Stable"
+  sha256 "eb3f6f044d05326e43873eac93ebfad778c47f4c286ba9654d759b10f0fb46e1"
   head "https://github.com/badvision/jace.git"
 
-  depends_on :java => "1.8+"
-  depends_on "maven" => :build if build.head?
+  depends_on "maven" => :build
+  depends_on :java => "1.8"
 
   def install
-    if head?
-      system "mvn", "package"
-      libexec.install "target/Jace.jar"
-    else
-      libexec.install "Jace.jar"
-    end
-    bin.write_jar_script libexec/"Jace.jar", "jace", "-Duser.dir=#{etc}"
+    system "./build.sh"
+    libexec.install "target/Jace.jar"
+    bin.write_jar_script libexec/"Jace.jar", "jace", "-Duser.dir=#{etc}", :java_version => "1.8"
   end
 
   def caveats; <<~EOS
+    The executable is called `jace`.
     Jace configuration is saved in
         #{etc}/.jace.conf
-    EOS
+  EOS
   end
 
   test do
