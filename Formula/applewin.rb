@@ -1,8 +1,8 @@
 class Applewin < Formula
   desc "Apple II emulator for Windows"
   homepage "https://github.com/AppleWin/AppleWin"
-  url "https://github.com/AppleWin/AppleWin/releases/download/v1.27.9.0/AppleWin1.27.9.0.zip"
-  sha256 "b5146b858eb94d298490a3943d979dc8144c063d953df0ed5a2e87f2ce3aea04"
+  url "https://github.com/AppleWin/AppleWin/releases/download/v1.27.10.0/AppleWin1.27.10.0.zip"
+  sha256 "37fb89494ed673f73261108757a6d8143f60a97d72a277d0b2d0d2a5ad08ad71"
 
   bottle :unneeded
 
@@ -20,7 +20,7 @@ class Applewin < Formula
 
   def caveats; <<~EOS
     The executable is called `applewin`.
-    EOS
+  EOS
   end
 
   test do
