@@ -1,8 +1,8 @@
 class Applewin < Formula
   desc "Apple II emulator for Windows"
   homepage "https://github.com/AppleWin/AppleWin"
-  url "https://github.com/AppleWin/AppleWin/releases/download/v1.27.10.0/AppleWin1.27.10.0.zip"
-  sha256 "37fb89494ed673f73261108757a6d8143f60a97d72a277d0b2d0d2a5ad08ad71"
+  url "https://github.com/AppleWin/AppleWin/releases/download/v1.28.0.0/AppleWin1.28.0.0.zip"
+  sha256 "dda2d4c6787684674d24dce00f8ac8c03a1bf812057889a762605bc1b8983fe9"
 
   bottle :unneeded
 
