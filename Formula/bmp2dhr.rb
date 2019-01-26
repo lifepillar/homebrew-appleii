@@ -13,16 +13,16 @@ class Bmp2dhr < Formula
 
   def install
     cd "a2fcbmp" do
-      system ENV.cc, "-DMINGW", "-arch", "i386", "-Wno-pointer-sign", "-Wno-comment", "-o", "a2b", "a2fcbmp.c"
+      system ENV.cc, "-DMINGW", "-Wno-pointer-sign", "-Wno-comment", "-o", "a2b", "a2fcbmp.c"
     end
     cd "src" do
-      system ENV.cc, "-DMINGW", "-arch", "i386", "-Wno-pointer-sign", "-Wno-comment", "-o", "b2d", "b2d.c"
+      system ENV.cc, "-DMINGW", "-Wno-pointer-sign", "-Wno-comment", "-o", "b2d", "b2d.c"
     end
     cd "magick" do
-      system ENV.cc, "-DMINGW", "-arch", "i386", "-Wno-pointer-sign", "-Wno-comment", "-o", "m2s", "m2s.c"
+      system ENV.cc, "-DMINGW", "-Wno-pointer-sign", "-Wno-comment", "-o", "m2s", "m2s.c"
     end
     cd "xpack" do
-      system ENV.cc, "-DMINGW", "-arch", "i386", "-Wno-pointer-sign", "-Wno-comment", "-o", "xpack", "xpack.c"
+      system ENV.cc, "-DMINGW", "-Wno-pointer-sign", "-Wno-comment", "-o", "xpack", "xpack.c"
     end
     libexec.install "bmp"
     libexec.install "dither"
@@ -41,7 +41,7 @@ class Bmp2dhr < Formula
     A template directory can be copied from #{libexec}/template
 
     Post-processing scripts are available at #{libexec}/scripts
-    EOS
+  EOS
   end
 
   test do
