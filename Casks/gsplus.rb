@@ -1,6 +1,6 @@
-cask 'gsplus' do
-  version '0.13'
-  sha256 '7a170868901eca3e1a88c15277709340f68e9de6ccc6b010aa9dc849f5e71903'
+cask "gsplus" do
+  version '0.14'
+  sha256 '63015f83211fccedd01707cca56342f5dba58127d5b336bc9c33be51b93d8882'
 
   url "http://apple2.gs/downloads/plusbuilds/#{version}/GSplus-Install.dmg"
   name 'GSplus'
@@ -12,9 +12,8 @@ cask 'gsplus' do
 
   app 'GSplus.app', target: "#{gsplus_folder}/GSplus.app"
   binary shimscript, target: 'gsplus'
-  artifact 'COPYING.txt', target: "#{gsplus_folder}/COPYING.txt"
+  artifact 'license', target: "#{gsplus_folder}/license"
   artifact 'gsplusmanual.pdf', target: "#{gsplus_folder}/gsplusmanual.pdf"
-  artifact 'gsplusmanual.txt', target: "#{gsplus_folder}/gsplusmanual.txt"
   artifact 'README.txt', target: "#{gsplus_folder}/README.txt"
 
   preflight do
