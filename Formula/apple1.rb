@@ -12,6 +12,7 @@ class Apple1 < Formula
     libexec.install "./apple1"
     libexec.install "./apple1.rom"
     libexec.install "./apple1.dbg"
+    man1.install "./src/apple1.1"
     (bin/"apple1").write <<~EOS
       #!/bin/bash
       cd #{libexec} && exec "./apple1" "$@"
