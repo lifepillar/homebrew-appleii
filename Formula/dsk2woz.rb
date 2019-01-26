@@ -2,8 +2,8 @@ class Dsk2woz < Formula
   desc "Convert Apple II DSK images to WOZ format"
   homepage "https://github.com/tomharte/dsk2woz"
   url "https://github.com/TomHarte/dsk2woz.git",
-    :revision => "4dc9ba551a5888cd685beb9a9180d227417c4062"
-  version "4dc9ba55"
+    :revision => "fbe7398d0f0ab6c4c88088b5bb1f35fd0e2f68f3"
+  version "20180607"  # Date of commit
   head "https://github.com/TomHarte/dsk2woz.git"
 
   def install

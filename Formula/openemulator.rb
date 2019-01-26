@@ -2,10 +2,10 @@ class Openemulator < Formula
   desc "Accurate, portable emulator of legacy computer systems"
   homepage "https://github.com/OpenEmulatorProject/OpenEmulator-OSX"
   url "https://github.com/OpenEmulatorProject/OpenEmulator-OSX.git",
-       :branch => "develop",
-       :revision => "4bef515645531d6574c6d10e305f9c0f17bbcba6"
-  version "4bef5156"
-  head "https://github.com/OpenEmulatorProject/OpenEmulator-OSX.git", :branch => "develop"
+    :revision => "dc41cad2a741894f9e6c0a4b13caaf55fe2cd68f"
+  version "20181226" # Date of commit
+  head "https://github.com/OpenEmulatorProject/OpenEmulator-OSX.git",
+    :branch   => "develop"
 
   depends_on "flac"
   depends_on "libpng"
@@ -17,12 +17,12 @@ class Openemulator < Formula
   def install
     header_paths = [
       "/usr/include/libxml2",
-      Formula["flac"].include,
-      Formula["libpng"].include/"libpng16",
-      Formula["portaudio"].include,
-      Formula["libsamplerate"].include,
-      Formula["libsndfile"].include,
-      Formula["libzip"].include,
+      Formula["flac"].opt_include,
+      Formula["libpng"].opt_include/"libpng16",
+      Formula["portaudio"].opt_include,
+      Formula["libsamplerate"].opt_include,
+      Formula["libsndfile"].opt_include,
+      Formula["libzip"].opt_include,
       Formula["libzip"].lib/"libzip/include",
 
     ]
@@ -31,20 +31,17 @@ class Openemulator < Formula
       HOMEBREW_PREFIX/"lib",
       Formula["flac"].lib,
     ]
-    library_paths << Formula["libpng"].lib if MacOS.version <= :lion
+    library_paths << Formula["libpng"].lib #if MacOS.version <= :lion
 
-    args = [
-      "-configuration", "Release",
+    xcodebuild "-configuration", "Release",
       "-alltargets",
       "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}",
       "SYMROOT=build",
       "PREFIX=#{prefix}",
       "ARCHS=x86_64",
       "HEADER_SEARCH_PATHS=#{header_paths.join(" ")}",
-      "LIBRARY_SEARCH_PATHS=#{library_paths.join(" ")}"
-    ]
-
-    xcodebuild *args
+      "LIBRARY_SEARCH_PATHS=#{library_paths.join(" ")}",
+      "OTHER_LIBTOOLFLAGS=-L/usr/local/lib/ -lpng16 -search_paths_first"
     prefix.install "build/Release/OpenEmulator.app"
   end
 
@@ -57,7 +54,7 @@ class Openemulator < Formula
 
     ROM files must be copied into:
       #{opt_prefix}/OpenEmulator.app/Contents/Resources/roms
-    EOS
+  EOS
   end
 
   test do

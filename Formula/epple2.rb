@@ -3,7 +3,7 @@ class Epple2 < Formula
   homepage "http://mosher.mine.nu/epple2"
   url "https://github.com/cmosher01/Epple-II.git",
        :revision => "ce3badc281221127408795193b076369b7013fbb"
-  version "ce3badc2"
+  version "20190126"  # Date of commit
   head "https://github.com/cmosher01/Epple-II.git"
 
   depends_on "autoconf" => :build

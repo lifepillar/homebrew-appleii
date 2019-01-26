@@ -3,7 +3,7 @@ class Calvados < Formula
   homepage "https://github.com/softwarejanitor/calvados"
   url "https://github.com/softwarejanitor/calvados.git",
     :revision => "f46ea157e7b0d950e0d4fb6a582f19b6ab3057d1"
-  version "f46ea157"
+  version "20190125"  # Date of commit
   head "https://github.com/softwarejanitor/calvados.git"
 
   depends_on "pkg-config" => :build
