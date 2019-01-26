@@ -2,20 +2,29 @@ class Calvados < Formula
   desc "Gtk app designed as a workalike of CiderPress"
   homepage "https://github.com/softwarejanitor/calvados"
   url "https://github.com/softwarejanitor/calvados.git",
-    :revision => "9df8ea81d84b4095f74c8eb998b3403fccebb026"
-  version "9df8ea81"
+    :revision => "f46ea157e7b0d950e0d4fb6a582f19b6ab3057d1"
+  version "f46ea157"
   head "https://github.com/softwarejanitor/calvados.git"
 
+  depends_on "glib"
   depends_on "gtk+"
+  depends_on "pkg-config" => :build
 
   def install
-    inreplace "Makefile", %r{/usr/include}, "#{HOMEBREW_PREFIX}/include"
+    gtkx = Formula["gtk+"]
+    glib = Formula["glib"]
+    glib_include = "#{glib.opt_include}/glib-2.0"
+    inreplace "Makefile" do |s|
+      s.gsub! "GTKFLAGS=", "GTKFLAGS=-I#{gtkx.opt_include}/gtk-2.0 "
+      s.gsub! "INCLUDES=-I/usr/include/glib-2.0", "INCLUDES=-I#{glib_include} -I#{glib_include}/glib"
+      s.gsub! "/usr/include", "#{HOMEBREW_PREFIX}/include"
+    end
     system "make", "calvados"
     libexec.install "calvados"
     libexec.install "images"
     (bin/"calvados").write <<~EOS
-        #!/bin/bash
-        cd #{libexec} && exec "./calvados" "$@"
+      #!/bin/bash
+      cd #{libexec} && exec "./calvados" "$@"
     EOS
   end
 
@@ -24,7 +33,7 @@ class Calvados < Formula
     functionality has been implemented yet.
 
     The executable is called `calvados`.
-    EOS
+  EOS
   end
 
   test do
