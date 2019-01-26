@@ -21,8 +21,13 @@ class AppleIiDiskTools < Formula
     system "make", "install"
   end
 
+  def caveats; <<-EOS
+    This project has been deprecated.
+  EOS
+  end
+
   test do
-    system "a2catalog", "-T"
-    system "a2nibblize", "-T"
+    system "#{bin}/a2catalog", "-T"
+    system "#{bin}/a2nibblize", "-T"
   end
 end

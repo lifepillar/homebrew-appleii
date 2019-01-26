@@ -6,8 +6,8 @@ class Apple2ImageEncoder < Formula
   sha256 "493fbeb36121e7d160ab9e3fbb32eaf42dbc4bc4992a692fc1cd60fb7c4caf61"
   head "https://github.com/a2geek/apple2-image-encoder.git"
 
-  depends_on :java => "1.8+"
   depends_on "maven" => :build
+  depends_on :java => "1.8+"
 
   def install
     system "mvn", "package"
@@ -17,7 +17,7 @@ class Apple2ImageEncoder < Formula
 
   def caveats; <<~EOS
     The executable is called apple2-image-encoder.
-    EOS
+  EOS
   end
 
   test do
