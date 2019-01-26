@@ -1,8 +1,7 @@
 class Applecommander < Formula
   desc "Move data between Apple ][ disk images and native filesystem"
   homepage "http://applecommander.github.io"
-  # The version from sites.google.com is more recent than the ones from SourceForge
-  url "https://github.com/AppleCommander/AppleCommander/releases/download/v1-4-0/AppleCommander-ac-1.4.0.jar"
+  url "https://github.com/AppleCommander/AppleCommander/releases/download/v1-5-0/AppleCommander-ac-1.5.0.jar"
   sha256 "4994afa46b67b30dd74c1964caca94c8df1a6e8e9bad3e141ecb3a4519256eb2"
 
   option "with-gui", "Additionally install the GUI."

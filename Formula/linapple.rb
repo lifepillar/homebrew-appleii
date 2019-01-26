@@ -1,6 +1,6 @@
 class Linapple < Formula
   desc "Apple 2, 2e cross-platform emulator"
-  homepage "http://linapple.sourceforge.net"
+  homepage "http://linapple.sourceforge.io"
   url "http://beotiger.com/download/linapple_src-2b"
   sha256 "96f837fe902a00a2b100766d234120f43f70a1e9c19198e442157516da4789fe"
   head "https://github.com/timob/linapple.git"

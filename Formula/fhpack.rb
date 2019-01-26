@@ -11,6 +11,6 @@ class Fhpack < Formula
   end
 
   test do
-    system "fhpack"
+    system "#{bin}/fhpack"
   end
 end

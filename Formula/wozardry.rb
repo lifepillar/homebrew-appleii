@@ -2,8 +2,8 @@ class Wozardry < Formula
   desc "Multi-purpose tool for manipulating .woz disk images"
   homepage "https://github.com/a2-4am/wozardry"
   url "https://github.com/a2-4am/wozardry/archive/1.0.tar.gz"
-  head "https://github.com/a2-4am/wozardry.git", :branch => "master"
   sha256 "2f694c64afeb899975c200ce47cdea4d31811e1ca224804dda4d92952e0a9723"
+  head "https://github.com/a2-4am/wozardry.git", :branch => "master"
 
   depends_on "python"
 
@@ -27,6 +27,11 @@ class Wozardry < Formula
     libexec.install Dir["*"]
     (libexec/"wozardry.py").chmod 0755
     (bin/"wozardry").write_env_script("#{libexec}/wozardry.py", :PYTHONPATH => ENV["PYTHONPATH"])
+  end
+
+  def caveats; <<~EOS
+    To get started, type `wozardry -h`.
+  EOS
   end
 
   test do

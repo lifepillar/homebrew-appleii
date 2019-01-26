@@ -28,7 +28,7 @@ class Ciderpress < Formula
     and choose No-Question-Asked Installation.
 
     Ciderpress can then be launched from the command-line with `ciderpress`.
-    EOS
+  EOS
   end
 
   test do

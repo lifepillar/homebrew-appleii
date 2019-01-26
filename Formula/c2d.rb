@@ -6,9 +6,9 @@ class C2d < Formula
   head "https://github.com/datajerk/c2d.git"
 
   def install
-    system ENV.cc, "-Wall", "-Wno-missing-braces", "-I.", "-O3", "-o", "c2d", "c2d.c", "-lm"
-    system ENV.cc, "-Wall", "-O3", "-o", "bin/text2page", "text2page.c", "-lm"
-    system ENV.cc, "-Wall", "-O3", "-o", "bin/page2text", "page2text.c", "-lm"
+    system ENV.cc, "-I.", "-O3", "-o", "c2d", "c2d.c", "-lm"
+    system ENV.cc, "-O3", "-o", "bin/text2page", "text2page.c", "-lm"
+    system ENV.cc, "-O3", "-o", "bin/page2text", "page2text.c", "-lm"
     bin.install "c2d"
     bin.install "bin/text2page"
     bin.install "bin/page2text"

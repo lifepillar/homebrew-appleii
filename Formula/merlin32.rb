@@ -1,5 +1,5 @@
 class Merlin32 < Formula
-  desc "Multi-pass Cross Assembler for 6502/65c02/65c816 processors."
+  desc "Multi-pass Cross Assembler for 6502/65c02/65c816 processors"
   homepage "http://www.brutaldeluxe.fr/products/crossdevtools/merlin/"
   url "http://www.brutaldeluxe.fr/products/crossdevtools/merlin/Merlin32_v1.0.zip"
   sha256 "eb9203b22dba23e70382ab876112e826d4c6bb3d04004f712fd8a9df56778e39"
@@ -12,16 +12,16 @@ class Merlin32 < Formula
       system "make", "-f", "linux_makefile"
     end
     bin.install "Source/Merlin32"
-    prefix.install "Library"
+    prefix.install "Library" => "lib"
   end
 
   def caveats; <<~EOS
-    Macro definition files are in #{prefix}/Library.
-    EOS
+    Macro definition files are in #{lib}.
+  EOS
   end
 
   test do
-    system "Merlin32"
+    system "#{bin}/Merlin32"
   end
 end
 
