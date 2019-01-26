@@ -3,7 +3,7 @@ class FozztexxTcpser < Formula
   homepage "https://github.com/fozztexx/tcpser"
   url "https://github.com/FozzTexx/tcpser.git",
     :revision => "9413ac1d37ec5750472a8b8b59b4caf18169be05"
-  version "20180402"  # Date of commit
+  version "20180402" # Date of commit
   head "https://github.com/FozzTexx/tcpser.git", :branch => "master"
 
   def install

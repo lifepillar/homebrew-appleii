@@ -3,7 +3,7 @@ class Apple1 < Formula
   homepage "https://github.com/RyuKojiro/apple1"
   url "https://github.com/RyuKojiro/apple1.git",
     :revision => "b11e9b89a396f3d9bd9f6bd9f4299dab277f04c0"
-  version "20181229"  # Date of commit
+  version "20181229" # Date of commit
   head "https://github.com/RyuKojiro/apple1.git"
 
   def install

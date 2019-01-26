@@ -3,7 +3,7 @@ class Dsk2woz < Formula
   homepage "https://github.com/tomharte/dsk2woz"
   url "https://github.com/TomHarte/dsk2woz.git",
     :revision => "fbe7398d0f0ab6c4c88088b5bb1f35fd0e2f68f3"
-  version "20180607"  # Date of commit
+  version "20180607" # Date of commit
   head "https://github.com/TomHarte/dsk2woz.git"
 
   def install

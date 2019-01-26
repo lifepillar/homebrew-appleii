@@ -31,7 +31,7 @@ class Openemulator < Formula
       HOMEBREW_PREFIX/"lib",
       Formula["flac"].lib,
     ]
-    library_paths << Formula["libpng"].lib #if MacOS.version <= :lion
+    library_paths << Formula["libpng"].lib # if MacOS.version <= :lion
 
     xcodebuild "-configuration", "Release",
       "-alltargets",
