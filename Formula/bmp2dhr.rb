@@ -13,16 +13,16 @@ class Bmp2dhr < Formula
 
   def install
     cd "a2fcbmp" do
-      system ENV.cc, "-DMINGW", "-Wno-pointer-sign", "-Wno-comment", "-o", "a2b", "a2fcbmp.c"
+      system ENV.cc, "-DMINGW", "-o", "a2b", "a2fcbmp.c"
     end
     cd "src" do
-      system ENV.cc, "-DMINGW", "-Wno-pointer-sign", "-Wno-comment", "-o", "b2d", "b2d.c"
+      system ENV.cc, "-DMINGW", "-o", "b2d", "b2d.c"
     end
     cd "magick" do
-      system ENV.cc, "-DMINGW", "-Wno-pointer-sign", "-Wno-comment", "-o", "m2s", "m2s.c"
+      system ENV.cc, "-DMINGW", "-o", "m2s", "m2s.c"
     end
     cd "xpack" do
-      system ENV.cc, "-DMINGW", "-Wno-pointer-sign", "-Wno-comment", "-o", "xpack", "xpack.c"
+      system ENV.cc, "-DMINGW", "-o", "xpack", "xpack.c"
     end
     libexec.install "bmp"
     libexec.install "dither"
@@ -51,10 +51,10 @@ end
 
 __END__
 diff --git a/a2fcbmp/a2fcbmp.c b/a2fcbmp/a2fcbmp.c
-index 496f043..d561452 100755
+index 7fa5d1c..ce0e3ee 100644
 --- a/a2fcbmp/a2fcbmp.c
 +++ b/a2fcbmp/a2fcbmp.c
-@@ -1172,7 +1172,7 @@ unsigned char dlomaincolor[16] = {
+@@ -1222,7 +1222,7 @@ unsigned char dlomaincolor[16] = {
  /* -------------------------------------------------------------- */
  /* http://stackoverflow.com/questions/7602919/how-do-i-generate-random-numbers-without-rand-function */
  ushort RandomSeed = (ushort)0xACE1;
@@ -63,7 +63,7 @@ index 496f043..d561452 100755
  {
      ushort bit = ((RandomSeed >> 0) ^ (RandomSeed >> 2) ^ (RandomSeed >> 3) ^ (RandomSeed >> 5) ) & 1;
  
-@@ -1193,7 +1193,7 @@ int RandomRange(int iMaxValue)
+@@ -1243,7 +1243,7 @@ int RandomRange(int iMaxValue)
  
    do {
      /* get random number */
@@ -72,3 +72,30 @@ index 496f043..d561452 100755
      /* get a positive value */
      if (iRetVal < 0) iRetVal *= -1;
  
+diff --git a/src/b2d.h b/src/b2d.h
+index 8167946..82c76a7 100644
+--- a/src/b2d.h
++++ b/src/b2d.h
+@@ -35,6 +35,7 @@ Apple II color or monochrome HGR or DHGR files.
+ /* ========================== includes ============================= */
+ /* ***************************************************************** */
+ 
++#include <stdint.h>
+ #include "tomthumb.h"
+ 
+ /* ***************************************************************** */
+@@ -110,10 +111,10 @@ Apple II color or monochrome HGR or DHGR files.
+ /* ========================== typedefs ============================= */
+ /* ***************************************************************** */
+ 
+-typedef unsigned char uchar;
+-typedef unsigned short ushort;
+-typedef unsigned long ulong;
+-typedef short sshort;
++typedef uint8_t uchar;
++typedef uint16_t ushort;
++typedef uint32_t ulong;
++typedef int16_t sshort;
+ 
+ /* Bitmap Header structures */
+ #ifdef MINGW
