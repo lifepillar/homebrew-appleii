@@ -1,24 +1,24 @@
 class Epple2 < Formula
-  desc "Emulator of the original APPLE ][ and APPLE ][ PLUS computers"
+  desc "Emulator of the Apple ][ computer"
   homepage "http://mosher.mine.nu/epple2"
   url "https://github.com/cmosher01/Epple-II.git",
-       :revision => "c50307a571b27f6de241fb609f94439c455bcd9b"
-  version "c50307a5"
+       :revision => "ce3badc281221127408795193b076369b7013fbb"
+  version "ce3badc2"
   head "https://github.com/cmosher01/Epple-II.git"
 
-  depends_on "apple-ii-disk-tools"
-  depends_on "automake" => :build
   depends_on "autoconf" => :build
-  depends_on "sdl2"
+  depends_on "automake" => :build
   # For apple2sys:
   depends_on "xa" => :build
-
-  needs :cxx11
+  depends_on "apple-ii-disk-tools"
+  depends_on "sdl2"
 
   resource "apple2sys" do
     url "https://github.com/cmosher01/Apple-II-Source/archive/1.0.tar.gz"
     sha256 "50c4b7a05550d0b3b4da76c133bf60e33df0319dfe03fa5ad4518203f72e5c89"
   end
+
+  needs :cxx11
 
   def install
     ENV.cxx11
@@ -55,7 +55,7 @@ class Epple2 < Formula
         #{etc}/epple2/epple2.conf
 
     Use Cmd-Alt-Esc to quit Epple ][ when in full-screen mode.
-    EOS
+  EOS
   end
 
   test do
