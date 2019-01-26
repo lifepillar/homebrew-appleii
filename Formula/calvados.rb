@@ -7,8 +7,8 @@ class Calvados < Formula
   head "https://github.com/softwarejanitor/calvados.git"
 
   depends_on "glib"
-  depends_on "gtk+"
   depends_on "pkg-config" => :build
+  depends_on "gtk+"
 
   def install
     gtkx = Formula["gtk+"]
