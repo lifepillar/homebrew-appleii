@@ -18,12 +18,6 @@ class Apple1 < Formula
     EOS
   end
 
-  def caveats; <<~EOS
-    When apple1 is running, the working directory is set to
-    #{libexec}
-  EOS
-  end
-
   test do
     system "false"
   end
