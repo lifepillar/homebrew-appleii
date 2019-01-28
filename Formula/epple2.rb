@@ -18,8 +18,6 @@ class Epple2 < Formula
     sha256 "50c4b7a05550d0b3b4da76c133bf60e33df0319dfe03fa5ad4518203f72e5c89"
   end
 
-  needs :cxx11
-
   def install
     ENV.cxx11
     ENV.append "CXXFLAGS", "-DETCDIR=\\\"#{etc}\\\""
