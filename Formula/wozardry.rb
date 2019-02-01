@@ -8,8 +8,8 @@ class Wozardry < Formula
   depends_on "python"
 
   resource "bitarray" do
-    url "https://files.pythonhosted.org/packages/aa/ef/2eb38a90ad40d0451a5228e760505567ff4cd3d8a936341a43a885fa8aa0/bitarray-0.8.2.1.tar.gz"
-    sha256 "94a1747208b7ef1debfd469657f2d4b74446e170ba735927207a525602ebf0cc"
+    url "https://files.pythonhosted.org/packages/e2/1e/b93636ae36d08d0ee3aec40b08731cc97217c69db9422c0afef6ee32ebd2/bitarray-0.8.3.tar.gz"
+    sha256 "050cd30b810ddb3aa941e7ddfbe0d8065e793012d0a88cb5739ec23624b9895e"
   end
 
   def install
