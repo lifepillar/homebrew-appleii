@@ -20,6 +20,7 @@ class JvernetCatakig < Formula
   def caveats; <<~EOS
     Catakig.app has been installed in #{opt_prefix}.
     You may create an alias in your Applications folder if you want.
+    ROM files should be put in #{opt_prefix}.
   EOS
   end
 
