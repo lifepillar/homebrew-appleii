@@ -2,8 +2,8 @@ class Apple1 < Formula
   desc "Apple 1 Emulator that doesn't suck"
   homepage "https://github.com/RyuKojiro/apple1"
   url "https://github.com/RyuKojiro/apple1.git",
-    :revision => "b11e9b89a396f3d9bd9f6bd9f4299dab277f04c0"
-  version "20181229" # Date of commit
+    :revision => "95134f17c290528231f9a99d6d103e534172aa16"
+  version "20190201" # Date of commit
   head "https://github.com/RyuKojiro/apple1.git"
 
   def install
