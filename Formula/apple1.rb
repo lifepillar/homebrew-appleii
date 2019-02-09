@@ -6,6 +6,9 @@ class Apple1 < Formula
   version "20190201" # Date of commit
   head "https://github.com/RyuKojiro/apple1.git"
 
+  depends_on "libedit"
+  depends_on "ncurses"
+
   def install
     system "make"
     libexec.install "./apple1"
