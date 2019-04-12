@@ -1,21 +1,19 @@
 class Epple2 < Formula
   desc "Emulator of the Apple ][ computer"
   homepage "http://mosher.mine.nu/epple2"
-  url "https://github.com/cmosher01/Epple-II.git",
-       :revision => "ce3badc281221127408795193b076369b7013fbb"
-  version "20190126" # Date of commit
+  url "https://github.com/cmosher01/Epple-II/archive/v1.0.3.tar.gz"
+  sha256 "e4382c5de88ad646af0e14ac2436259a6cad3f5b4ccdd64144eb8cb5ea4cb79a"
   head "https://github.com/cmosher01/Epple-II.git"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   # For apple2sys:
   depends_on "xa" => :build
-  depends_on "apple-ii-disk-tools"
   depends_on "sdl2"
 
   resource "apple2sys" do
-    url "https://github.com/cmosher01/Apple-II-Source/archive/1.0.tar.gz"
-    sha256 "50c4b7a05550d0b3b4da76c133bf60e33df0319dfe03fa5ad4518203f72e5c89"
+    url "https://github.com/cmosher01/Apple-II-Source/archive/v1.1.2.tar.gz"
+    sha256 "452a924e84d26e2ff0d9b29f42e32d485b0bb48ef0881ff5d2dff836e1f9c187"
   end
 
   def install
