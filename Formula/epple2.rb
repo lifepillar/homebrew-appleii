@@ -49,8 +49,6 @@ class Epple2 < Formula
 
     After upgrading you may need to update the import path in
         #{etc}/epple2/epple2.conf
-
-    Use Cmd-Alt-Esc to quit Epple ][ when in full-screen mode.
   EOS
   end
 
