@@ -2,9 +2,8 @@ class Passport < Formula
   desc "Verification and copy program for Apple II .woz disk images"
   homepage "https://github.com/a2-4am/passport.py"
   url "https://github.com/a2-4am/passport.py.git",
-    :revision => "541ba512dae46c8aa0e33618e79bd6fdbed435c0"
-  version "20190129" # As in `passport --version`
-  sha256 "2f694c64afeb899975c200ce47cdea4d31811e1ca224804dda4d92952e0a9723"
+    :revision => "88c3224f7299320c129d9a63253aaf195c4c48db"
+  version "20190303" # As in `passport --version`
   head "https://github.com/a2-4am/passport.py.git", :branch => "master"
 
   depends_on "python"
