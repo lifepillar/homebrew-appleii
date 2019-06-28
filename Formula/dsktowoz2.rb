@@ -1,8 +1,8 @@
 class Dsktowoz2 < Formula
   desc "Converts Apple ][ DSK images to new WOZ2 format images"
   homepage "https://github.com/cmosher01/DskToWoz2"
-  url "https://github.com/cmosher01/DskToWoz2/archive/v1.0.4.tar.gz"
-  sha256 "d64f4ca4cf06c1a34fc5c9fe983da9ddb11b4ff6747eae111d286ecbd83b05e3"
+  url "https://github.com/cmosher01/DskToWoz2/archive/v1.0.8.tar.gz"
+  sha256 "9b972bec289db17e10e609209d19c395ae382636b9bf798fdab566b185236bb8"
 
   depends_on "qt"
 
