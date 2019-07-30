@@ -1,8 +1,8 @@
 class Diskbrowser < Formula
   desc "Apple II Disk Browser"
   homepage "https://github.com/dmolony/DiskBrowser"
-  url "https://github.com/dmolony/DiskBrowser/releases/download/v1.0.33/DiskBrowser.jar"
-  sha256 "bd8e924011527ad56baefc721b1d6035d5393035c19041866e0042cb68fbc3ba"
+  url "https://github.com/dmolony/DiskBrowser/releases/download/v1.0.36/DiskBrowser.jar"
+  sha256 "ea646f484a79877c17918a361fe2355331b032ed6bf3616967df8be971ad3e2e"
 
   depends_on :java => "1.10+"
 
