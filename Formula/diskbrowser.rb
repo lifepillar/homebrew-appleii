@@ -1,10 +1,10 @@
 class Diskbrowser < Formula
   desc "Apple II Disk Browser"
   homepage "https://github.com/dmolony/DiskBrowser"
-  url "https://github.com/dmolony/DiskBrowser/releases/download/v1.41/DiskBrowser.jar"
-  sha256 "20fe766f7ed5261c90542149f5377eb735ae27afe1cd665a85c0c61dc022a2ff"
+  url "https://github.com/dmolony/DiskBrowser/releases/download/v1.42/DiskBrowser.jar"
+  sha256 "76f7206b3ec7da412695325308ebff90e4fe1eb140ffd16b0684de612b587770"
 
-  depends_on :java => "1.10+"
+  depends_on :java => "1.13+"
 
   def install
     libexec.install "DiskBrowser.jar"
