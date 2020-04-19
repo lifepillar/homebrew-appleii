@@ -1,8 +1,8 @@
 class Epple2 < Formula
   desc "Emulator of the Apple ][ computer"
   homepage "http://mosher.mine.nu/epple2"
-  url "https://github.com/cmosher01/Epple-II/archive/v1.0.4.tar.gz"
-  sha256 "99030cfe4dfb320d7b7d4a5f4731dffc53f09729389da5eb99b013290872f729"
+  url "https://github.com/cmosher01/Epple-II/archive/v1.0.5.tar.gz"
+  sha256 "c9ac8309118018949285f100d7fc5259cc7104363f8c3721703ded60c60ed32a"
   head "https://github.com/cmosher01/Epple-II.git"
 
   depends_on "autoconf" => :build
