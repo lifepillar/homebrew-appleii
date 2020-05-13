@@ -1,8 +1,8 @@
 cask 'buckshot' do
-  version '0.04'
-  sha256 '711106d1c616f49a29e29e55992e83f33dd9d4e44b3027b97cdd9868b133f1d1'
+  version '0.05t1'
+  sha256 '89c48c4a6b60ca6c253100c1d72cc0ff5c9b17574ab3df4a154b5d3ca9dc0009'
 
-  url 'http://apple2.gs/downloads/buckshot/0.04m/buckshot.dmg'
+  url 'https://github.com/digarok/buckshot/releases/download/v0.5t1/buckshot.dmg'
   name 'buckshot'
   homepage 'https://apple2.gs/buckshot/'
 
