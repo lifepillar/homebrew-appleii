@@ -9,6 +9,8 @@ class Apple1 < Formula
   depends_on "libedit"
   depends_on "ncurses"
 
+  conflicts_with "apple1emulator", :because => "both install an `apple1` executable"
+
   def install
     system "make"
     libexec.install "./apple1"
