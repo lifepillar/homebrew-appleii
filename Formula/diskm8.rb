@@ -1,8 +1,8 @@
 class Diskm8 < Formula
   desc "Command-line tool for manipulating and managing Apple II DSK images"
-  homepage "http://www.microm8.com/diskm8/"
-  url "https://github.com/paleotronic/diskm8/archive/v0.5.6.tar.gz"
-  sha256 "cf31d8f2c2c29eb13a1c430b4749e4d6d6b7acd4a32cca73d8a33efa4fbdd5a7"
+  homepage "https://paleotronic.com/software/microm8/"
+  url "https://github.com/paleotronic/diskm8/archive/v0.5.7.tar.gz"
+  sha256 "79349f996937e641b744d4f167bc43b1459ff7f1c108b7ee405033e921ea8c6e"
   head "https://github.com/paleotronic/diskm8.git"
 
   depends_on "go" => :build
