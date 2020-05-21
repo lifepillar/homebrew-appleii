@@ -1,6 +1,6 @@
 cask 'microm8' do
   version '1.0.0'
-  sha256 'efc44dd7e531d4ba5a6d3aceb5eb78ccbdc4a75c9f1227ce20de595be02eaafd'
+  sha256 'e891ac177baa3aa271d9ac95a2ad806932fff05bc94fafe10b0be27a116a3973'
 
   url "http://paleotronic.com/download/microm8-mac.zip"
   name 'MicroM8'
