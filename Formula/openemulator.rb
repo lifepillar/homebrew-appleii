@@ -2,11 +2,12 @@ class Openemulator < Formula
   desc "Accurate, portable emulator of legacy computer systems"
   homepage "https://github.com/OpenEmulatorProject/OpenEmulator-OSX"
   url "https://github.com/OpenEmulatorProject/OpenEmulator-OSX.git",
-    :revision => "dc41cad2a741894f9e6c0a4b13caaf55fe2cd68f"
-  version "20181226" # Date of commit
+    :revision => "77fbd285084cca14252998c871115eea6136509d"
+  version "20200407" # Date of commit
   head "https://github.com/OpenEmulatorProject/OpenEmulator-OSX.git",
     :branch   => "develop"
 
+  depends_on "cmake" => :build
   depends_on "flac"
   depends_on "libpng"
   depends_on "libsamplerate"
@@ -33,28 +34,17 @@ class Openemulator < Formula
     ]
     library_paths << Formula["libpng"].lib # if MacOS.version <= :lion
 
-    xcodebuild "-configuration", "Release",
-      "-alltargets",
-      "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}",
-      "SYMROOT=build",
-      "PREFIX=#{prefix}",
-      "ARCHS=x86_64",
-      "HEADER_SEARCH_PATHS=#{header_paths.join(" ")}",
-      "LIBRARY_SEARCH_PATHS=#{library_paths.join(" ")}",
-      "OTHER_LIBTOOLFLAGS=-L/usr/local/lib/ -lpng16 -search_paths_first"
+    system "cmake", "-Hmodules/libemulation", "-Bmodules/libemulation/build", "-DCMAKE_BUILD_TYPE=Release"
+    system "cmake", "--build", "modules/libemulation/build", "--config", "Release"
+    xcodebuild "-configuration", "Release", "SYMROOT=build", "PREFIX=#{prefix}"
     prefix.install "build/Release/OpenEmulator.app"
   end
 
-  def caveats; <<~EOS
-    Openemulator.app has been installed in #{opt_prefix}.
-    You may create an alias in your Applications folder if you want.
-
-    OpenEmulator does not contain any ROM file. See:
-      https://github.com/OpenEmulatorProject/libemulation/issues/15
-
-    ROM files must be copied into:
-      #{opt_prefix}/OpenEmulator.app/Contents/Resources/roms
-  EOS
+  def caveats
+    <<~EOS
+      Openemulator.app has been installed in #{opt_prefix}.
+      You may create an alias in your Applications folder if you want.
+    EOS
   end
 
   test do
