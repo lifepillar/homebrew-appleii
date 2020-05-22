@@ -8,4 +8,8 @@ cask 'apple1basic' do
   homepage 'https://www.pagetable.com/?p=35'
 
   binary 'apple1basic'
+
+  caveats <<~EOS
+    This is a 32-bit executable, hence it does not work in macOS Catalina or later.
+  EOS
 end
