@@ -13,7 +13,7 @@
 
 ## Requirements
 
-[Homebrew](http://brew.sh), [Homebrew Cask](https://caskroom.github.io) (optional, for casks only).
+[Homebrew](http://brew.sh), [Homebrew Cask](https://github.com/Homebrew/homebrew-cask/#homebrew-cask) (optional, for casks only).
 
 
 ## Installation
@@ -35,13 +35,11 @@ already built GUI applications) use:
 
 Examples:
 
-1. Install the bleeding edge version of OpenEmulator from source:
+1. Install the bleeding edge version of [OpenEmulator](https://github.com/openemulator/openemulator) from source:
 
         brew install openemulator --HEAD
 
-2. Install [4am's snapshot](https://archive.org/details/OpenEmulatorSnapshots)
-   (including [Zellyn](https://github.com/zellyn/OpenEmulator-OSX)'s patches
-   that add support for the Apple //e):
+2. Install [4am's OpenEmulator snapshot](https://archive.org/details/OpenEmulatorSnapshots):
 
         brew cask install openemulator
 
