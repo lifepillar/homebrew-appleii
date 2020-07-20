@@ -1,8 +1,10 @@
 cask 'buckshot' do
-  version '0.04'
-  sha256 '711106d1c616f49a29e29e55992e83f33dd9d4e44b3027b97cdd9868b133f1d1'
+  version '0.5'
+  sha256 '16babb4446509717e469fdd793c5feb3c4d361e5241bb7a425b378932588df15'
 
-  url 'http://apple2.gs/downloads/buckshot/0.04m/buckshot.dmg'
+  # github.com/digarok/buckshot was verified as official when first introduced to the cask
+  url "https://github.com/digarok/buckshot/releases/download/v#{version}/buckshot.dmg"
+  appcast 'https://github.com/digarok/releases.atom'
   name 'buckshot'
   homepage 'https://apple2.gs/buckshot/'
 
