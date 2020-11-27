@@ -6,7 +6,7 @@ class Applecommander < Formula
 
   option "with-gui", "Additionally install the GUI."
 
-  depends_on :java => "1.8+" # Not tested with previous versions
+  depends_on "openjdk"
 
   if build.with? "gui"
     resource "AppleCommander-GUI" do
