@@ -7,7 +7,7 @@ class Apple2ImageEncoder < Formula
   head "https://github.com/a2geek/apple2-image-encoder.git"
 
   depends_on "maven" => :build
-  depends_on :java => "1.8+"
+  depends_on "openjdk@8"
 
   def install
     system "mvn", "package"

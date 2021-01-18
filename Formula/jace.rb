@@ -7,7 +7,7 @@ class Jace < Formula
   head "https://github.com/badvision/jace.git"
 
   depends_on "maven" => :build
-  depends_on :java => "1.8"
+  depends_on "openjdk@8"
 
   def install
     system "./build.sh"
