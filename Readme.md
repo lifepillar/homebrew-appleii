@@ -13,7 +13,7 @@
 
 ## Requirements
 
-[Homebrew](http://brew.sh), [Homebrew Cask](https://github.com/Homebrew/homebrew-cask/#homebrew-cask) (optional, for casks only).
+[Homebrew](http://brew.sh).
 
 
 ## Installation
