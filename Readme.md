@@ -31,7 +31,7 @@ from the command line) use:
 For casks (files inside the `Casks` folder, which install
 already built GUI applications) use:
 
-    brew cask install <cask name>
+    brew install --cask <cask name>
 
 Examples:
 
@@ -41,11 +41,11 @@ Examples:
 
 2. Install [4am's OpenEmulator snapshot](https://archive.org/details/OpenEmulatorSnapshots):
 
-        brew cask install openemulator
+        brew install --cask openemulator
 
 3. Install GSPort:
 
-        brew cask install gsport
+        brew install --cask gsport
 
 Refer to the documentation of Homebrew and Homebrew Cask for
 further details about these and other commands.
@@ -65,7 +65,7 @@ cc65 is already in Homebrew! (`brew install cc65`)
 
 _Why isn't [Virtual \]\[](http://www.virtualii.com) in this repository?_
 
-Virtual ][ is already in Homebrew Cask! (`brew cask install virtual-ii`)
+Virtual ][ is already in Homebrew Cask! (`brew install --cask virtual-ii`)
 
 
 ## Credits
