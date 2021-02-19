@@ -6,7 +6,10 @@ class Profuse < Formula
   sha256 "83ce3a7e3001ea1816d3518f29a6532c857e500be6a780586c5fd365d85a77aa"
   head "https://github.com/ksherlock/profuse.git"
 
-  depends_on :osxfuse
+  on_macos do
+    deprecate! date: "2020-11-10", because: "requires FUSE"
+    depends_on :osxfuse
+  end
 
   def install
     system "make"
