@@ -5,6 +5,8 @@ class Bmp2dhr < Formula
   version "20160824"
   sha256 "4cd25bccddae411a512ef172b447083ca9d4eb72ffb58a5bdadd1e4200a8b0ac"
 
+  conflicts_with "digarok-bmp2dhr", because: "both install a `b2d` executable"
+
   # To use the batch files provided with A2B to do automatic conversions
   depends_on "imagemagick"
 
