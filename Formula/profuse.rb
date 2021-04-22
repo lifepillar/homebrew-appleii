@@ -7,14 +7,19 @@ class Profuse < Formula
   head "https://github.com/ksherlock/profuse.git"
 
   on_macos do
-    deprecate! date: "2020-11-10", because: "requires FUSE"
-    depends_on :osxfuse
+    disable! date: "2020-11-10", because: "requires FUSE"
   end
 
   def install
     system "make"
     # Do not install xattr, as it's already in OS X
     bin.install "o/apfm", "o/fuse_pascal", "o/newfs_pascal", "o/profuse"
+  end
+
+  def caveats
+    <<-EOS
+    IMPORTANT! Install OSXFUSE before installing this formula!
+    EOS
   end
 
   test do
