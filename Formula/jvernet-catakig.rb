@@ -2,8 +2,8 @@ class JvernetCatakig < Formula
   desc "Fork of Catakig that builds on newer Xcode"
   homepage "https://github.com/jvernet/Catakig"
   url "https://github.com/jvernet/Catakig.git",
-    :revision => "bc33f8fa6da0bdddee558e47b6b6523d7e65ea02"
-  version "20190127"
+    :revision => "83d0e8f94047ddcc862a848e63cf610a05e42b0f"
+  version "20190303"
   head "https://github.com/jvernet/Catakig.git"
 
   def install
