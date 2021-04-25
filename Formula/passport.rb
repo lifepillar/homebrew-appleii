@@ -2,9 +2,9 @@ class Passport < Formula
   desc "Verification and copy program for Apple II .woz disk images"
   homepage "https://github.com/a2-4am/passport.py"
   url "https://github.com/a2-4am/passport.py.git",
-    :revision => "88c3224f7299320c129d9a63253aaf195c4c48db"
-  version "20190303" # As in `passport --version`
-  head "https://github.com/a2-4am/passport.py.git", :branch => "master"
+    revision: "88c3224f7299320c129d9a63253aaf195c4c48db"
+  version "20190425" # As in `passport --version`
+  head "https://github.com/a2-4am/passport.py.git", branch: "master"
 
   depends_on "python"
 
@@ -27,12 +27,13 @@ class Passport < Formula
 
     libexec.install Dir["*"]
     (libexec/"passport.py").chmod 0755
-    (bin/"passport").write_env_script("#{libexec}/passport.py", :PYTHONPATH => ENV["PYTHONPATH"])
+    (bin/"passport").write_env_script("#{libexec}/passport.py", PYTHONPATH: ENV["PYTHONPATH"])
   end
 
-  def caveats; <<~EOS
-    To get started, type `passport -h`.
-  EOS
+  def caveats
+    <<~EOS
+      To get started, type `passport -h`.
+    EOS
   end
 
   test do
