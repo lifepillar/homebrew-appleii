@@ -3,7 +3,7 @@ class Wozardry < Formula
   homepage "https://github.com/a2-4am/wozardry"
   url "https://github.com/a2-4am/wozardry/archive/v2.0.tar.gz"
   sha256 "715feaa8c0ebc5f8b3adf2f9c4f33194469a8eb77e69097d990b8f96282580c2"
-  head "https://github.com/a2-4am/wozardry.git", :branch => "master"
+  head "https://github.com/a2-4am/wozardry.git", branch: "master"
 
   depends_on "python"
 
@@ -26,12 +26,13 @@ class Wozardry < Formula
 
     libexec.install Dir["*"]
     (libexec/"wozardry.py").chmod 0755
-    (bin/"wozardry").write_env_script("#{libexec}/wozardry.py", :PYTHONPATH => ENV["PYTHONPATH"])
+    (bin/"wozardry").write_env_script("#{libexec}/wozardry.py", PYTHONPATH: ENV["PYTHONPATH"])
   end
 
-  def caveats; <<~EOS
-    To get started, type `wozardry -h`.
-  EOS
+  def caveats
+    <<~EOS
+      To get started, type `wozardry -h`.
+    EOS
   end
 
   test do
