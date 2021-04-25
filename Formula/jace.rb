@@ -7,19 +7,30 @@ class Jace < Formula
   head "https://github.com/badvision/jace.git"
 
   depends_on "maven" => :build
-  depends_on "openjdk@8"
 
-  def install
-    system "./build.sh"
-    libexec.install "target/Jace.jar"
-    bin.write_jar_script libexec/"Jace.jar", "jace", "-Duser.dir=#{etc}", :java_version => "1.8"
+  unless Dir.exist?("/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home")
+    puts "Execute `brew install zulufx8` before installing Jace"
+    exit 1
   end
 
-  def caveats; <<~EOS
-    The executable is called `jace`.
-    Jace configuration is saved in
-        #{etc}/.jace.conf
-  EOS
+  def install
+    java_home = "/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
+    ENV["JAVA_HOME"] = java_home
+    system "./build.sh"
+    libexec.install "target/Jace.jar"
+    (bin/"jace").write <<~EOS
+      #!/bin/bash
+      export JAVA_HOME="#{java_home}"
+      exec "${JAVA_HOME}/bin/java" -Duser.dir=/usr/local/etc -jar "/usr/local/Cellar/jace/2.0-Stable/libexec/Jace.jar" "$@"
+    EOS
+  end
+
+  def caveats
+    <<~EOS
+      The executable is called `jace`.
+      Jace configuration is saved in
+          #{etc}/.jace.conf
+    EOS
   end
 
   test do
