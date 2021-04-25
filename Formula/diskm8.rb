@@ -13,6 +13,7 @@ class Diskm8 < Formula
 
     (buildpath/"src/github.com/paleotronic/diskm8").install buildpath.children
     cd "src/github.com/paleotronic/diskm8" do
+      system "go", "mod", "init", "github.com/paleotronic/diskm8"
       system "./make.sh"
     end
     system "unzip", "src/github.com/paleotronic/diskm8/publish/diskm8-darwin-amd64.zip"
