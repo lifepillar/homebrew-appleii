@@ -13,10 +13,11 @@ class Tohgr < Formula
     bin.install "tohgr"
   end
 
-  def caveats; <<~EOS
-    tohgr may segfault if it does not have permission
-    to write to the destination path.
-  EOS
+  def caveats
+    <<~EOS
+      tohgr may segfault if it does not have permission
+      to write to the destination path.
+    EOS
   end
 
   test do
