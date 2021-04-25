@@ -9,11 +9,15 @@ class Apple1emulator < Formula
   conflicts_with "apple1", :because => "both install an `apple1` executable"
 
   def install
+    inreplace "src/main.rs" do |s|
+      s.sub! "sys/wozmon.bin", "#{libexec}/sys/wozmon.bin"
+      s.sub! "sys/replica1.bin", "#{libexec}/sys/replica1.bin"
+    end
     system "cargo", "install", "--root", prefix, "--path", "."
     bin.install "./target/release/apple1"
-    libexec.install Dir["./asm/*"]
-    libexec.install Dir["./roms/*"]
-    libexec.install Dir["./sys/*"]
+    libexec.install Dir["asm"]
+    libexec.install Dir["roms"]
+    libexec.install Dir["sys"]
   end
 
   def caveats
