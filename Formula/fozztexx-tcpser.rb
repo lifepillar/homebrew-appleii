@@ -2,8 +2,8 @@ class FozztexxTcpser < Formula
   desc "Serial to IP modem emulation program"
   homepage "https://github.com/fozztexx/tcpser"
   url "https://github.com/FozzTexx/tcpser.git",
-    :revision => "9413ac1d37ec5750472a8b8b59b4caf18169be05"
-  version "20180402" # Date of commit
+    :revision => "95f4b515ef2f9a5473400229a44a31badc54188f"
+  version "20200425" # Date of commit
   head "https://github.com/FozzTexx/tcpser.git", :branch => "master"
 
   def install
