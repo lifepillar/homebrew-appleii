@@ -12,13 +12,14 @@ class Dsktowoz2 < Formula
     libexec.install "dsktowoz2.app"
   end
 
-  def caveats; <<~EOS
-    dsktowoz2.app was installed in #{libexec}.
+  def caveats
+    <<~EOS
+      dsktowoz2.app was installed in #{libexec}.
 
-    You may create a symlink into /Applications or ~/Applications:
+      You may create a symlink into /Applications or ~/Applications:
 
-    ln -Fs '#{libexec}/dsktowoz2.app' /Applications/DskToWoz2.app
-  EOS
+      ln -Fs '#{libexec}/dsktowoz2.app' /Applications/DskToWoz2.app
+    EOS
   end
 
   test do

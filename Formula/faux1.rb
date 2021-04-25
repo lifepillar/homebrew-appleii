@@ -17,10 +17,11 @@ class Faux1 < Formula
     EOS
   end
 
-  def caveats; <<~EOS
-    When faux1 is running, the working directory is set to
-    #{libexec}
-  EOS
+  def caveats
+    <<~EOS
+      When faux1 is running, the working directory is set to
+      #{libexec}
+    EOS
   end
 
   test do

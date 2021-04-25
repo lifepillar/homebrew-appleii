@@ -2,12 +2,12 @@ class Openemulator < Formula
   desc "Accurate, portable emulator of legacy computer systems"
   homepage "https://github.com/openemulator/openemulator"
   url "https://github.com/openemulator/openemulator.git",
-    :revision => "77fbd285084cca14252998c871115eea6136509d"
+    revision: "77fbd285084cca14252998c871115eea6136509d"
   version "20200407" # Date of commit
   head "https://github.com/openemulator/openemulator.git"
 
   depends_on "cmake" => :build
-  depends_on :xcode => :build
+  depends_on xcode: :build
   depends_on "flac"
   depends_on "libpng"
   depends_on "libsamplerate"

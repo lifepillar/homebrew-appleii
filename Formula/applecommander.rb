@@ -28,9 +28,7 @@ class Applecommander < Formula
 
   def caveats
     s = "The command-line executable is called `applecommander`."
-    if build.with? "gui"
-      s += "\nTo run the GUI version use `applecommander-gui`."
-    end
+    s += "\nTo run the GUI version use `applecommander-gui`." if build.with? "gui"
     s
   end
 

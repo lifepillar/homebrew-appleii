@@ -40,16 +40,17 @@ class Epple2 < Formula
     (etc/"epple2").install "conf/epple2.conf" unless File.exist?(etc/"epple2/epple2.conf")
   end
 
-  def caveats; <<~EOS
-    Please read Warning Concerning Copyright Restrictions here:
+  def caveats
+    <<~EOS
+      Please read Warning Concerning Copyright Restrictions here:
 
-        http://mosher.mine.nu/apple2/site/
+          http://mosher.mine.nu/apple2/site/
 
-    Configuration files are in #{etc}/epple2.
+      Configuration files are in #{etc}/epple2.
 
-    After upgrading you may need to update the import path in
-        #{etc}/epple2/epple2.conf
-  EOS
+      After upgrading you may need to update the import path in
+          #{etc}/epple2/epple2.conf
+    EOS
   end
 
   test do

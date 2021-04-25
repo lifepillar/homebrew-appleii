@@ -2,7 +2,7 @@ class Napple1 < Formula
   desc "Apple I emulator on a text terminal or console using ncurses"
   homepage "https://github.com/nobuh/napple1"
   url "https://github.com/nobuh/napple1.git",
-    :revision => "a6f12814f9260e3c24bf4c0bcaf1073b32481a13"
+    revision: "a6f12814f9260e3c24bf4c0bcaf1073b32481a13"
   version "20181006" # Date of commit
   head "https://github.com/nobuh/napple1.git"
 

@@ -1,5 +1,5 @@
 class Lisaem < Formula
-  desc "The first fully functional Lisa Emulator™"
+  desc "Fully functional Lisa Emulator™"
   homepage "https://lisaem.sunder.net/"
   url "https://lisaem.sunder.net/downloads/lisaem-1.2.7-RC3a-2020.08.24-src.tar.xz"
   version "1.2.7-2020.08.24"
