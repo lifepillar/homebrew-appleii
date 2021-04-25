@@ -13,6 +13,7 @@ class Dskalyzer < Formula
 
     (buildpath/"src/github.com/paleotronic/dskalyzer").install buildpath.children
     cd "src/github.com/paleotronic/dskalyzer" do
+      system "go", "mod", "init", "github.com/paleotronic/dskalyzer"
       system "./make.sh"
     end
     system "unzip", "src/github.com/paleotronic/dskalyzer/publish/dskalyzer-darwin-amd64.zip"
