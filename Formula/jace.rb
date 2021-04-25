@@ -8,10 +8,10 @@ class Jace < Formula
 
   depends_on "maven" => :build
 
-  unless Dir.exist?("/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home")
-    puts "Execute `brew install zulufx8` before installing Jace"
-    exit 1
-  end
+  # unless Dir.exist?("/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home")
+  #   puts "Execute `brew install zulufx8` before installing Jace"
+  #   exit 1
+  # end
 
   def install
     java_home = "/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
@@ -27,11 +27,15 @@ class Jace < Formula
 
   def caveats
     <<~EOS
-      The executable is called `jace`.
-      Jace configuration is saved in
+      IMPORTANT! Install Zulu OpenJDK *before* installing this formula!
+
+          brew install zulufx8
+
+      The executable is called `jace`. Jace configuration is saved in
           #{etc}/.jace.conf
     EOS
   end
+
 
   test do
     false
