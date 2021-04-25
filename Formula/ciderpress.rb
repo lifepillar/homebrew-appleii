@@ -7,28 +7,31 @@ class Ciderpress < Formula
 
   bottle :unneeded
 
-  depends_on "wine"
-
   def install
     libexec.install Dir["*"]
 
     bin.mkpath
     (bin/"ciderpress").write <<~EOS
       #!/bin/bash
-      wine ${HOME}'/.wine/drive_c/Program Files (x86)/faddenSoft/CiderPress/CiderPress.exe' "$@"
+      wine64 ${HOME}'/.wine/drive_c/Program Files (x86)/faddenSoft/CiderPress/CiderPress.exe' "$@"
     EOS
   end
 
-  def caveats; <<~EOS
-    To complete the installation execute:
+  def caveats
+    <<~EOS
+      Ciderpress requires Wine. It is recommended to use homebrew-wine:
 
-      cd #{libexec}
-      wine Setup403.exe
+          https://github.com/Gcenx/homebrew-wine
 
-    and choose No-Question-Asked Installation.
+      To complete the installation execute:
 
-    Ciderpress can then be launched from the command-line with `ciderpress`.
-  EOS
+        cd #{libexec}
+        wine64 Setup403.exe
+
+      and choose No-Question-Asked Installation.
+
+      Ciderpress can then be launched from the command-line with `ciderpress`.
+    EOS
   end
 
   test do
