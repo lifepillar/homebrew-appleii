@@ -1,14 +1,22 @@
 # Vintage Apple emulators and related software
 
-![Apple I](images/i.png "Apple I")
-![Apple \]\[](images/ii.png "Apple II")
-![Apple \]\[+](images/ii+.png "Apple II+")
-![Apple \]\[e](images/iie.png "Apple IIe")
-![Jobs and Woz](images/jobs_woz.png "Jobs and Woz")
-![Apple //e Platinum](images/iiee.png "Apple //e Platinum")
-![Apple //c](images/iic.png "Apple //c")
-![Apple ///+](images/iii+.png "Apple ///+")
-![Apple //GS](images/iigs.png "Apple //GS")
+<table style="padding:10 px;">
+  <tr>
+    <td><img src="images/i.png" alt="Apple I"></td>
+    <td><img src="images/ii.png" alt="Apple II"></td>
+    <td><img src="images/ii+.png" alt="Apple II+"></td>
+  </tr>
+  <tr>
+    <td><img src="images/iie.png" alt="Apple IIe"></td>
+    <td><img src="images/jobs_woz.png" alt="Jobs and Woz"></td>
+    <td><img src="images/iiee.png" alt="Apple //e Platinum"></td>
+  </tr>
+  <tr>
+    <td><img src="images/iic.png" alt="Apple //c"></td>
+    <td><img src="images/iii+.png" alt="Apple ///+"></td>
+    <td><img src="images/iigs.png" alt="Apple //GS"></td>
+  </tr>
+</table>
 
 
 ## Requirements
