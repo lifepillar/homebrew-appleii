@@ -1,8 +1,6 @@
 class Zulufx8Requirement < Requirement
   fatal true
-  satisfy(build_env: false) {
-    Dir.exist?("/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home")
-  }
+  satisfy(build_env: false) { Dir.exist?("/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home") }
   def message
     <<~EOS
       Execute `brew install zulufx8` before installing Jace.
@@ -48,7 +46,6 @@ class Jace < Formula
           #{etc}/.jace.conf
     EOS
   end
-
 
   test do
     false
