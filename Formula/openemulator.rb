@@ -2,8 +2,8 @@ class Openemulator < Formula
   desc "Accurate, portable emulator of legacy computer systems"
   homepage "https://github.com/openemulator/openemulator"
   url "https://github.com/openemulator/openemulator.git",
-    revision: "77fbd285084cca14252998c871115eea6136509d"
-  version "20200407" # Date of commit
+    revision: "85f75fe5c493e810b56ee96c0a0bbb640e0739b3"
+  version "20200522" # Date of commit
   head "https://github.com/openemulator/openemulator.git"
 
   depends_on "cmake" => :build
@@ -16,9 +16,10 @@ class Openemulator < Formula
   depends_on "portaudio"
 
   def install
+    arch = Hardware::CPU.arm? ? "arm64": "x86_64"
     system "cmake", "-Hmodules/libemulation", "-Bmodules/libemulation/build", "-DCMAKE_BUILD_TYPE=Release"
     system "cmake", "--build", "modules/libemulation/build", "--config", "Release"
-    xcodebuild "-configuration", "Release", "SYMROOT=build", "PREFIX=#{prefix}"
+    xcodebuild "-configuration", "Release", "-arch", arch, "SYMROOT=build", "PREFIX=#{prefix}"
     prefix.install "build/Release/OpenEmulator.app"
   end
 
