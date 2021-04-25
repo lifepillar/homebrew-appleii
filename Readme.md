@@ -21,40 +21,27 @@
     brew tap lifepillar/appleii
 
 
-## How to install formulas
+## How to install formulas and casks
 
-For Homebrew formulas (programs built from source and/or launched
-from the command line) use:
+    brew install <formula or cask>
 
-    brew install <formula name>
-
-For casks (files inside the `Casks` folder, which install
-already built GUI applications) use:
-
-    brew install --cask <cask name>
+In some cases, a formula and a cask have the same name (e.g., `openemulator`).
+You may pass `--formula` or `--cask` to `brew install` to disambiguate. Refer
+to Homebrew's documentation for further details about these and other commands,
+or if you are unfamiliar with the terminology.
 
 Examples:
 
-1. Install the bleeding edge version of [OpenEmulator](https://github.com/openemulator/openemulator) from source:
-
-        brew install openemulator --HEAD
-
-2. Install [4am's OpenEmulator snapshot](https://archive.org/details/OpenEmulatorSnapshots):
-
-        brew install --cask openemulator
-
-3. Install GSPort:
-
-        brew install --cask gsport
-
-Refer to the documentation of Homebrew and Homebrew Cask for
-further details about these and other commands.
+    brew install --formula openemulator
+    brew install --cask openemulator
+    brew install cadius
+    brew install gsport
 
 
 ## Contributions
 
-They are welcome! If you know of some program that is
-not included here, please let me know!
+They are welcome! If you know of some program that is not included here, please
+let me know!
 
 
 ## FAQ
@@ -79,4 +66,3 @@ Apple ][e (courtesy of [W.
 Warby](https://www.flickr.com/photos/wwarby/16614254568/)). The picture of Jobs
 and Woz is in so many places that I don't know whether it is copyrighted or may
 be considered in the public domain.
-
