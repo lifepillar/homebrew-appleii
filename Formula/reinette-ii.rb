@@ -1,9 +1,9 @@
 class ReinetteIi < Formula
-  desc "A French Apple II text-only emulator"
+  desc "French Apple II text-only emulator"
   homepage "https://github.com/ArthurFerreira2/reinette-II"
   url "https://github.com/ArthurFerreira2/reinette-II.git",
-    :revision => "ef47881ad38e6b43dc1e31ca8e449725657f8632"
-  version "20190325" # Date of commit
+    revision: "ef47881ad38e6b43dc1e31ca8e449725657f8632"
+  version "20200408" # Date of commit
 
   depends_on "ncurses"
 
@@ -20,6 +20,12 @@ class ReinetteIi < Formula
     libexec.install "appleII+.rom"
     libexec.install "appleII.rom"
     (bin+"reinette-II").write shim_script("reinette-II")
+  end
+
+  def caveats
+    <<~EOS
+      The executable is `reinette-II`.
+    EOS
   end
 
   test do
