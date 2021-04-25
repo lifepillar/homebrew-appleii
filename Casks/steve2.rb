@@ -5,6 +5,7 @@ cask "steve2" do
   url "https://github.com/trudnai/Steve2/releases/download/v#{version}/Steve2.pkg"
   appcast "https://github.com/trudnai/Steve2/releases.atom"
   name "Steve ]["
+  desc 'Apple ][ Emulator for Mac'
   homepage "https://github.com/trudnai/Steve2"
 
   pkg "Steve2.pkg"

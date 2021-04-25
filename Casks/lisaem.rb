@@ -5,7 +5,7 @@ cask 'lisaem' do
   url "https://lisaem.sunder.net/downloads/LisaEm_#{version}-macosx.dmg"
   appcast 'https://lisaem.sunder.net/downloads.html'
   name 'LisaEm'
-  name 'The first fully functional Lisa Emulator™'
+  desc 'The first fully functional Lisa Emulator™'
   homepage 'https://lisaem.sunder.net/'
 
   lisaem_folder = '/Applications/LisaEm'

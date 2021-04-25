@@ -4,7 +4,7 @@ cask 'openemulator' do
 
   url 'https://archive.org/download/OpenEmulatorSnapshots/OpenEmulator-20190205.zip'
   name 'OpenEmulator'
-  name 'Accurate, portable emulator of legacy computer systems'
+  desc 'Accurate, portable emulator of legacy computer systems'
   homepage 'https://archive.org/details/OpenEmulatorSnapshots'
 
   app 'OpenEmulator.app'

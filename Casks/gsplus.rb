@@ -4,7 +4,7 @@ cask "gsplus" do
 
   url "http://apple2.gs/downloads/plusbuilds/#{version}/GSplus-Install.dmg"
   name 'GSplus'
-  name 'Apple IIGS emulator based on KEGS and GSPort'
+  desc 'Apple IIGS emulator based on KEGS and GSPort'
   homepage 'https://apple2.gs/plus/'
 
   gsplus_folder = '/Applications/GSplus'

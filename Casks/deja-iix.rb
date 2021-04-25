@@ -3,9 +3,10 @@ cask 'deja-iix' do
   sha256 'e6f16fade3e1af3ff484345acee25a05403e13b479e52c0818b833c42e3307be'
 
   # unmarked.com was verified as official when first introduced to the cask
-  url 'http://www.unmarked.com/labs/deja2/files/d2_latest.zip'
+  url 'http://www.unmarked.com/labs/deja2/files/d2_latest.zip',
+    verified: "unmarked.com/labs/deja2/"
   name 'Deja IIx'
-  name 'AppleWorks emulator'
+  desc 'AppleWorks emulator'
   # Deja IIx has no official home page
   homepage 'https://apple2history.org/history/ah19/'
 

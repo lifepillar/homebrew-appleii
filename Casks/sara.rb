@@ -4,7 +4,7 @@ cask 'sara' do
 
   url 'http://www.blackcatsystems.com/download/SaraOSX.zip'
   name 'Sara'
-  name 'Sara Apple /// Emulator'
+  desc 'Sara Apple /// Emulator'
   homepage 'http://www.blackcatsystems.com/software/sara.html'
 
   app 'SaraOSX/Sara.app'

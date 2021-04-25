@@ -4,7 +4,7 @@ cask 'catakig' do
 
   url 'http://www.zophar.net/fileuploads/2/12323nkscx/Catakig-2.00b4.dmg.zip'
   name 'Catakig'
-  name 'Apple II emulator'
+  desc 'Apple II emulator'
   homepage 'http://www.zophar.net/macintosh/apple2/catakig.html'
 
   app 'Catakig'
