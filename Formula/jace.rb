@@ -7,11 +7,7 @@ class Jace < Formula
   head "https://github.com/badvision/jace.git"
 
   depends_on "maven" => :build
-
-  unless Dir.exist?("/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home")
-    puts "Execute `brew install zulufx8` before installing Jace"
-    exit 1
-  end
+  depends_on "zulufx8" unless Dir.exist?("/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home")
 
   def install
     java_home = "/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
