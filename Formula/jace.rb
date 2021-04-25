@@ -38,10 +38,6 @@ class Jace < Formula
 
   def caveats
     <<~EOS
-      IMPORTANT! Install Zulu OpenJDK *before* installing this formula!
-
-          brew install zulufx8
-
       The executable is called `jace`. Jace configuration is saved in
           #{etc}/.jace.conf
     EOS
