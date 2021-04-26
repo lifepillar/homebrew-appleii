@@ -23,11 +23,14 @@ class Lisaem < Formula
         s.gsub! "for VER in 3.1.2; do\n", "for VER in 3.1.3; do\n#"
         # build for only x86_64 on >= 10.14
         s.gsub! "\"$OSVER\" > \"macOS-10.14\"", "\"$OSVER\" > \"macOS-10.13\""
+        s.gsub! 'CXXFLAGS="-std=c++0x -stdlib=libc++"', ""
         s.gsub! "--prefix=/usr/local/wx${VER}-${TYPE}", "--prefix=#{buildpath}/../wxWidgets"
         s.gsub! "&& sudo make", "&& make"
       end
       system "./build-wx3.1.2-modern-macosx.sh"
     end
+
+    inreplace "bashbuild/Darwin.sys", "macosx10", "macosx1"
 
     ENV.prepend_path "PATH", buildpath/"../wxWidgets/bin" # for wx-config
     system "./build.sh", "build", "--quiet", "--no-upx", "--prefix=#{prefix}"
