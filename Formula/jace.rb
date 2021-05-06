@@ -1,3 +1,4 @@
+# TODO: install Zulu as a resource instead
 class Zulufx8Requirement < Requirement
   fatal true
   satisfy(build_env: false) { Dir.exist?("/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home") }
