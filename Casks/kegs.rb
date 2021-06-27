@@ -1,7 +1,8 @@
 cask 'kegs' do
-  version '1.05'
-  sha256 '86d712dc08506cd770943d29d61552d23c6b5e9cc34d0f3628b084a01dc21462'
-  url "https://downloads.sourceforge.net/kegs/kegs.#{version}.tar.gz"
+  version '1.07'
+  sha256 '89f4735e7e3130e1a36f07250eead05f2f3bd83155bc5728bc7306d1aa37a331'
+  # url "https://downloads.sourceforge.net/kegs/kegs.#{version}.tar.gz"
+  url "http://kegs.sourceforge.net/kegs.#{version}.tar.gz"
   name 'KEGS'
   desc 'Apple IIgs emulator'
   homepage 'http://kegs.sourceforge.net'
@@ -30,8 +31,8 @@ cask 'kegs' do
   caveats <<-EOS
     You may launch KEGS by running `kegs` from the terminal.
 
-    Because of macOS security measures, the first time you use KEGS, you may
-    have to open it by right-clicking on the app in the Finder.
+    Because of macOS security measures, you may have to open KEGSAPP by
+    right-clicking on the app in the Finder a couple of times.
 
     You need to copy ROM files into #{kegs_folder}.
 
