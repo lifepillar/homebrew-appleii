@@ -1,6 +1,6 @@
 cask 'kegs' do
-  version '1.11'
-  sha256 '094643e8646dc87f21e7a81068dd0934e54863deb8a64bff7c79bf40c1432c5b'
+  version '1.12'
+  sha256 'd3ab57261f65ba8375063d2551b8d0eebc8faa014dc787e3915b8510b8cc310a'
   # url "https://downloads.sourceforge.net/kegs/kegs.#{version}.tar.gz"
   url "http://kegs.sourceforge.net/kegs.#{version}.tar.gz"
   name 'KEGS'
