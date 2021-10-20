@@ -5,8 +5,6 @@ class Ciderpress < Formula
   version "4.0.3"
   sha256 "fc21b46adbd01ac5911066d99ef3b74cb6704bd8df234e724a183ad451e7cd25"
 
-  bottle :unneeded
-
   def install
     libexec.install Dir["*"]
 
