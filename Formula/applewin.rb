@@ -4,8 +4,6 @@ class Applewin < Formula
   url "https://github.com/AppleWin/AppleWin/releases/download/v1.30.0.0(try2)/AppleWin1.30.0.0.zip"
   sha256 "17d2c5e1a29afbaf782b7110a3d5c887251869c3907953dd4ba6c419a214b7c9"
 
-  bottle :unneeded
-
   def install
     libexec.install Dir["*"]
 
