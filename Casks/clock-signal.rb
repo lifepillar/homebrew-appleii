@@ -1,5 +1,5 @@
 cask "clock-signal" do
-  version "2021-12-19"
+  version "2022-03-13"
 
   url "https://github.com/TomHarte/CLK/releases/download/#{version}/Clock.Signal.macOS.#{version}.zip"
   appcast "https://github.com/TomHarte/CLK/releases.atom"
