@@ -1,8 +1,8 @@
 cask 'openemulator' do
-  version '1.0.5-20190205'
-  sha256 '5379d4810949e9ddd7a8efc3e3e42efae8372f8618ece6fd07755410b1cdc5d9'
+  version '1.1.1-20220311'
+  sha256 'b32f144efc3d6bf2be857e35fe1d65a91fd40ffe6f3dc34cf34cbf7501998a6f'
 
-  url 'https://archive.org/download/OpenEmulatorSnapshots/OpenEmulator-20190205.zip'
+  url 'https://archive.org/download/OpenEmulatorSnapshots/OpenEmulator-20220311.zip'
   name 'OpenEmulator'
   desc 'Accurate, portable emulator of legacy computer systems'
   homepage 'https://archive.org/details/OpenEmulatorSnapshots'
