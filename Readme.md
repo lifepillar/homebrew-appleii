@@ -46,6 +46,14 @@ Examples:
     brew install gsport
 
 
+Some formulas or casks in this repository may already exist in Homebrew. In
+such cases, if you want to refer to the formula or cask in this repository
+(e.g., because it contains a more up to date version), you must use
+`lifepillar/homebrew-appleii/<name>`. For instance:
+
+    brew upgrade lifepillar/homebrew-appleii/clock-signal
+
+
 ## Contributions
 
 They are welcome! If you know of some program that is not included here, please
