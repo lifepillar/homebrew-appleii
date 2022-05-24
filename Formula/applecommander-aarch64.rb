@@ -1,8 +1,8 @@
 class ApplecommanderAarch64 < Formula
   desc "Move data between Apple ][ disk images and native filesystem"
   homepage "https://applecommander.github.io/"
-  url "https://github.com/AppleCommander/AppleCommander/releases/download/1.7.0/AppleCommander-macosx-aarch64-1.7.0.jar"
-  sha256 "94b57f52998b4205999e255673daef3353411ce698913d95011a2d19a5c22caf"
+  url "https://github.com/AppleCommander/AppleCommander/releases/download/1.8.0/AppleCommander-macosx-aarch64-1.8.0.jar"
+  sha256 "c54e350bc4d9414786a4006a78a49536cbe6b1e2dffa194e44163c068f7d9fc8"
 
   depends_on "openjdk"
 
