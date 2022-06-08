@@ -25,8 +25,6 @@ cask "zulufx8" do
     end
   end
 
-  depends_on macos: ">= :yosemite"
-
   pkg "Double-Click to Install ZuluFX #{version.major}.pkg"
 
   uninstall pkgutil: "com.azulsystems.zulu.#{version.major}"
