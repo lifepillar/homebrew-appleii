@@ -68,7 +68,11 @@ cc65 is already in Homebrew! (`brew install cc65`)
 
 _Why isn't [Virtual \]\[](http://www.virtualii.com) in this repository?_
 
-Virtual ][ is already in Homebrew Cask! (`brew install --cask virtual-ii`)
+Virtual ][ is already in Homebrew Cask! (`brew install virtual-ii`)
+
+_Why isn't [Clock Signal](https://github.com/TomHarte/CLK) in this repository any longer?_
+
+CLK (Clock Signal) has been added to Homebrew Cask! (`brew install clock-signal`)
 
 
 ## Credits
