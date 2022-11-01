@@ -42,7 +42,7 @@ class Epple2 < Formula
 
   def caveats
     <<~EOS
-      Please read Warning Concerning Copyright Restrictions here:
+      Please read Warnings about copyright here:
 
           https://cmosher01.github.io/Apple-II-Source/
 
