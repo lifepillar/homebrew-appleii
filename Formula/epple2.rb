@@ -1,8 +1,8 @@
 class Epple2 < Formula
   desc "Emulator of the Apple ][ computer"
   homepage "http://mosher.mine.nu/epple2"
-  url "https://github.com/cmosher01/Epple-II/archive/v1.0.5.tar.gz"
-  sha256 "c9ac8309118018949285f100d7fc5259cc7104363f8c3721703ded60c60ed32a"
+  url "https://github.com/cmosher01/Epple-II/archive/1.0.6.tar.gz"
+  sha256 "c72f7c1b720db6db72d6575bba80d9100c5949c5df45a99a773488c024343584"
   head "https://github.com/cmosher01/Epple-II.git"
 
   depends_on "autoconf" => :build
@@ -44,7 +44,7 @@ class Epple2 < Formula
     <<~EOS
       Please read Warning Concerning Copyright Restrictions here:
 
-          http://mosher.mine.nu/apple2/site/
+          https://cmosher01.github.io/Apple-II-Source/
 
       Configuration files are in #{etc}/epple2.
 
