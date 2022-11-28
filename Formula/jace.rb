@@ -33,7 +33,7 @@ class Jace < Formula
     (bin/"jace").write <<~EOS
       #!/bin/bash
       export JAVA_HOME="#{java_home}"
-      exec "${JAVA_HOME}/bin/java" -Duser.dir=/usr/local/etc -jar "/usr/local/Cellar/jace/2.0-Stable/libexec/Jace.jar" "$@"
+      exec "${JAVA_HOME}/bin/java" -Duser.dir=#{etc} -jar "#{prefix}/libexec/Jace.jar" "$@"
     EOS
   end
 
