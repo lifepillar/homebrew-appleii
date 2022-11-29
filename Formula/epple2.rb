@@ -5,10 +5,9 @@ class Epple2 < Formula
   sha256 "4dde05482fd0a548e12d8976030fb9dff4e2f6268717963678f536f0c3a6327d"
   head "https://github.com/cmosher01/Epple-II.git"
 
-  depends_on "cmake" => :build
-  # For apple2sys:
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "cmake" => :build
   depends_on "xa" => :build
   depends_on "sdl2"
 
@@ -27,12 +26,19 @@ class Epple2 < Formula
       system "make", "install"
     end
 
+    cd "rom" do
+      system "make"
+    end
+
     system "cmake", "--install-prefix=#{prefix}", "."
     system "make"
     bin.install "src/epple2"
-    if not Dir.exist? etc/"epple2"
-      (etc/"epple2").install Pathname.glob("conf/*.conf")
-    end
+    (lib/"epple2/system").install "rom/epple2sys.a65"
+    (lib/"epple2/cards").install "rom/stdout.a65"
+    (lib/"epple2/cards").install "rom/stdin.a65"
+    (lib/"epple2/cards").install "rom/clock.a65"
+
+    (etc/"epple2").install Pathname.glob("conf/*.conf") unless Dir.exist? etc/"epple2"
   end
 
   def caveats
