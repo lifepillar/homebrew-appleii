@@ -1,19 +1,20 @@
 class Epple2 < Formula
   desc "Emulator of the Apple ][ computer"
   homepage "http://mosher.mine.nu/epple2"
-  url "https://github.com/cmosher01/Epple-II/archive/1.0.6.tar.gz"
-  sha256 "c72f7c1b720db6db72d6575bba80d9100c5949c5df45a99a773488c024343584"
+  url "https://github.com/cmosher01/Epple-II/archive/refs/tags/1.1.1.tar.gz"
+  sha256 "4dde05482fd0a548e12d8976030fb9dff4e2f6268717963678f536f0c3a6327d"
   head "https://github.com/cmosher01/Epple-II.git"
 
+  depends_on "cmake" => :build
+  # For apple2sys:
   depends_on "autoconf" => :build
   depends_on "automake" => :build
-  # For apple2sys:
   depends_on "xa" => :build
   depends_on "sdl2"
 
   resource "apple2sys" do
-    url "https://github.com/cmosher01/Apple-II-Source/archive/v1.1.2.tar.gz"
-    sha256 "452a924e84d26e2ff0d9b29f42e32d485b0bb48ef0881ff5d2dff836e1f9c187"
+    url "https://github.com/cmosher01/Apple-II-Source/archive/refs/tags/1.2.0.tar.gz"
+    sha256 "fee4fcf4730784ac506edfafabb9dcbcc377af67cb5c71ff8ace2029dc0bb76a"
   end
 
   def install
@@ -26,18 +27,12 @@ class Epple2 < Formula
       system "make", "install"
     end
 
-    opts = []
-    opts << "--disable-dependency-tracking"
-    opts << "--disable-silent-rules"
-    opts << "--prefix=#{prefix}"
-
-    system "autoreconf", "--install"
-    system "./configure", *opts
-    system "make", "install"
-    # Rename default configuration file and install epple2.conf manually,
-    # so that it won't be deleted if epple2 is removed.
-    File.rename prefix/"etc/epple2/epple2.conf", prefix/"etc/epple2/epple2.conf.default"
-    (etc/"epple2").install "conf/epple2.conf" unless File.exist?(etc/"epple2/epple2.conf")
+    system "cmake", "--install-prefix=#{prefix}", "."
+    system "make"
+    bin.install "src/epple2"
+    if not Dir.exist? etc/"epple2"
+      (etc/"epple2").install Pathname.glob("conf/*.conf")
+    end
   end
 
   def caveats
