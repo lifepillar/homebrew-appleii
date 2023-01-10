@@ -2,7 +2,7 @@ class Plasma < Formula
   desc "Proto Language AsSeMbler for Apple"
   homepage "https://github.com/dschmenk/PLASMA"
   url "https://github.com/dschmenk/PLASMA/archive/refs/tags/Alpha2.tar.gz"
-  version "2.0-alpha1"
+  version "2.0-alpha2"
   sha256 "b5f888ccf33eccf327b11796d4da508906dce20f29c03278909f167236102dc4"
   head "https://github.com/dschmenk/PLASMA.git"
 
