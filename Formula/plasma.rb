@@ -1,9 +1,9 @@
 class Plasma < Formula
   desc "Proto Language AsSeMbler for Apple"
   homepage "https://github.com/dschmenk/PLASMA"
-  url "https://github.com/dschmenk/PLASMA/archive/refs/tags/Alpha2.tar.gz"
-  version "2.0-alpha2"
-  sha256 "b5f888ccf33eccf327b11796d4da508906dce20f29c03278909f167236102dc4"
+  url "https://github.com/dschmenk/PLASMA/archive/refs/tags/Beta.tar.gz"
+  version "2.0-beta"
+  sha256 "2936bb4b6ec17419492bceb4928bc3aa6aa8ec25898777501c649d247d811441"
   head "https://github.com/dschmenk/PLASMA.git"
 
   option "with-test", "Verify the build with `make test`"
