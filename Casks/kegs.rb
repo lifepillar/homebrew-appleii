@@ -1,8 +1,7 @@
 cask 'kegs' do
-  version '1.16'
-  sha256 'b0166a31e40dadbdaf623c8a10b7718f71e7658a1b443f595b343ccb185d7db7'
-  # url "https://downloads.sourceforge.net/kegs/kegs.#{version}.tar.gz"
-  url "http://kegs.sourceforge.net/kegs.#{version}.tar.gz"
+  version '1.19'
+  sha256 '78ea17a935f67814d0e292630a8049cda090fe295a930da21852236ccd5bf7b4'
+  url "https://kegs.sourceforge.net/kegs.#{version}.zip"
   name 'KEGS'
   desc 'Apple IIgs emulator'
   homepage 'http://kegs.sourceforge.net'
@@ -13,10 +12,7 @@ cask 'kegs' do
   app "kegs.#{version}/KEGSMAC.app", target: "#{kegs_folder}/KEGSMAC.app"
   binary shimscript, target: 'kegs'
   artifact "kegs.#{version}/config.kegs", target: "#{kegs_folder}/config.kegs"
-  artifact "kegs.#{version}/README.a2.compatibility.txt", target: "#{kegs_folder}/README.a2.compatibility.txt"
-  artifact "kegs.#{version}/README.kegs.txt", target: "#{kegs_folder}/README.kegs.txt"
-  artifact "kegs.#{version}/README.mac.txt", target: "#{kegs_folder}/README.mac.txt"
-  artifact "kegs.#{version}/README.ROM.files.txt", target: "#{kegs_folder}/README.ROM.files.txt"
+  artifact "kegs.#{version}/doc", target: "#{kegs_folder}/doc"
   artifact "kegs.#{version}/NUCLEUS03.gz", target: "#{kegs_folder}/NUCLEUS03.gz"
   artifact "kegs.#{version}/XMAS_DEMO.gz", target: "#{kegs_folder}/XMAS_DEMO.gz"
 
