@@ -1,16 +1,18 @@
-cask 'lisaem' do
-  version '1.2.7-RC3a_2020.08.24'
-  sha256 "98123604b3cc4b7d55a0551a9c3d24e0631fe0f1a1acb57a83185e98ae413fd7"
+cask "lisaem" do
+  version "1.2.7-RC4_2022.04.01"
+  sha256 "5b6b8026f57f6ac39986b11d4481f864ab8feb27412fadfae93eb377f4420c02"
 
   url "https://lisaem.sunder.net/downloads/LisaEm_#{version}-macosx.dmg"
-  appcast 'https://lisaem.sunder.net/downloads.html'
-  name 'LisaEm'
-  desc 'The first fully functional Lisa Emulator™'
-  homepage 'https://lisaem.sunder.net/'
+  name "LisaEm"
+  desc "The first fully functional Lisa Emulator™"
+  homepage "https://lisaem.sunder.net/"
 
-  lisaem_folder = '/Applications/LisaEm'
+  livecheck do
+    url "https://lisaem.sunder.net/downloads.html"
+    regex(/href=.*?LisaEm[._-]v?(\d+(?:\.\d+)+[.\w-]*)-macosx.dmg/i)
+  end
 
-  app 'LisaEm.app', target: "#{lisaem_folder}/LisaEm.app"
+  app "LisaEm #{version}.app", target: "LisaEm/LisaEm.app"
 
   zap trash: [
                '~/Library/Caches/net.sunder.lisaem',
