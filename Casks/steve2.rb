@@ -3,10 +3,14 @@ cask "steve2" do
   sha256 "cdb4cb9f4d937a0211be78b6819130391d9b4a9f623be28dd1aaef91df197f42"
 
   url "https://github.com/trudnai/Steve2/releases/download/v#{version}/Steve2.pkg"
-  appcast "https://github.com/trudnai/Steve2/releases.atom"
   name "Steve ]["
-  desc 'Apple ][ Emulator for Mac'
+  desc "Apple ][ Emulator for Mac"
   homepage "https://github.com/trudnai/Steve2"
+
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+[.\w-]*)$/i)
+  end
 
   pkg "Steve2.pkg"
 
