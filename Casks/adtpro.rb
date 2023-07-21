@@ -1,11 +1,10 @@
-cask 'adtpro' do
-  version "2.0.3"
-  sha256 "fb3d380a1a5196a950a2a90711fa99e2bd6bfd025891984e5ff967b2725d5dfc"
+cask "adtpro" do
+  version "2.1.0"
+  sha256 "663a4a6c8b0b7d61bcbf5ae0284b014645cb701a00c084c4ab4361df99eae8fc"
 
   adtpro = "ADTPro-#{version}"
   url "https://github.com/ADTPro/adtpro/releases/download/v_#{version.tr('.','_')}/#{adtpro}.dmg",
     verified: "github.com/ADTPro/adtpro/"
-  appcast "https://github.com/ADTPro/adtpro/releases.atom"
   name "ADTPro"
   desc "Apple Disk Transfer ProDOS"
   homepage "http://adtpro.com"
