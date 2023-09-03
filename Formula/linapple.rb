@@ -6,7 +6,7 @@ class Linapple < Formula
   head "https://github.com/timob/linapple.git"
 
   depends_on "libzip"
-  depends_on "sdl"
+  depends_on "sdl12-compat"
 
   def shim_script(target)
     <<~EOS
