@@ -1,6 +1,6 @@
 cask 'kegs' do
-  version '1.23'
-  sha256 '5466e91868ee6d156c853625740d9c9b5e6a3409e9bcfbb1e517788e7dae2aec'
+  version '1.30'
+  sha256 '425675ab88bc6a9fba6d10f0cd54f09848df56d77ebf6ffdeff6ae199f91029c'
   url "https://kegs.sourceforge.net/kegs.#{version}.zip"
   name 'KEGS'
   desc 'Apple IIgs emulator'
