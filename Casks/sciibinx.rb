@@ -9,6 +9,3 @@ cask 'sciibinx' do
 
   app "SCIIBinX.app"
 end
-
-
-

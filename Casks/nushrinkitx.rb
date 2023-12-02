@@ -9,5 +9,3 @@ cask 'nushrinkitx' do
 
   app "NuShrinkItX.app"
 end
-
-

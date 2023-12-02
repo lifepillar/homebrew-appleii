@@ -9,4 +9,3 @@ cask 'ciderxpress' do
 
   app "CiderXPress.app"
 end
-
