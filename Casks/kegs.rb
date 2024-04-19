@@ -4,7 +4,7 @@ cask 'kegs' do
   url "https://kegs.sourceforge.net/kegs.#{version}.zip"
   name 'KEGS'
   desc 'Apple IIgs emulator'
-  homepage 'http://kegs.sourceforge.net'
+  homepage 'http://kegs.sourceforge.net/'
 
   kegs_folder = '/Applications/KEGS'
   shimscript = "#{staged_path}/kegs-wrapper.sh"

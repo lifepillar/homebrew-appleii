@@ -5,7 +5,7 @@ cask 'quickviewdhgr' do
   url "http://www.apple2works.com/marklim/quickviewdhgr.zip"
   name 'QuickViewDHGR'
   desc 'Utility for viewing Apple II graphics files'
-  homepage 'http://www.apple2works.com'
+  homepage 'http://www.apple2works.com/'
 
   app "QuickViewDHGR.app"
 end

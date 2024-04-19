@@ -5,7 +5,7 @@ cask 'activegs' do
   url 'http://activegs.freetoolsassociation.com/ActiveGS.zip'
   name 'ActiveGS'
   desc 'Apple IIGS emulator'
-  homepage 'http://activegs.freetoolsassociation.com'
+  homepage 'http://activegs.freetoolsassociation.com/'
 
   app 'ActiveGS.app'
 end

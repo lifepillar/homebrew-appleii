@@ -7,7 +7,7 @@ cask "adtpro" do
     verified: "github.com/ADTPro/adtpro/"
   name "ADTPro"
   desc "Apple Disk Transfer ProDOS"
-  homepage "http://adtpro.com"
+  homepage "http://adtpro.com/"
 
   # Copy the whole folder
   app "#{adtpro}"

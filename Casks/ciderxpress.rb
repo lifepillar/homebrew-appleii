@@ -5,7 +5,7 @@ cask 'ciderxpress' do
   url "http://www.apple2works.com/marklim/ciderxpress.zip"
   name 'CiderXPress'
   desc 'Utility for creating and working with Apple II disk images'
-  homepage 'http://www.apple2works.com'
+  homepage 'http://www.apple2works.com/'
 
   app "CiderXPress.app"
 end

@@ -5,7 +5,7 @@ cask 'nushrinkitx' do
   url "http://www.apple2works.com/marklim/nushrinkitx.zip"
   name 'NuShrinkItX'
   desc 'Utility for creating and working with Apple II archive files (e.g., .shk)'
-  homepage 'http://www.apple2works.com'
+  homepage 'http://www.apple2works.com/'
 
   app "NuShrinkItX.app"
 end

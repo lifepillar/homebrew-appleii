@@ -5,7 +5,7 @@ cask 'compressiix' do
   url "http://www.apple2works.com/marklim/compressiix.zip"
   name 'CompressIIX'
   desc 'Utility for compressing ordinary Apple II graphics files'
-  homepage 'http://www.apple2works.com'
+  homepage 'http://www.apple2works.com/'
 
   app "CompressIIX.app"
 end

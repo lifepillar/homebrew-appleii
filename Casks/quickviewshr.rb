@@ -5,7 +5,7 @@ cask 'quickviewshr' do
   url "http://www.apple2works.com/marklim/quickviewshr.zip"
   name 'QuickViewSHR'
   desc 'Utility for viewing Apple IIGS SuperHires graphics (packed and unpacked) files'
-  homepage 'http://www.apple2works.com'
+  homepage 'http://www.apple2works.com/'
 
   app "QuickViewSHR.app"
 end

@@ -5,7 +5,7 @@ cask 'lz4compressorx' do
   url "http://www.apple2works.com/marklim/lz4compressorx.zip"
   name 'LZ4CompressorX'
   desc 'Utility for general file compression'
-  homepage 'http://www.apple2works.com'
+  homepage 'http://www.apple2works.com/'
 
   app "LZ4CompressorX.app"
 end
