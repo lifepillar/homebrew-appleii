@@ -1,20 +1,20 @@
 cask "gsplus" do
-  version '0.14'
-  sha256 '63015f83211fccedd01707cca56342f5dba58127d5b336bc9c33be51b93d8882'
+  version "0.14"
+  sha256 "63015f83211fccedd01707cca56342f5dba58127d5b336bc9c33be51b93d8882"
 
   url "http://apple2.gs/downloads/plusbuilds/#{version}/GSplus-Install.dmg"
-  name 'GSplus'
-  desc 'Apple IIGS emulator based on KEGS and GSPort'
-  homepage 'https://apple2.gs/plus/'
+  name "GSplus"
+  desc "Apple IIGS emulator based on KEGS and GSPort"
+  homepage "https://apple2.gs/plus/"
 
-  gsplus_folder = '/Applications/GSplus'
+  gsplus_folder = "/Applications/GSplus"
   shimscript = "#{staged_path}/gsplus-wrapper.sh"
 
-  app 'GSplus.app', target: "#{gsplus_folder}/GSplus.app"
-  binary shimscript, target: 'gsplus'
-  artifact 'license', target: "#{gsplus_folder}/license"
-  artifact 'gsplusmanual.pdf', target: "#{gsplus_folder}/gsplusmanual.pdf"
-  artifact 'README.txt', target: "#{gsplus_folder}/README.txt"
+  app "GSplus.app", target: "#{gsplus_folder}/GSplus.app"
+  binary shimscript, target: "gsplus"
+  artifact "license", target: "#{gsplus_folder}/license"
+  artifact "gsplusmanual.pdf", target: "#{gsplus_folder}/gsplusmanual.pdf"
+  artifact "README.txt", target: "#{gsplus_folder}/README.txt"
 
   preflight do
     IO.write shimscript, <<~EOS
@@ -24,7 +24,7 @@ cask "gsplus" do
   end
 
   postflight do
-    IO.write("#{gsplus_folder}/config.txt", '# GSplus configuration file')
+    IO.write("#{gsplus_folder}/config.txt", "# GSplus configuration file")
   end
 
   caveats <<~EOS

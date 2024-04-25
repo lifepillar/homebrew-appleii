@@ -15,10 +15,10 @@ cask "lisaem" do
   app "LisaEm #{version}.app", target: "LisaEm/LisaEm.app"
 
   zap trash: [
-               '~/Library/Caches/net.sunder.lisaem',
-               '~/Library/Preferences/LisaEm Preferences',
-               '~/Library/Preferences/lisaem.conf',
-               '~/Library/Preferences/net.sunder.lisaem.plist',
-               '~/Library/Saved Application State/net.sunder.lisaem.savedState',
+               "~/Library/Caches/net.sunder.lisaem",
+               "~/Library/Preferences/LisaEm Preferences",
+               "~/Library/Preferences/lisaem.conf",
+               "~/Library/Preferences/net.sunder.lisaem.plist",
+               "~/Library/Saved Application State/net.sunder.lisaem.savedState",
              ]
 end
