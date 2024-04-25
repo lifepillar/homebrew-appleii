@@ -4,7 +4,7 @@ cask "apple1basic" do
 
   # www.weihenstephan.org/~michaste/pagetable/recompiler was verified as official when first introduced to the cask
   url "http://www.weihenstephan.org/~michaste/pagetable/recompiler/apple1basic_osx.zip",
-    verified: "weihenstephan.org/~michaste/"
+      verified: "weihenstephan.org/~michaste/"
   name "Apple I BASIC"
   desc "Apple I BASIC as a scripting language for Mac OS X Intel"
   homepage "https://www.pagetable.com/?p=35"

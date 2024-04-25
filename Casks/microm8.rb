@@ -9,4 +9,3 @@ cask "microm8" do
 
   app "microM8.app"
 end
-

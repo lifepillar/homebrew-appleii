@@ -4,7 +4,7 @@ cask "buckshot" do
 
   # github.com/digarok/buckshot was verified as official when first introduced to the cask
   url "https://github.com/digarok/buckshot/releases/download/v#{version}/buckshot.dmg",
-    verified: "github.com/digarok/buckshot/"
+      verified: "github.com/digarok/buckshot/"
   name "buckshot"
   desc "Apple II Image Converter Tool"
   homepage "https://apple2.gs/buckshot/"

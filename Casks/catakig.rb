@@ -11,7 +11,7 @@ cask "catakig" do
 
   caveats do
     <<~EOS
-    ROMs files must be put in /Applications/Catakig/ROMs.
+      ROMs files must be put in /Applications/Catakig/ROMs.
     EOS
   end
 end
