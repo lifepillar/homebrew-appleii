@@ -1,6 +1,6 @@
 cask "ample" do
-  version "0.264,56"
-  sha256 "c814e533dfb5fc42d8c9f0d34cb8d43bd4170036867aae574a4a3e3b8942902c"
+  version "0.265,57"
+  sha256 "533e9da1c5033c3a5c50912f292cecce28b3d8269f6b2c052c6d098ea4fa3d9a"
 
   url "https://github.com/ksherlock/ample/releases/download/r#{version.csv.second}/Ample-#{version.csv.second}.zip"
   name "Ample"
@@ -9,7 +9,9 @@ cask "ample" do
 
   livecheck do
     url "https://ample.ksherlock.com/updates/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |item|
+      "#{item.short_version.delete_suffix("-u2")},#{item.version}"
+    end
   end
 
   auto_updates true
@@ -21,5 +23,6 @@ cask "ample" do
     "~/Library/Application Support/Ample",
     "~/Library/Caches/com.ksherlock.ample",
     "~/Library/Preferences/com.ksherlock.ample.plist",
+    "~/Library/WebKit/com.ksherlock.ample",
   ]
 end
