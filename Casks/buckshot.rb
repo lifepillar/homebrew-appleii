@@ -10,4 +10,9 @@ cask "buckshot" do
   homepage "https://apple2.gs/buckshot/"
 
   app "buckshot.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.dagenbrock.buckshot.plist",
+    "~/Library/Saved Application State/com.dagenbrock.buckshot.savedState",
+  ]
 end
