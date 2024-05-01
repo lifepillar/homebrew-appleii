@@ -8,4 +8,6 @@ cask "ciderxpress" do
   homepage "http://www.apple2works.com/"
 
   app "CiderXPress.app"
+
+  zap trash: "~/Library/Application Support/CiderXPress"
 end
