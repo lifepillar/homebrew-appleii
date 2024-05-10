@@ -1,11 +1,18 @@
 cask "kegs" do
-  version "1.32"
-  sha256 "0290bc648f1d17cd52c1960faf48e4e2513e48e4f5f688031d76cd1977aea0b2"
+  version "1.34"
+  sha256 "50646990d200619d1056d4204375cd9d65434ac4304a7bd5418cccc88283408b"
 
   url "https://kegs.sourceforge.net/kegs.#{version}.zip"
   name "KEGS"
   desc "Apple IIgs emulator"
-  homepage "http://kegs.sourceforge.net/"
+  homepage "https://kegs.sourceforge.net/"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?kegs[._-](\d+(?:\.\d+)*)\.zip/i)
+  end
+
+  depends_on macos: ">= :high_sierra"
 
   kegs_folder = "/Applications/KEGS"
   shimscript = "#{staged_path}/kegs-wrapper.sh"
@@ -18,18 +25,18 @@ cask "kegs" do
   artifact "kegs.#{version}/XMAS_DEMO.gz", target: "#{kegs_folder}/XMAS_DEMO.gz"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       cd #{kegs_folder}
       #{kegs_folder}/KEGSMAC.app/Contents/MacOS/KEGSMAC "$@"
     EOS
   end
 
-  caveats <<-EOS
+  caveats <<~EOS
     You may launch KEGS by running `kegs` from the terminal.
 
-    Because of macOS security measures, you may have to open KEGSAPP by
-    right-clicking on the app in the Finder a couple of times.
+    Because of macOS security measures, you may have to first open KEGSMAC by
+    right-clicking on the app in the Finder and selecting "Open".
 
     You need to copy ROM files into #{kegs_folder}.
 
