@@ -9,6 +9,11 @@ cask "catakig" do
 
   app "Catakig"
 
+  zap trash: [
+    "~/Library/Preferences/net.sourceforge.catakig.plist",
+    "~/Library/Saved Application State/net.sourceforge.catakig.savedState",
+  ]
+
   caveats do
     <<~EOS
       ROMs files must be put in /Applications/Catakig/ROMs.

@@ -8,4 +8,10 @@ cask "sara" do
   homepage "http://www.blackcatsystems.com/software/sara.html"
 
   app "SaraOSX/Sara.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.blackcatsystems.Sara.plist",
+    "~/Library/Preferences/Sara Prefs",
+    "~/Library/Saved Application State/com.blackcatsystems.Sara.savedState",
+  ]
 end

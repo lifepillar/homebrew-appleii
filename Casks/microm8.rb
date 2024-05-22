@@ -8,4 +8,10 @@ cask "microm8" do
   homepage "https://paleotronic.com/software/microm8/"
 
   app "microM8.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.paleotronic.microM8.plist",
+    "~/Library/Saved Application State/com.paleotronic.microM8.savedState",
+    "~/microM8",
+  ]
 end

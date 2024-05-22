@@ -8,4 +8,9 @@ cask "iigsgraphicsconverter" do
   homepage "http://www.apple2works.com/"
 
   app "IIGSGraphicsConverter.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.yourcompany.IIGSGraphicsConverter.plist",
+    "~/Library/Saved Application State/com.yourcompany.IIGSGraphicsConverter.savedState",
+  ]
 end

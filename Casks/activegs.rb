@@ -8,4 +8,9 @@ cask "activegs" do
   homepage "http://activegs.freetoolsassociation.com/"
 
   app "ActiveGS.app"
+
+  zap trash: [
+    "~/ActiveGSLocalData",
+    "~/Library/Saved Application State/com.yourcompany.ActiveGS.savedState",
+  ]
 end

@@ -9,5 +9,10 @@ cask "ciderxpress" do
 
   app "CiderXPress.app"
 
-  zap trash: "~/Library/Application Support/CiderXPress"
+  zap trash: [
+    "~/Library/Application Support/CiderXPress",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.incrementalinnovation.ciderxpress.sfl*",
+    "~/Library/Preferences/com.incrementalinnovation.CiderXPress.plist",
+    "~/Library/Saved Application State/com.incrementalinnovation.CiderXPress.savedState",
+  ]
 end

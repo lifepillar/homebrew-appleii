@@ -8,4 +8,9 @@ cask "compressiix" do
   homepage "http://www.apple2works.com/"
 
   app "CompressIIX.app"
+
+  zap trash: [
+    "~/Library/Application Support/CompressIIX",
+    "~/Library/Saved Application State/com.yourcompany.CompressIIX.savedState",
+  ]
 end

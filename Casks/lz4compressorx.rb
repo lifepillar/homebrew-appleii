@@ -8,4 +8,9 @@ cask "lz4compressorx" do
   homepage "http://www.apple2works.com/"
 
   app "LZ4CompressorX.app"
+
+  zap trash: [
+    "~/Library/Application Support/LZ4CompressorX",
+    "~/Library/Saved Application State/com.yourcompany.LZ4CompressorX.savedState",
+  ]
 end

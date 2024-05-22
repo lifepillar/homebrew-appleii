@@ -8,4 +8,10 @@ cask "nushrinkitx" do
   homepage "http://www.apple2works.com/"
 
   app "NuShrinkItX.app"
+
+  zap trash: [
+    "~/Library/Application Support/NuShrinkItX",
+    "~/Library/Preferences/com.incrementalinnovation.NuShrinkItX.plist",
+    "~/Library/Saved Application State/com.incrementalinnovation.NuShrinkItX.savedState",
+  ]
 end

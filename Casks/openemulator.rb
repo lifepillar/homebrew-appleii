@@ -8,4 +8,9 @@ cask "openemulator" do
   homepage "https://archive.org/details/OpenEmulatorSnapshots"
 
   app "OpenEmulator.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.openemulator.openemulator.sfl",
+    "~/Library/Preferences/org.openemulator.OpenEmulator.plist",
+  ]
 end

@@ -9,4 +9,10 @@ cask "sweet16" do
   homepage "http://www.sheppyware.net/software-mac/sweet16/"
 
   app "#{sweet16}/Sweet16.app"
+
+  zap trash: [
+    "~/Library/Application Support/Sweet16",
+    "~/Library/Preferences/com.fesystems.Sweet16.plist",
+    "~/Library/Saved Application State/com.fesystems.Sweet16.savedState",
+  ]
 end

@@ -8,4 +8,9 @@ cask "quickviewshr" do
   homepage "http://www.apple2works.com/"
 
   app "QuickViewSHR.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.incrementalinnovation.QuickViewSHR.plist",
+    "~/Library/Saved Application State/com.incrementalinnovation.QuickViewSHR.savedState",
+  ]
 end

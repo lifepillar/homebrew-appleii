@@ -8,4 +8,9 @@ cask "quickviewdhgr" do
   homepage "http://www.apple2works.com/"
 
   app "QuickViewDHGR.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.incrementalInnovation.QuickViewDHGR.plist",
+    "~/Library/Saved Application State/com.incrementalInnovation.QuickViewDHGR.savedState",
+  ]
 end

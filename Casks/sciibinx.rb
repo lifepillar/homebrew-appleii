@@ -8,4 +8,10 @@ cask "sciibinx" do
   homepage "http://www.apple2works.com/"
 
   app "SCIIBinX.app"
+
+  zap trash: [
+    "~/Library/Application Support/SCIIBinX",
+    "~/Library/Preferences/com.incrementalinnovation.SCIIBinX.plist",
+    "~/Library/Saved Application State/com.incrementalinnovation.SCIIBinX.savedState",
+  ]
 end
