@@ -7,6 +7,8 @@ cask "catakig" do
   desc "Apple II emulator"
   homepage "http://www.zophar.net/macintosh/apple2/catakig.html"
 
+  depends_on macos: "<= :mojave"
+
   app "Catakig"
 
   zap trash: [

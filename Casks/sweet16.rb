@@ -8,6 +8,8 @@ cask "sweet16" do
   desc "The most capable Apple IIGS emulator for OS X"
   homepage "http://www.sheppyware.net/software-mac/sweet16/"
 
+  depends_on macos: "<= :mojave"
+
   app "#{sweet16}/Sweet16.app"
 
   zap trash: [

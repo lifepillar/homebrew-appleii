@@ -6,12 +6,10 @@ cask "apple1basic" do
   url "http://www.weihenstephan.org/~michaste/pagetable/recompiler/apple1basic_osx.zip",
       verified: "weihenstephan.org/~michaste/"
   name "Apple I BASIC"
-  desc "Apple I BASIC as a scripting language for Mac OS X Intel"
+  desc "Apple I BASIC as a scripting language for 32-bit Intel"
   homepage "https://www.pagetable.com/?p=35"
 
-  binary "apple1basic"
+  depends_on macos: "<= :mojave"
 
-  caveats <<~EOS
-    This is a 32-bit executable, hence it does not work in macOS Catalina or later.
-  EOS
+  binary "apple1basic"
 end

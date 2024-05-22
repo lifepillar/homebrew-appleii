@@ -8,6 +8,8 @@ cask "gsport" do
   desc "Portable Apple IIGS emulator"
   homepage "https://david-schmidt.github.io/gsport/"
 
+  depends_on macos: "<= :mojave"
+
   # Copy the whole folder
   app "GSPort"
 

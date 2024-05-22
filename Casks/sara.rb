@@ -7,6 +7,8 @@ cask "sara" do
   desc "Sara Apple /// Emulator"
   homepage "http://www.blackcatsystems.com/software/sara.html"
 
+  depends_on macos: "<= :mojave"
+
   app "SaraOSX/Sara.app"
 
   zap trash: [
