@@ -4,7 +4,7 @@ cask "lisaem" do
 
   url "https://lisaem.sunder.net/downloads/LisaEm_#{version}-macosx.dmg"
   name "LisaEm"
-  desc "The first fully functional Lisa Emulator™"
+  desc "Apple Lisa emulator"
   homepage "https://lisaem.sunder.net/"
 
   livecheck do

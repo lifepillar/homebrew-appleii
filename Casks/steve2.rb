@@ -4,7 +4,7 @@ cask "steve2" do
 
   url "https://github.com/trudnai/Steve2/releases/download/v#{version}/Steve2.pkg"
   name "Steve ]["
-  desc "Apple ][ Emulator for Mac"
+  desc "Speedy Apple ][ emulator"
   homepage "https://github.com/trudnai/Steve2"
 
   livecheck do

@@ -4,7 +4,7 @@ cask "osxii" do
 
   url "http://www.zophar.net/fileuploads/2/12325fpoak/OSXII_v09.dmg.gz"
   name "OSXII"
-  desc "Apple ][ emulator for OS X"
+  desc "Apple ][ emulator"
   homepage "http://www.zophar.net/macintosh/apple2/osxii.html"
 
   depends_on macos: "<= :mojave"

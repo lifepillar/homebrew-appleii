@@ -4,7 +4,7 @@ cask "sara" do
 
   url "http://www.blackcatsystems.com/download/SaraOSX.zip"
   name "Sara"
-  desc "Sara Apple /// Emulator"
+  desc "Apple /// emulator"
   homepage "http://www.blackcatsystems.com/software/sara.html"
 
   depends_on macos: "<= :mojave"

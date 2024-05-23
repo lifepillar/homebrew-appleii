@@ -3,7 +3,7 @@ cask "microm8" do
   sha256 :no_check
 
   url "http://paleotronic.com/download/microm8-mac.zip"
-  name "MicroM8"
+  name "microM8"
   desc "Apple II emulator"
   homepage "https://paleotronic.com/software/microm8/"
 
