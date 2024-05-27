@@ -16,9 +16,5 @@ cask "catakig" do
     "~/Library/Saved Application State/net.sourceforge.catakig.savedState",
   ]
 
-  caveats do
-    <<~EOS
-      ROMs files must be put in /Applications/Catakig/ROMs.
-    EOS
-  end
+  caveats "ROM files must be put in #{appdir}/Catakig/ROMs."
 end
