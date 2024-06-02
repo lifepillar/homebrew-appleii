@@ -16,4 +16,8 @@ cask "adtpro" do
 
   # Copy the whole folder
   app adtpro
+
+  caveats do
+    depends_on_java
+  end
 end
