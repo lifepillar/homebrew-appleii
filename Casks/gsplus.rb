@@ -7,7 +7,11 @@ cask "gsplus" do
   desc "Apple IIGS emulator based on KEGS and GSPort"
   homepage "https://apple2.gs/plus/"
 
-  gsplus_folder = "/Applications/GSplus"
+  livecheck do
+    url "https://github.com/digarok/gsplus"
+  end
+
+  gsplus_folder = "#{appdir}/GSplus"
   shimscript = "#{staged_path}/gsplus-wrapper.sh"
 
   app "GSplus.app", target: "#{gsplus_folder}/GSplus.app"
@@ -17,14 +21,14 @@ cask "gsplus" do
   artifact "README.txt", target: "#{gsplus_folder}/README.txt"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       #{gsplus_folder}/GSplus.app/Contents/macOS/gsplus -config #{gsplus_folder}/config.txt "$@"
     EOS
   end
 
   postflight do
-    IO.write("#{gsplus_folder}/config.txt", "# GSplus configuration file")
+    File.write("#{gsplus_folder}/config.txt", "# GSplus configuration file")
   end
 
   caveats <<~EOS
