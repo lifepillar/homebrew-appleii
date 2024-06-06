@@ -14,7 +14,7 @@ cask "kegs" do
 
   depends_on macos: ">= :high_sierra"
 
-  kegs_folder = "/Applications/KEGS"
+  kegs_folder = "#{appdir}/KEGS"
   shimscript = "#{staged_path}/kegs-wrapper.sh"
 
   app "kegs.#{version}/KEGSMAC.app", target: "#{kegs_folder}/KEGSMAC.app"
