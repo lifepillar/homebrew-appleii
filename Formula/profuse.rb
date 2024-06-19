@@ -1,7 +1,7 @@
 class Profuse < Formula
   desc "ProDOS file system for FUSE"
   homepage "https://github.com/ksherlock/profuse"
-  url "https://github.com/ksherlock/profuse/archive/2016-08-16.tar.gz"
+  url "https://github.com/ksherlock/profuse/archive/refs/tags/2016-08-16.tar.gz"
   version "2016-08-16"
   sha256 "83ce3a7e3001ea1816d3518f29a6532c857e500be6a780586c5fd365d85a77aa"
   head "https://github.com/ksherlock/profuse.git"

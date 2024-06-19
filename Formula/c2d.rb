@@ -1,7 +1,7 @@
 class C2d < Formula
   desc "Apple II Code to Disk"
   homepage "https://github.com/datajerk/c2d"
-  url "https://github.com/datajerk/c2d/archive/v0.57.tar.gz"
+  url "https://github.com/datajerk/c2d/archive/refs/tags/v0.57.tar.gz"
   sha256 "f6437d3bbd43fb638ef8378232b2453d1c75f5e5ed7f85adc47565596f940cc1"
   head "https://github.com/datajerk/c2d.git"
 
