@@ -1,7 +1,7 @@
 class Wozardry < Formula
   desc "Multi-purpose tool for manipulating .woz disk images"
   homepage "https://github.com/a2-4am/wozardry"
-  url "https://github.com/a2-4am/wozardry/archive/v2.0.tar.gz"
+  url "https://github.com/a2-4am/wozardry/archive/refs/tags/v2.0.tar.gz"
   sha256 "715feaa8c0ebc5f8b3adf2f9c4f33194469a8eb77e69097d990b8f96282580c2"
   head "https://github.com/a2-4am/wozardry.git", branch: "master"
 
