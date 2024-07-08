@@ -2,8 +2,8 @@ class AppleIiCassetteRecover < Formula
   desc "Recover data from Apple ][ cassette image WAVE files"
   homepage "https://github.com/cmosher01/Apple-II-Cassette-Recover"
   url "https://github.com/cmosher01/Apple-II-Cassette-Recover.git",
-    revision: "9c47d0a901ea9e94ba7dd46cfbfa91dd71f40686"
-  version "20190123" # Date of commit
+    revision: "fdef3810972e0382984c8f1822328fb20d220104"
+  version "20240403" # Date of commit
   sha256 "798e6fcdcf7add395f9e741f9afc2d323e10d4d839a6d4cb2b09c101058afc57"
   head "https://github.com/cmosher01/Apple-II-Cassette-Recover.git"
 
@@ -12,6 +12,8 @@ class AppleIiCassetteRecover < Formula
 
   def install
     system "qmake"
+    inreplace "Makefile", "/usr/local/include", "#{HOMEBREW_PREFIX}/include"
+    inreplace "Makefile", "/usr/local/lib", "${HOMEBREW_PREFIX}/lib"
     system "make"
     bin.install "./a2cassre.app/Contents/MacOS/a2cassre"
   end
