@@ -2,8 +2,8 @@ class Apple2e < Formula
   desc "Yet another Apple //e emulator"
   homepage "https://github.com/bradgrantham/apple2e"
   url "https://github.com/bradgrantham/apple2e.git",
-    revision: "df7a4df305e2cd0047865a11a93bf41aa751be64"
-  version "20210112" # Date of commit
+    revision: "8e656aba3b07788aee11705e188e4431c46b7e68"
+  version "20240708" # Date of commit
   head "https://github.com/bradgrantham/apple2e.git"
 
   depends_on "glfw"
