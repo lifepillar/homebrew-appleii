@@ -1,46 +1,24 @@
-# TODO: install Zulu as a resource instead
-class Zulufx8Requirement < Requirement
-  fatal true
-  satisfy(build_env: false) { Dir.exist?("/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home") }
-  def message
-    <<~EOS
-      Execute `brew install zulufx8` before installing Jace.
-    EOS
-  end
-end
-
 class Jace < Formula
-  desc "Logical reproduction of an enhanced Apple //e computer"
-  homepage "https://sites.google.com/site/brendanrobert/projects/jace"
-  url "https://github.com/badvision/jace/archive/refs/tags/2.0-Stable.tar.gz"
-  version "2.0-Stable"
-  sha256 "eb3f6f044d05326e43873eac93ebfad778c47f4c286ba9654d759b10f0fb46e1"
+  desc "Cycle-accurate emulation of an Apple //e computer"
+  homepage "https://github.com/badvision/jace"
+  url "https://github.com/badvision/jace/releases/download/3.0/Jace_3.0_MacOS_Intel64.zip"
+  version "3.0"
+  sha256 "d0f7930668b42b57a84046f267bda21a4ce5d52c27afdf14cc34cc92e3c651f1"
   head "https://github.com/badvision/jace.git"
 
-  depends_on "maven" => :build
-  depends_on Zulufx8Requirement
-
-  # unless Dir.exist?("/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home")
-  #   puts "Execute `brew install zulufx8` before installing Jace"
-  #   exit 1
-  # end
-
   def install
-    java_home = "/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
-    ENV["JAVA_HOME"] = java_home
-    system "./build.sh"
-    libexec.install "target/Jace.jar"
+    libexec.install "Jace"
     (bin/"jace").write <<~EOS
       #!/bin/bash
-      export JAVA_HOME="#{java_home}"
-      exec "${JAVA_HOME}/bin/java" -Duser.dir=#{etc} -jar "#{prefix}/libexec/Jace.jar" "$@"
+      cd #{etc}
+      #{libexec}/Jace
     EOS
   end
 
   def caveats
     <<~EOS
       The executable is called `jace`. Jace configuration is saved in
-          #{etc}/.jace.conf
+      #{etc}/.jace.conf.
     EOS
   end
 
