@@ -1,5 +1,5 @@
 class Apple1 < Formula
-  desc "Apple I emulator that doesn't suck"
+  desc "The Apple 1 emulator with the boring name"
   homepage "https://github.com/RyuKojiro/apple1"
   url "https://github.com/RyuKojiro/apple1.git",
     revision: "95134f17c290528231f9a99d6d103e534172aa16"
