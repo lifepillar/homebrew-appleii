@@ -1,6 +1,6 @@
 class Faux1 < Formula
   desc "Apple I emulator for the terminal with cut and paste"
-  homepage "http://faux1.sourceforge.io"
+  homepage "https://sourceforge.net/projects/faux1/"
   url "https://downloads.sourceforge.net/project/faux1/faux1.0.95.9.20120222.src.tar.gz"
   sha256 "fc5c72085abd0e5925d57c477d5e4dc20ded83723a03bd3c5f09281cdc43f25e"
 
