@@ -1,8 +1,8 @@
 class Applewin < Formula
   desc "Apple II emulator for Windows"
   homepage "https://github.com/AppleWin/AppleWin"
-  url "https://github.com/AppleWin/AppleWin/releases/download/v1.30.0.0(try2)/AppleWin1.30.0.0.zip"
-  sha256 "17d2c5e1a29afbaf782b7110a3d5c887251869c3907953dd4ba6c419a214b7c9"
+  url "https://github.com/AppleWin/AppleWin/releases/download/v1.30.18.0/AppleWin1.30.18.0.zip"
+  sha256 "392e927c75cfbb93b3aa893f7139d78b32daaeeb81305429ba8fbebe4822a083"
 
   def install
     libexec.install Dir["*"]
@@ -16,9 +16,9 @@ class Applewin < Formula
 
   def caveats
     <<~EOS
-      Applewin requires Wine. It is recommended to use homebrew-wine:
+      Applewin requires Wine. Install it with:
 
-          https://github.com/Gcenx/homebrew-wine
+          brew install wine-stable
 
       The executable is called `applewin`.
     EOS
