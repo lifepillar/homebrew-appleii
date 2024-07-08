@@ -1,9 +1,9 @@
 class Ciderpress < Formula
   desc "Apple II archive utility for Windows"
   homepage "http://a2ciderpress.com"
-  url "https://github.com/fadden/ciderpress/releases/download/v4.0.3/CiderPress403.zip"
-  version "4.0.3"
-  sha256 "fc21b46adbd01ac5911066d99ef3b74cb6704bd8df234e724a183ad451e7cd25"
+  url "https://github.com/fadden/ciderpress/releases/download/v4.1.1/CiderPress411.zip"
+  version "4.1.1"
+  sha256 "d2348b114e7506e3d2f99dc2a47358e710e06a8e99304ab27f88e9e321a5283f"
 
   def install
     libexec.install Dir["*"]
@@ -17,16 +17,16 @@ class Ciderpress < Formula
 
   def caveats
     <<~EOS
-      Ciderpress requires Wine. It is recommended to use homebrew-wine:
+      Ciderpress requires Wine. Install it with:
 
-          https://github.com/Gcenx/homebrew-wine
+          brew install wine-stable
 
       To complete the installation execute:
 
         cd #{libexec}
-        wine64 Setup403.exe
+        wine64 Setup411.exe
 
-      and choose No-Question-Asked Installation.
+      and choose Immediate Installation.
 
       Ciderpress can then be launched from the command-line with `ciderpress`.
     EOS
