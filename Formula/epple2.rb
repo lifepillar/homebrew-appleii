@@ -3,7 +3,6 @@ class Epple2 < Formula
   homepage "http://mosher.mine.nu/epple2"
   url "https://github.com/cmosher01/Epple-II/archive/refs/tags/1.1.1.tar.gz"
   sha256 "4dde05482fd0a548e12d8976030fb9dff4e2f6268717963678f536f0c3a6327d"
-  head "https://github.com/cmosher01/Epple-II.git"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
@@ -12,8 +11,8 @@ class Epple2 < Formula
   depends_on "sdl2"
 
   resource "apple2sys" do
-    url "https://github.com/cmosher01/Apple-II-Source/archive/refs/tags/1.2.0.tar.gz"
-    sha256 "fee4fcf4730784ac506edfafabb9dcbcc377af67cb5c71ff8ace2029dc0bb76a"
+    url "https://github.com/cmosher01/Apple-II-Source/archive/refs/tags/1.2.1.tar.gz"
+    sha256 "4c27bb6f462ba766ad12cf094ef978336ee612648d830c52b929a7b3b419915f"
   end
 
   def install
