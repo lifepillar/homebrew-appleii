@@ -1,8 +1,8 @@
 class Apple1emulator < Formula
   desc "Apple I Emulator"
   homepage "https://github.com/alexander-akhmetov/apple1"
-  url "https://github.com/alexander-akhmetov/apple1/archive/refs/tags/0.1.0.tar.gz"
-  sha256 "a28b6828fea06e4f1a82821c9f5b5ef6a7f7f7f1135a82baea3802134412f30b"
+  url "https://github.com/alexander-akhmetov/apple1/archive/refs/tags/0.2.0.tar.gz"
+  sha256 "016765f55c185d3dbe20f2afa7da1cee27f6996ad9e61e15bf9af54bcbc166c4"
   head "https://github.com/alexander-akhmetov/apple1.git"
 
   depends_on "rust" => :build
