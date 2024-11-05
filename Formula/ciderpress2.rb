@@ -10,7 +10,7 @@ class Ciderpress2 < Formula
     bin.mkpath
     (bin/"cp2").write <<~EOS
       #!/bin/bash
-      cd #{libexec} && exec "./cp2" "$@"
+      exec #{libexec}/cp2 "$@"
     EOS
   end
 
