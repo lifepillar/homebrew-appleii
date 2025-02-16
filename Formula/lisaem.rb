@@ -1,5 +1,5 @@
 class Lisaem < Formula
-  desc "Fully functional Lisa Emulator™"
+  desc "Fully functional Lisa Emulator"
   homepage "https://lisaem.sunder.net/"
   url "https://github.com/arcanebyte/lisaem/archive/refs/tags/RC5-2024.07.28.tar.gz"
   version "1.2.7-2024.07.28"
@@ -7,11 +7,16 @@ class Lisaem < Formula
   head "https://github.com/arcanebyte/lisaem.git"
 
   depends_on "sdl2"
-  depends_on "xz"
 
   resource "wxWidgets" do
     url "https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.5/wxWidgets-3.2.5.tar.bz2"
     sha256 "0ad86a3ad3e2e519b6a705248fc9226e3a09bbf069c6c692a02acf7c2d1c6b51"
+  end
+
+  # Backport fixes for type mismatches under Xcode > 14.1
+  patch do
+    url "https://github.com/arcanebyte/lisaem/commit/8d5d7f1ea6ad5f6bf0111f0df05a7ea29a246f8b.patch?full_index=1"
+    sha256 "62bca3797f52065b31e46ceaaacb13bd934cd4991737017e55f7642006586720"
   end
 
   def install
@@ -23,7 +28,7 @@ class Lisaem < Formula
         s.gsub! "--prefix=/usr/local/wx${VER}-${TYPE}", "--prefix=#{buildpath}/../wxWidgets"
         s.gsub! "&& sudo make", "&& make"
       end
-      system "./build-wx3.2.5-modern-macosx.sh --no-minimum-macos"
+      system "./build-wx3.2.5-modern-macosx.sh", "--no-minimum-macos"
     end
 
     inreplace "build.sh", "# replace machine type", "SOFTWARE='LisaEm' #"
