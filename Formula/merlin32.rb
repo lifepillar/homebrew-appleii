@@ -1,19 +1,19 @@
 class Merlin32 < Formula
   desc "Multi-pass Cross Assembler for 6502/65c02/65c816 processors"
-  homepage "http://www.brutaldeluxe.fr/products/crossdevtools/merlin/"
-  url "https://www.brutaldeluxe.fr/products/crossdevtools/merlin/Merlin32_v1.0.zip"
-  sha256 "0de8e9458579221501260a63802dab8cbd96fd524b78f674dc0d7b58d13d929c"
+  homepage "https://www.brutaldeluxe.fr/products/crossdevtools/merlin/"
+  url "https://www.brutaldeluxe.fr/products/crossdevtools/merlin/Merlin32_v1.1.zip"
+  sha256 "6a4ebd09ed8800a3874b15e35b5d16469a8ad08dd477b9f84cbd5ce8832dc108"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?Merlin32[._-]v?(\d+(?:\.\d+)+)\./i)
+  end
 
   def install
-    File.rename "Source", "Merlin32"
-
-    xcodebuild "-configuration", "Release",
-      "-alltargets",
-      "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}",
-      "SYMROOT=build",
-      "PREFIX=#{prefix}"
-
-    bin.install "build/Release/Merlin32"
+    cd "Source" do
+      system "make", "-f", "linux_makefile"
+      bin.install "Merlin32"
+    end
     prefix.install "Library" => "lib"
   end
 
@@ -25,6 +25,6 @@ class Merlin32 < Formula
   end
 
   test do
-    system "#{bin}/Merlin32"
+    assert_match version.to_s, shell_output("#{bin}/Merlin32 -v", 1)
   end
 end
