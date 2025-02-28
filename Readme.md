@@ -49,9 +49,7 @@ Examples:
 Some formulas or casks in this repository may already exist in Homebrew. In
 such cases, if you want to refer to the formula or cask in this repository
 (e.g., because it contains a more up to date version), you must use
-`lifepillar/homebrew-appleii/<name>`. For instance:
-
-    brew upgrade lifepillar/homebrew-appleii/clock-signal
+`lifepillar/homebrew-appleii/<name>` as the argument for `brew install`.
 
 
 ## Contributions
