@@ -57,22 +57,18 @@ such cases, if you want to refer to the formula or cask in this repository
 ## Contributions
 
 They are welcome! If you know of some program that is not included here, please
-let me know!
+let me know! Even better, open a pull request!
 
 
-## FAQ
+## More Software
 
-_Why isn't [cc65](https://cc65.github.io/cc65/) in this repository?_
+Some software relevant to the community interested in this repository is not
+found in this repository because it is already in Homebrew Core. That includes:
 
-cc65 is already in Homebrew! (`brew install cc65`)
-
-_Why isn't [Virtual \]\[](http://www.virtualii.com) in this repository?_
-
-Virtual ][ is already in Homebrew Cask! (`brew install virtual-ii`)
-
-_Why isn't [Clock Signal](https://github.com/TomHarte/CLK) in this repository any longer?_
-
-CLK (Clock Signal) has been added to Homebrew Cask! (`brew install clock-signal`)
+- [cc65](https://cc65.github.io/cc65/): `brew install cc65`
+- [Clock Signal](https://github.com/TomHarte/CLK): `brew install clock-signal`
+- [exomizer](https://bitbucket.org/magli143/exomizer/wiki/Home): `brew install exomizer`
+- [Virtual \]\[](http://www.virtualii.com): `brew install virtual-ii`
 
 
 ## Credits
