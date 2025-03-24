@@ -7,7 +7,6 @@ class Lisaem < Formula
   head "https://github.com/arcanebyte/lisaem.git"
 
   depends_on "sdl2"
-  depends_on macos: :sonoma
 
   resource "wxWidgets" do
     url "https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.5/wxWidgets-3.2.5.tar.bz2"
