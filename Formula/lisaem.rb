@@ -1,9 +1,9 @@
 class Lisaem < Formula
   desc "Fully functional Lisa Emulator"
   homepage "https://lisaem.sunder.net/"
-  url "https://github.com/arcanebyte/lisaem/archive/refs/tags/RC5-2024.07.28.tar.gz"
-  version "1.2.7-2024.07.28"
-  sha256 "3bbb01a0c26399546d8a97cbccbb80db86f8397c1707c22084b8672f8d39a4a3"
+  url "https://github.com/arcanebyte/lisaem/archive/refs/tags/RC5-2025.03.15.tar.gz"
+  version "1.2.7-2025.03.15"
+  sha256 "29ac35a43a98c693ec85206256fa2450a3371fab2bc0d2da2fc02dd87c1a3e2e"
   head "https://github.com/arcanebyte/lisaem.git"
 
   depends_on "sdl2"
@@ -11,12 +11,6 @@ class Lisaem < Formula
   resource "wxWidgets" do
     url "https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.5/wxWidgets-3.2.5.tar.bz2"
     sha256 "0ad86a3ad3e2e519b6a705248fc9226e3a09bbf069c6c692a02acf7c2d1c6b51"
-  end
-
-  # Backport fixes for type mismatches under Xcode > 14.1
-  patch do
-    url "https://github.com/arcanebyte/lisaem/commit/8d5d7f1ea6ad5f6bf0111f0df05a7ea29a246f8b.patch?full_index=1"
-    sha256 "62bca3797f52065b31e46ceaaacb13bd934cd4991737017e55f7642006586720"
   end
 
   def install
