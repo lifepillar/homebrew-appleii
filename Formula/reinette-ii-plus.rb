@@ -1,8 +1,8 @@
 class ReinetteIiPlus < Formula
   desc "French Apple II plus emulator"
   homepage "https://github.com/ArthurFerreira2/reinette-II-plus"
-  url "https://github.com/ArthurFerreira2/reinette-II-plus/archive/refs/tags/0.4.tar.gz"
-  sha256 "21b7db1336ca0da15bbb3322710c6e8e6942b4421ca19c6ac329a7500572cf2f"
+  url "https://github.com/ArthurFerreira2/reinette-II-plus/archive/refs/tags/v0.4.8.tar.gz"
+  sha256 "ea630d3ca3555edec742a633993db1bf8655c3a1b66e6398fd1346b01e977ed3"
 
   depends_on "sdl2"
 
@@ -20,7 +20,7 @@ class ReinetteIiPlus < Formula
     libexec.install "reinetteII+"
     libexec.install "assets"
     libexec.install "rom"
-    libexec.install "DOS3.3 Blank.nib"
+    libexec.install "DOS 3.3.nib"
     (bin+"reinetteII+").write shim_script("reinetteII+")
   end
 
@@ -40,16 +40,14 @@ diff --git a/Makefile b/Makefile
 index 32374dd..69ea68f 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -3,10 +3,10 @@ FLAGS = -std=c99 -pedantic -Wpedantic -Wall -O3 -Werror
+@@ -3,8 +3,8 @@
 
  LIBS = -lSDL2
- # comment this line if you are under Linux :
+ # comment these two lines if you are under Linux :
 -WIN32-LIBS = -lmingw32 -lSDL2main -Wl,-subsystem,windows
-+#WIN32-LIBS = -lmingw32 -lSDL2main -Wl,-subsystem,windows
-
- # comment this line if you are under Linux :
 -WIN32-RES = reinetteII+.res
++#WIN32-LIBS = -lmingw32 -lSDL2main -Wl,-subsystem,windows
 +#WIN32-RES = reinetteII+.res
 
  reinetteII+: reinetteII+.c puce6502.c $(WIN32-RES)
-        $(CC) $^ $(FLAGS) $(WIN32-LIBS) $(LIBS) -o $@
+ 	$(CC) $^ $(FLAGS) $(WIN32-LIBS) $(LIBS) -o $@
