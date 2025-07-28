@@ -1,8 +1,8 @@
 class Ciderpress2 < Formula
   desc "Tool for working with Apple II and vintage Mac disk images and file archives"
   homepage "https://ciderpress2.com/"
-  url "https://github.com/fadden/CiderPress2/releases/download/v1.0.7/cp2_1.0.7_osx-x64_sc.zip"
-  sha256 "e6a76c6258dae4fe4e30c072e98bcb7d92beb0d151844075b9335f5d4ce59b98"
+  url "https://github.com/fadden/CiderPress2/releases/download/v1.1.0/cp2_1.1.0_osx-x64_sc.zip"
+  sha256 "66a6f1006a6ae050c1f827e0de680b47f924c6eb5c37a9ced1430da2e06e71b5"
 
   def install
     libexec.install Dir["*"]
