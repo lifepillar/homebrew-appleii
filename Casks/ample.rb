@@ -1,6 +1,6 @@
 cask "ample" do
-  version "0.278,70"
-  sha256 "f94566c92d8c72b01f12437a4ec0e39bd74d8206da16451c46112c53fd75569b"
+  version "0.279,71"
+  sha256 "46ba4a22bb778f8c57cce1064e0aaa58b595355ec199fb36440a95a7911ea198"
 
   url "https://github.com/ksherlock/ample/releases/download/r#{version.csv.second}/Ample-#{version.csv.second}.zip"
   name "Ample"
