@@ -1,8 +1,8 @@
 class ApplecommanderAcx < Formula
   desc "Move data between Apple ][ disk images and native filesystem"
   homepage "https://applecommander.github.io/"
-  url "https://github.com/AppleCommander/AppleCommander/releases/download/1.10.1/AppleCommander-acx-1.10.1.jar"
-  sha256 "7782d9b495de76fcb708e6b6b19617cdcce8f357c2bd5f080684898855a1ec79"
+  url "https://github.com/AppleCommander/AppleCommander/releases/download/1.11.0/AppleCommander-acx-1.11.0.jar"
+  sha256 "bfd2d2cd4ec7db9b36ec846a56ca89651c0b1be7f95f636c4cf57c336e3087eb"
 
   depends_on "openjdk"
 
