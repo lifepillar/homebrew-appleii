@@ -12,8 +12,6 @@ cask "kegs" do
     regex(/href=.*?kegs[._-](\d+(?:\.\d+)*)\.zip/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   kegs_folder = "#{appdir}/KEGS"
   shimscript = "#{staged_path}/kegs-wrapper.sh"
 
