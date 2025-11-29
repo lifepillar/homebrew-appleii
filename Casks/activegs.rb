@@ -7,8 +7,6 @@ cask "activegs" do
   desc "Apple IIGS emulator"
   homepage "http://activegs.freetoolsassociation.com/"
 
-  depends_on macos: "<= :mojave"
-
   app "ActiveGS.app"
 
   zap trash: [
