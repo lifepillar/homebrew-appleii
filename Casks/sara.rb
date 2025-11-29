@@ -7,8 +7,6 @@ cask "sara" do
   desc "Apple /// emulator"
   homepage "https://www.blackcatsystems.com/software/sara.html"
 
-  depends_on macos: "<= :mojave"
-
   # Copy the whole folder
   app "SaraOSX"
 
