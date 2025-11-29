@@ -7,8 +7,6 @@ cask "osxii" do
   desc "Apple ][ emulator"
   homepage "https://www.zophar.net/macintosh/apple2/osxii.html"
 
-  depends_on macos: "<= :mojave"
-
   # Copy the whole folder
   app "OSXII 0.9 Folder"
   artifact "README.rtfd", target: "#{appdir}/OSXII 0.9 Folder/README.rtfd"
