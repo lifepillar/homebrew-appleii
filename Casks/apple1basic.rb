@@ -9,7 +9,5 @@ cask "apple1basic" do
   desc "Apple I BASIC as a scripting language for 32-bit Intel"
   homepage "https://www.pagetable.com/?p=35"
 
-  depends_on macos: "<= :mojave"
-
   binary "apple1basic"
 end
