@@ -13,8 +13,6 @@ cask "sweet16" do
     regex(%r{href=.*?/Sweet16[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
-  depends_on macos: "<= :mojave"
-
   # Copy the whole folder
   app sweet16
 
