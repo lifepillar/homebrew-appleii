@@ -7,8 +7,6 @@ cask "catakig" do
   desc "Apple II emulator"
   homepage "https://catakig.sourceforge.net/"
 
-  depends_on macos: "<= :mojave"
-
   # Copy the whole folder
   app "Catakig"
   artifact "License.html", target: "#{appdir}/Catakig/License.html"
