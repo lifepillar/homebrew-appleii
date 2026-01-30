@@ -9,7 +9,7 @@ cask "lisaem" do
 
   livecheck do
     url :url
-    regex(/LisaEm[._-]v?(\d+(?:\.\d+)+[.\w-]*)-MacOS[._-](?:[.0-9]+)?[._-]arm64\.pkg/i)
+    regex(/LisaEm[._-]v?(\d+(?:\.\d+)+[.\w-]*)-MacOS[._-][.0-9]*[._-]arm64\.pkg/i)
   end
 
   pkg "LisaEm-#{version.csv.first}-#{version.csv.second}-MacOS-15.7_arm64.pkg"
