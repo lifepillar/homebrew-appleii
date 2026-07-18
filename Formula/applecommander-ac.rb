@@ -1,8 +1,8 @@
 class ApplecommanderAc < Formula
   desc "Move data between Apple ][ disk images and native filesystem"
   homepage "https://applecommander.github.io/"
-  url "https://github.com/AppleCommander/AppleCommander/releases/download/13.1/AppleCommander-ac-13.1.jar"
-  sha256 "49ef0e028120c84a42264b054fb208a52792ffb7e6b2e96bd516cabb93fe056e"
+  url "https://github.com/AppleCommander/AppleCommander/releases/download/13.2/AppleCommander-ac-13.2.jar"
+  sha256 "354dd16c355982c80e92fce117cf44c16b87e50a5dcc2030997f1e02564de7b9"
 
   depends_on "openjdk"
 

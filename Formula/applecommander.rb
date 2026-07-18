@@ -1,10 +1,10 @@
 class Applecommander < Formula
   if Hardware::CPU.intel?
-    url "https://github.com/AppleCommander/AppleCommander/releases/download/13.1/AppleCommander-macosx-x86_64-13.1.jar"
-    sha256 "dd5830588956a53f99141c6da30edab6e278e2fec6b2bae2c603a3242088124b"
+    url "https://github.com/AppleCommander/AppleCommander/releases/download/13.2/AppleCommander-macosx-x86_64-13.2.jar"
+    sha256 "e8e5bdf0288270f46b1f046ead77d54e6ead9e412dd7b80d1581184707977598"
   else
-    url "https://github.com/AppleCommander/AppleCommander/releases/download/13.1/AppleCommander-macosx-aarch64-13.1.jar"
-    sha256 "eac252992c8f5d9052221e0649d87412076bf04d85ce0e02babadd4d1f1b8e13"
+    url "https://github.com/AppleCommander/AppleCommander/releases/download/13.2/AppleCommander-macosx-aarch64-13.2.jar"
+    sha256 "b76cbc06ed98df057e94a710888324f4bee184d16371dc393ce14699ba3ec1bf"
   end
 
   desc "Move data between Apple ][ disk images and native filesystem"
