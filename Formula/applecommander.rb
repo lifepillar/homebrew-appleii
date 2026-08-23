@@ -1,10 +1,10 @@
 class Applecommander < Formula
   if Hardware::CPU.intel?
-    url "https://github.com/AppleCommander/AppleCommander/releases/download/13.2/AppleCommander-macosx-x86_64-13.2.jar"
-    sha256 "e8e5bdf0288270f46b1f046ead77d54e6ead9e412dd7b80d1581184707977598"
+    url "https://github.com/AppleCommander/AppleCommander/releases/download/14.0/AppleCommander-macosx-x86_64-14.0.jar"
+    sha256 "ecb7b7b342c0b16a41ee92aef8c7f0096764ce48b068cefbcd44892e5adcdcb6"
   else
-    url "https://github.com/AppleCommander/AppleCommander/releases/download/13.2/AppleCommander-macosx-aarch64-13.2.jar"
-    sha256 "b76cbc06ed98df057e94a710888324f4bee184d16371dc393ce14699ba3ec1bf"
+    url "https://github.com/AppleCommander/AppleCommander/releases/download/14.0/AppleCommander-macosx-aarch64-14.0.jar"
+    sha256 "e8b0aabb1b0935e33562654a9871d0b10a6b3f410072f45262e63866e4ca7dc4"
   end
 
   desc "Move data between Apple ][ disk images and native filesystem"
@@ -18,7 +18,7 @@ class Applecommander < Formula
   end
 
   def caveats
-    "Run by typing `applecommander` in the terminal."
+    "This formaula is DEPRECATED and will be eventually removed. Use `brew install --cask applecommander` instead."
   end
 
   test do
