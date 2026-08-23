@@ -12,6 +12,8 @@ cask "applecommander" do
 
   app "AppleCommander.app"
 
+  caveats "Run `xattr -d com.apple.quarantine /Applications/AppleCommander.app` if you cannot launch the app."
+
   zap trash: [
     "~/Library/Preferences/AppleCommander.plist",
     "~/Library/Preferences/AppleCommander.preferences"
