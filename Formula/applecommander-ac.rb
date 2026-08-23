@@ -1,14 +1,20 @@
 class ApplecommanderAc < Formula
   desc "Move data between Apple ][ disk images and native filesystem"
   homepage "https://applecommander.github.io/"
-  url "https://github.com/AppleCommander/AppleCommander/releases/download/14.0/AppleCommander-ac-14.0.jar"
-  sha256 "5e233fab17e765250ff9ed251df9855a4524fa93259fcf84d1bd66b7f60a2e23"
 
-  depends_on "openjdk"
+  version "14.0"
+
+  if Hardware::CPU.arm?
+    url "https://github.com/AppleCommander/AppleCommander/releases/download/#{version}/ac-mac-aarch64-#{version}"
+    sha256 "291c8485ce4027a6440bfaf1351df11d71f37d3028b98b00500a160c6bb7d78a"
+  else
+    url "https://github.com/AppleCommander/AppleCommander/releases/download/#{version}/ac-mac-x86_64-#{version}"
+    sha256 "d051343a3c0ec0b8c60372cd1599062b6129e48b215b31ed7f0e09309a121693"
+  end
 
   def install
-    libexec.install "AppleCommander-ac-#{version}.jar"
-    bin.write_jar_script libexec/"AppleCommander-ac-#{version}.jar", "ac"
+    executable = Hardware::CPU.arm? ? "ac-mac-aarch64-#{version}" : "ac-mac-x86_64-#{version}"
+    bin.install executable => "ac"
   end
 
   def caveats
