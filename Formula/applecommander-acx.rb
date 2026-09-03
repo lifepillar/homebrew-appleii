@@ -2,14 +2,14 @@ class ApplecommanderAcx < Formula
   desc "Move data between Apple ][ disk images and native filesystem"
   homepage "https://applecommander.github.io/"
 
-  version "14.0"
+  version "14.1"
 
   if Hardware::CPU.arm?
     url "https://github.com/AppleCommander/AppleCommander/releases/download/#{version}/acx-mac-aarch64-#{version}"
-    sha256 "2c50eabbce9ec20165ec990dc2151a2683d2369b88e2b094c0e80a2e35e9405f"
+    sha256 "970a5708164c38bc562963b4476218f27034638de01ca16818e7228214a2c8b0"
   else
     url "https://github.com/AppleCommander/AppleCommander/releases/download/#{version}/acx-mac-x86_64-#{version}"
-    sha256 "d051343a3c0ec0b8c60372cd1599062b6129e48b215b31ed7f0e09309a121693"
+    sha256 "09a938fc0608f8bed562257e72baeb94a5d8fb13209ba85d853e44e5d2a25f8b"
   end
 
   def install

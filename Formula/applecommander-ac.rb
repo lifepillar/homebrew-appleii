@@ -2,14 +2,14 @@ class ApplecommanderAc < Formula
   desc "Move data between Apple ][ disk images and native filesystem"
   homepage "https://applecommander.github.io/"
 
-  version "14.0"
+  version "14.1"
 
   if Hardware::CPU.arm?
     url "https://github.com/AppleCommander/AppleCommander/releases/download/#{version}/ac-mac-aarch64-#{version}"
-    sha256 "291c8485ce4027a6440bfaf1351df11d71f37d3028b98b00500a160c6bb7d78a"
+    sha256 "1339a01df2c29509c62083c5cf6bf7b30f5dc3ed6d77100a208cdeaf07f6c6ab"
   else
     url "https://github.com/AppleCommander/AppleCommander/releases/download/#{version}/ac-mac-x86_64-#{version}"
-    sha256 "d051343a3c0ec0b8c60372cd1599062b6129e48b215b31ed7f0e09309a121693"
+    sha256 "5690742ead7538eee7aa0aa7563c437ed05446b67d65bd5425fb14e90a0c4a7b"
   end
 
   def install
