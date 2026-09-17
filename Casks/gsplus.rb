@@ -1,8 +1,8 @@
 cask "gsplus" do
-  version "0.14"
-  sha256 "63015f83211fccedd01707cca56342f5dba58127d5b336bc9c33be51b93d8882"
+  version "1.38.0"
+  sha256 "d73608c11b650b8993e5427ad044bfb4b1f00c1a57f62bb54ca3b8401b341a3d"
 
-  url "http://apple2.gs/downloads/plusbuilds/#{version}/GSplus-Install.dmg"
+  url "https://github.com/digarok/gsplus/releases/download/v#{version}/GSplus-#{version}-Darwin.dmg"
   name "GSplus"
   desc "Apple IIGS emulator based on KEGS and GSPort"
   homepage "https://apple2.gs/plus/"
@@ -11,31 +11,12 @@ cask "gsplus" do
     url "https://github.com/digarok/gsplus"
   end
 
-  gsplus_folder = "#{appdir}/GSplus"
-  shimscript = "#{staged_path}/gsplus-wrapper.sh"
-
-  app "GSplus.app", target: "#{gsplus_folder}/GSplus.app"
-  binary shimscript, target: "gsplus"
-  artifact "license", target: "#{gsplus_folder}/license"
-  artifact "gsplusmanual.pdf", target: "#{gsplus_folder}/gsplusmanual.pdf"
-  artifact "README.txt", target: "#{gsplus_folder}/README.txt"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      #{gsplus_folder}/GSplus.app/Contents/macOS/gsplus -config #{gsplus_folder}/config.txt "$@"
-    EOS
-  end
-
-  postflight do
-    File.write("#{gsplus_folder}/config.txt", "# GSplus configuration file")
-  end
+  app "GSplus.app"
 
   caveats <<~EOS
-    Edit the config file located at #{gsplus_folder}/config.txt.
+    Because of macOS security measures, you may have to remove the
+    quarantine attribute using the following command:
 
-    GSplus must be launched from the command line. To get started, type:
-
-      gsplus -h
+        xattr -d com.apple.quarantine #{appdir}/GSplus.app
   EOS
 end
