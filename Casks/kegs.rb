@@ -13,31 +13,32 @@ cask "kegs" do
   end
 
   kegs_folder = "#{appdir}/KEGS"
-  shimscript = "#{staged_path}/kegs-wrapper.sh"
 
   app "kegs.#{version}/KEGSMAC.app", target: "#{kegs_folder}/KEGSMAC.app"
-  binary shimscript, target: "kegs"
+  binary "kegs-wrapper.sh", target: "kegs"
   artifact "kegs.#{version}/config.kegs", target: "#{kegs_folder}/config.kegs"
   artifact "kegs.#{version}/doc", target: "#{kegs_folder}/doc"
   artifact "kegs.#{version}/NUCLEUS03.gz", target: "#{kegs_folder}/NUCLEUS03.gz"
   artifact "kegs.#{version}/XMAS_DEMO.gz", target: "#{kegs_folder}/XMAS_DEMO.gz"
 
-  preflight do
-    File.write shimscript, <<~EOS
+  preflight_steps do
+    write_file "kegs-wrapper.sh", <<~EOS
       #!/bin/sh
-      cd #{kegs_folder}
-      #{kegs_folder}/KEGSMAC.app/Contents/MacOS/KEGSMAC "$@"
+      cd {{appdir}}/KEGS
+      {{appdir}}/KEGS/KEGSMAC.app/Contents/MacOS/KEGSMAC "$@"
     EOS
   end
 
   caveats <<~EOS
     You may launch KEGS by running `kegs` from the terminal.
 
-    Because of macOS security measures, you may have to first open KEGSMAC by
-    right-clicking on the app in the Finder and selecting "Open".
+    Because of macOS security measures, you may have to first remove the
+    quarantine attribute using the following command:
 
-    You need to copy ROM files into #{kegs_folder}.
+        xattr -d com.apple.quarantine #{kegs_folder}/KEGSMAC.app
 
-    See #{kegs_folder}/README.mac.txt.
+    ROM files must be copied into into #{kegs_folder}.
+
+    See also #{kegs_folder}/doc/README.mac.txt.
   EOS
 end
