@@ -1,6 +1,6 @@
 cask "buckshot" do
-  version "0.5"
-  sha256 "16babb4446509717e469fdd793c5feb3c4d361e5241bb7a425b378932588df15"
+  version "0.8.0"
+  sha256 "b25be134cef7aafbf5b5eb6118ce258e57ae20368fb8be39a701d029f5fceee1"
 
   # github.com/digarok/buckshot was verified as official when first introduced to the cask
   url "https://github.com/digarok/buckshot/releases/download/v#{version}/buckshot.dmg",
@@ -15,4 +15,11 @@ cask "buckshot" do
     "~/Library/Preferences/com.dagenbrock.buckshot.plist",
     "~/Library/Saved Application State/com.dagenbrock.buckshot.savedState",
   ]
+
+  caveats <<-EOS
+    As buckshot is not notarized with Apple, you should execute
+    the following command before the first launch:
+
+      xattr -d com.apple.quarantine /Applications/buckshot.app
+  EOS
 end
