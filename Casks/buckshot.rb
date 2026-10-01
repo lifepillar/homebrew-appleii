@@ -3,8 +3,7 @@ cask "buckshot" do
   sha256 "b25be134cef7aafbf5b5eb6118ce258e57ae20368fb8be39a701d029f5fceee1"
 
   # github.com/digarok/buckshot was verified as official when first introduced to the cask
-  url "https://github.com/digarok/buckshot/releases/download/v#{version}/buckshot.dmg",
-      verified: "github.com/digarok/buckshot/"
+  url "https://github.com/digarok/buckshot/releases/download/v#{version}/buckshot.dmg"
   name "buckshot"
   desc "Apple II Image Converter Tool"
   homepage "https://apple2.gs/buckshot/"
