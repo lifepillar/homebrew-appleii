@@ -1,9 +1,9 @@
 cask "applecommander" do
   arch arm: "arm64", intel: "x86-64"
 
-  version "14.1"
-  sha256 arm:   "d18ad1c1913eb5bf3c5fdbab5bc7f4ec34a838bfbd5475a903c613a598148bc3",
-         intel: "9cbf994ab4dbc23c68ede2ef55f8bf25fda3aebf90f2c39902e890f73eb6412d"
+  version "15.0"
+  sha256 arm:   "ce0514244c1a4b7f2bcdd890dfa8217aa1669a28db395f7c832fa33d2953498f",
+         intel: "ac81230dc1fa97f4bb41278a176d7bd92560430172c9dde7a1fa6fe33648fe76"
 
   url "https://github.com/AppleCommander/AppleCommander/releases/download/#{version}/AppleCommander-#{version}-mac-#{arch}.dmg"
   name "AppleCommander"
