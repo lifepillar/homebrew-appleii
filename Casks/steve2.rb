@@ -12,7 +12,7 @@ cask "steve2" do
     regex(/^v?(\d+(?:\.\d+)+[.\w-]*)$/i)
   end
 
-  pkg "Steve2.pkg", allow_untrusted: true
+  pkg "Steve2.pkg"
 
   uninstall pkgutil: "com.trudnai.pkg.Steve2"
 
